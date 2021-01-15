@@ -17,7 +17,7 @@ title: VNA2V-W21
 description: AEROSP 740 - Visual Navigation for Autonomous Aerial Vehicles (W21)
 baseurl: "/VNA2V-W21-handouts" # the subpath of your site, e.g. /blog
 # url: "https://mit-spark.github.io" # the base hostname & protocol for your site, e.g. http://example.com
-url: "https://u-m-iral.gitlab.io" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://u-m-iral.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 
 permalink: pretty
 exclude: ["node_modules/", "*.gemspec", "*.gem", "Gemfile", "Gemfile.lock", "package.json", "package-lock.json",  "script/", "LICENSE.txt", "lib/", "bin/", "README.md", "Rakefile", "Makefile", "vendor"]
