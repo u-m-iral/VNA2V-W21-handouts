@@ -1,1 +1,63 @@
-theme: jekyll-theme-minimal
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole site, values
+# which you are expected to set up once and rarely edit after that. If you find
+# yourself editing these this file very often, consider using Jekyll's data files
+# feature for the data you need to update frequently.
+#
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'jekyll serve'. If you change this file, please restart the server process.
+
+# Site settings
+# These are used to personalize your new site. If you look in the HTML files,
+# you will see them accessed via {{ site.title }}, {{ site.github_repo }}, and so on.
+# You can create any custom variable you would like, and they will be accessible
+# in the templates via {{ site.myvariable }}.
+title: VNA2V-W21
+description: AEROSP 740 - Visual Navigation for Autonomous Aerial Vehicles (W21)
+baseurl: "/VNA2V-W21-handouts" # the subpath of your site, e.g. /blog
+# url: "https://mit-spark.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://u-m-iral.gitlab.io" # the base hostname & protocol for your site, e.g. http://example.com
+
+permalink: pretty
+exclude: ["node_modules/", "*.gemspec", "*.gem", "Gemfile", "Gemfile.lock", "package.json", "package-lock.json",  "script/", "LICENSE.txt", "lib/", "bin/", "README.md", "Rakefile", "Makefile", "vendor"]
+
+# Enable or disable the site search
+search_enabled: true
+
+# Enable or disable heading anchors
+heading_anchors: true
+
+kramdown:
+  # Use GitHub flavored markdown, including triple backtick fenced code blocks
+  input: GFM
+  # Jekyll 3 and GitHub Pages now only support rouge for syntax highlighting
+  syntax_highlighter: rouge
+  mathjax: true
+
+# Aux links for the upper right navigation
+# aux_links:
+#   "Just the Docs on GitHub":
+#     - "//github.com/pmarsceill/just-the-docs"
+
+# Theme (for public github pages)
+theme: just-the-docs
+
+# Footer content appears at the bottom of every page's main content
+# footer_content: "<a href=\"http://accessibility.mit.edu\">Accessibility.</a> Copyright &copy; 2017-2020 MIT SPARK Lab. Using <a href=\"https://github.com/pmarsceill/just-the-docs/tree/master\">Just the docs</a> theme."
+footer_content: "Enabled with the generous support of the MIT SPARK Lab. Copyright &copy; MIT SPARK Lab and Vasileios Tzoumas of the University of Michigan. Using <a href=\"https://github.com/pmarsceill/just-the-docs/tree/master\">Just the docs</a> theme."
+
+# Color scheme currently only supports "dark" or nil (default)
+color_scheme: nil
+
+plugins:
+  - jekyll-seo-tag
+  - jekyll-target-blank
+
+compress_html:
+  clippings: all
+  comments: all
+  endings: all
+  startings: []
+  blank_lines: false
+  profile: false

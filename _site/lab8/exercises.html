@@ -1,0 +1,703 @@
+
+
+<!DOCTYPE html>
+
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+
+  
+    <title>Exercises - VNA2V-W21</title>
+
+    
+  
+
+  <link rel="shortcut icon" href="http://localhost:4000/VNA2V-W21-handouts/favicon.ico" type="image/x-icon">
+
+  <link rel="stylesheet" href="http://localhost:4000/VNA2V-W21-handouts/assets/css/just-the-docs.css">
+  <script src="https://use.fontawesome.com/d81b2d50d8.js"></script>
+  
+  
+
+  
+    <script type="text/javascript" src="http://localhost:4000/VNA2V-W21-handouts/assets/js/vendor/lunr.min.js"></script>
+  
+  <script type="text/javascript" src="http://localhost:4000/VNA2V-W21-handouts/assets/js/just-the-docs.js"></script>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>Exercises | VNA2V-W21</title>
+<meta name="generator" content="Jekyll v3.8.6" />
+<meta property="og:title" content="Exercises" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="AEROSP 740 - Visual Navigation for Autonomous Aerial Vehicles (W21)" />
+<meta property="og:description" content="AEROSP 740 - Visual Navigation for Autonomous Aerial Vehicles (W21)" />
+<link rel="canonical" href="http://localhost:4000/VNA2V-W21-handouts/lab8/exercises" />
+<meta property="og:url" content="http://localhost:4000/VNA2V-W21-handouts/lab8/exercises" />
+<meta property="og:site_name" content="VNA2V-W21" />
+<script type="application/ld+json">
+{"@type":"WebPage","headline":"Exercises","description":"AEROSP 740 - Visual Navigation for Autonomous Aerial Vehicles (W21)","url":"http://localhost:4000/VNA2V-W21-handouts/lab8/exercises","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+  
+<script>
+  window.MathJax = {
+    options: {
+      skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+    },
+    loader: {
+      load: ['input/tex', '[tex]/ams', '[tex]/configMacros']
+    },
+    tex: {
+      packages: {'[+]': ['boldsymbol', 'ams', 'configMacros']},
+      inlineMath: [['$','$'], ['\\(','\\)']],
+      displayMath: [["$$", "$$"], ["\\[","\\]"]],
+      processEscapes: true,
+      tags: "ams",
+      macros: {
+        SE: ['\\mathrm{SE}(#1)', 1],
+        SO: ['\\mathrm{SO}(#1)', 1],
+        argmin: '\\mathop{\\operatorname{argmin}}',
+        argmax: '\\mathop{\\operatorname{argmax}}',
+        trace: '\\operatorname{trace}',
+        tran: '^{\\mathsf{T}}',
+      },
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+
+
+<script type="text/javascript" src="http://localhost:4000/VNA2V-W21-handouts/assets/js/vendor/lazysizes.min.js" async=""></script>
+
+</head>
+
+<body>
+
+  <div class="page-wrap">
+    <div class="side-bar">
+      <div class="site-header">
+        <a href="http://localhost:4000/VNA2V-W21-handouts" class="site-title lh-tight">VNA2V-W21</a>
+        <button class="menu-button fs-3 js-main-nav-trigger" data-text-toggle="Hide" type="button">Menu</button>
+      </div>
+
+      <div class="navigation main-nav js-main-nav">
+        <nav role="navigation" aria-label="Main navigation">
+  <ul class="navigation-list">
+<li class="navigation-list-item"><a href="http://localhost:4000/VNA2V-W21-handouts/" class="navigation-list-link">Home</a></li>
+<li class="navigation-list-item">
+<a href="http://localhost:4000/VNA2V-W21-handouts/lab1/" class="navigation-list-link">Lab 1</a><ul class="navigation-list-child-list ">
+<li class="navigation-list-item "><a href="http://localhost:4000/VNA2V-W21-handouts/lab1/ubuntu" class="navigation-list-link">Install Ubuntu 18.04</a></li>
+<li class="navigation-list-item "><a href="http://localhost:4000/VNA2V-W21-handouts/lab1/shell" class="navigation-list-link">Shell basics</a></li>
+<li class="navigation-list-item "><a href="http://localhost:4000/VNA2V-W21-handouts/lab1/git" class="navigation-list-link">Git</a></li>
+<li class="navigation-list-item "><a href="http://localhost:4000/VNA2V-W21-handouts/lab1/cpp" class="navigation-list-link">C++</a></li>
+<li class="navigation-list-item "><a href="http://localhost:4000/VNA2V-W21-handouts/lab1/exercises" class="navigation-list-link">Exercises</a></li>
+</ul>
+</li>
+<li class="navigation-list-item">
+<a href="http://localhost:4000/VNA2V-W21-handouts/lab2/" class="navigation-list-link">Lab 2</a><ul class="navigation-list-child-list ">
+<li class="navigation-list-item "><a href="http://localhost:4000/VNA2V-W21-handouts/lab2/ros" class="navigation-list-link">Installing ROS</a></li>
+<li class="navigation-list-item "><a href="http://localhost:4000/VNA2V-W21-handouts/lab2/ros101" class="navigation-list-link">Introduction to ROS</a></li>
+<li class="navigation-list-item "><a href="http://localhost:4000/VNA2V-W21-handouts/lab2/exercises" class="navigation-list-link">Exercises</a></li>
+</ul>
+</li>
+<li class="navigation-list-item">
+<a href="http://localhost:4000/VNA2V-W21-handouts/lab3/" class="navigation-list-link">Lab 3</a><ul class="navigation-list-child-list "><li class="navigation-list-item "><a href="http://localhost:4000/VNA2V-W21-handouts/lab3/exercises" class="navigation-list-link">Exercises</a></li></ul>
+</li>
+<li class="navigation-list-item">
+<a href="http://localhost:4000/VNA2V-W21-handouts/lab4/" class="navigation-list-link">Lab 4</a><ul class="navigation-list-child-list "><li class="navigation-list-item "><a href="http://localhost:4000/VNA2V-W21-handouts/lab4/exercises" class="navigation-list-link">Exercises</a></li></ul>
+</li>
+<li class="navigation-list-item">
+<a href="http://localhost:4000/VNA2V-W21-handouts/lab5/" class="navigation-list-link">Lab 5</a><ul class="navigation-list-child-list "><li class="navigation-list-item "><a href="http://localhost:4000/VNA2V-W21-handouts/lab5/exercises" class="navigation-list-link">Exercises</a></li></ul>
+</li>
+<li class="navigation-list-item">
+<a href="http://localhost:4000/VNA2V-W21-handouts/lab6/" class="navigation-list-link">Lab 6</a><ul class="navigation-list-child-list "><li class="navigation-list-item "><a href="http://localhost:4000/VNA2V-W21-handouts/lab6/exercises" class="navigation-list-link">Exercises</a></li></ul>
+</li>
+<li class="navigation-list-item">
+<a href="http://localhost:4000/VNA2V-W21-handouts/lab7/" class="navigation-list-link">Lab 7</a><ul class="navigation-list-child-list "><li class="navigation-list-item "><a href="http://localhost:4000/VNA2V-W21-handouts/lab7/exercises" class="navigation-list-link">Exercises</a></li></ul>
+</li>
+<li class="navigation-list-item active">
+<a href="http://localhost:4000/VNA2V-W21-handouts/lab8/" class="navigation-list-link">Lab 8</a><ul class="navigation-list-child-list "><li class="navigation-list-item  active"><a href="http://localhost:4000/VNA2V-W21-handouts/lab8/exercises" class="navigation-list-link active">Exercises</a></li></ul>
+</li>
+<li class="navigation-list-item">
+<a href="http://localhost:4000/VNA2V-W21-handouts/lab9/" class="navigation-list-link">Lab 9</a><ul class="navigation-list-child-list "><li class="navigation-list-item "><a href="http://localhost:4000/VNA2V-W21-handouts/lab9/exercises" class="navigation-list-link">Exercises</a></li></ul>
+</li>
+<li class="navigation-list-item"><a href="http://localhost:4000/VNA2V-W21-handouts/about" class="navigation-list-link">How to print</a></li>
+</ul>
+</nav>
+
+      </div>
+      <footer class="site-footer">
+        <p class="text-small text-grey-dk-000 mb-4"><b>Last modified</b>:<br> Wednesday, January 13 at 06:06</p>
+      </footer>
+    </div>
+    <div class="main-content-wrap js-main-content" tabindex="0">
+      <div class="main-content">
+        <div class="page-header js-page-header">
+          
+          <div class="search">
+            <div class="search-input-wrap">
+              <input type="text" class="js-search-input search-input" tabindex="0" placeholder="Search VNA2V-W21" aria-label="Search VNA2V-W21" autocomplete="off">
+              <svg width="14" height="14" viewbox="0 0 28 28" xmlns="http://www.w3.org/2000/svg" class="search-icon"><title>Search</title>
+<g fill-rule="nonzero"><path d="M17.332 20.735c-5.537 0-10-4.6-10-10.247 0-5.646 4.463-10.247 10-10.247 5.536 0 10 4.601 10 10.247s-4.464 10.247-10 10.247zm0-4c3.3 0 6-2.783 6-6.247 0-3.463-2.7-6.247-6-6.247s-6 2.784-6 6.247c0 3.464 2.7 6.247 6 6.247z"></path><path d="M11.672 13.791L.192 25.271 3.02 28.1 14.5 16.62z"></path></g></svg>
+            </div>
+            <div class="js-search-results search-results-wrap"></div>
+          </div>
+          
+          
+        </div>
+        <div class="page">
+          
+            
+              <nav class="breadcrumb-nav">
+                <ol class="breadcrumb-nav-list">
+                  
+                    <li class="breadcrumb-nav-list-item"><a href="http://localhost:4000/VNA2V-W21-handouts/lab8/">Lab 8</a></li>
+                  
+                  <li class="breadcrumb-nav-list-item"><span>Exercises</span></li>
+                </ol>
+              </nav>
+            
+          
+          <div id="main-content" class="page-content" role="main">
+            
+              <h1 class="no_toc text-delta fs-9" id="exercises">
+        
+        
+          <a href="#exercises" class="anchor-heading"><svg class="d-inline-block v-align-middle" viewbox="0 0 16 16" version="1.1" width="18" height="18" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> Exercises
+        
+        
+      </h1>
+
+<ol id="markdown-toc">
+  <li>
+<a href="#submission" id="markdown-toc-submission">Submission</a>    <ol>
+      <li><a href="#individual" id="markdown-toc-individual">Individual</a></li>
+      <li><a href="#team" id="markdown-toc-team">Team</a></li>
+      <li><a href="#deadline" id="markdown-toc-deadline">Deadline</a></li>
+    </ol>
+  </li>
+  <li>
+<a href="#-individual" id="markdown-toc--individual">👤 Individual</a>    <ol>
+      <li><a href="#-deliverable-1---bags-of-visual-words-25-pts" id="markdown-toc--deliverable-1---bags-of-visual-words-25-pts">📨 Deliverable 1 - Bags of Visual Words [25 pts]</a></li>
+    </ol>
+  </li>
+  <li>
+<a href="#-team" id="markdown-toc--team">👥 Team</a>    <ol>
+      <li>
+<a href="#using-neural-networks-for-object-detection" id="markdown-toc-using-neural-networks-for-object-detection">Using Neural Networks for Object Detection</a>        <ol>
+          <li><a href="#installation" id="markdown-toc-installation">Installation</a></li>
+          <li><a href="#usage" id="markdown-toc-usage">Usage</a></li>
+        </ol>
+      </li>
+      <li>
+<a href="#-deliverable-2---object-localization-45-pts" id="markdown-toc--deliverable-2---object-localization-45-pts">📨 Deliverable 2 - Object Localization [45 pts]</a>        <ol>
+          <li><a href="#performance-expectations" id="markdown-toc-performance-expectations">Performance Expectations</a></li>
+        </ol>
+      </li>
+      <li><a href="#-optional-deliverable-3---object-reconstruction-20-pts" id="markdown-toc--optional-deliverable-3---object-reconstruction-20-pts">📨 [Optional] Deliverable 3 - Object Reconstruction [+20 pts]</a></li>
+      <li>
+<a href="#-deliverable-4---evaluating-bow-place-recognition-using-ransac-30-pts" id="markdown-toc--deliverable-4---evaluating-bow-place-recognition-using-ransac-30-pts">📨 Deliverable 4 - Evaluating BoW Place Recognition using RANSAC [30 pts]</a>        <ol>
+          <li><a href="#installation-1" id="markdown-toc-installation-1">Installation</a></li>
+          <li><a href="#usage-1" id="markdown-toc-usage-1">Usage</a></li>
+        </ol>
+      </li>
+      <li><a href="#summary-of-team-deliverables" id="markdown-toc-summary-of-team-deliverables">Summary of Team Deliverables</a></li>
+    </ol>
+  </li>
+</ol>
+    
+      <h1 id="submission">
+        
+        
+          <a href="#submission" class="anchor-heading"><svg class="d-inline-block v-align-middle" viewbox="0 0 16 16" version="1.1" width="18" height="18" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> Submission
+        
+        
+      </h1>
+
+<p>To submit your solutions create a folder called <code class="highlighter-rouge">lab8</code> and push one or more file
+to your repository with your answers (it can be plain text, markdown, pdf or
+whatever other format is reasonably easy to read)</p>
+    
+      <h3 id="individual">
+        
+        
+          <a href="#individual" class="anchor-heading"><svg class="d-inline-block v-align-middle" viewbox="0 0 16 16" version="1.1" width="18" height="18" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> Individual
+        
+        
+      </h3>
+
+<p>Please push the deliverables into your personal repository, for math-related
+questions LaTeX is preferred but handwritten is accepted too.</p>
+    
+      <h3 id="team">
+        
+        
+          <a href="#team" class="anchor-heading"><svg class="d-inline-block v-align-middle" viewbox="0 0 16 16" version="1.1" width="18" height="18" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> Team
+        
+        
+      </h3>
+
+<p>Please push the source code for the entire package to the folder <code class="highlighter-rouge">lab8</code> of the
+team repository. For the tables and discussion questions, please push a PDF to
+the <code class="highlighter-rouge">lab8</code> folder of your team repository.</p>
+
+<p><strong>Reminder:</strong> Please make sure that all of your final results and figures appear
+in your PDF submission. We do not have time to build and run everyone’s code to check every
+individual result.</p>
+    
+      <h3 id="deadline">
+        
+        
+          <a href="#deadline" class="anchor-heading"><svg class="d-inline-block v-align-middle" viewbox="0 0 16 16" version="1.1" width="18" height="18" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> Deadline
+        
+        
+      </h3>
+
+<p><strong>Deadline:</strong> the VNA2V staff will clone your repository on <strong>November 4th</strong> at 11:59 PM EDT.</p>
+    
+      <h1 id="-individual">
+        
+        
+          <a href="#-individual" class="anchor-heading"><svg class="d-inline-block v-align-middle" viewbox="0 0 16 16" version="1.1" width="18" height="18" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> 👤 Individual
+        
+        
+      </h1>
+    
+      <h2 id="-deliverable-1---bags-of-visual-words-25-pts">
+        
+        
+          <a href="#-deliverable-1---bags-of-visual-words-25-pts" class="anchor-heading"><svg class="d-inline-block v-align-middle" viewbox="0 0 16 16" version="1.1" width="18" height="18" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> 📨 Deliverable 1 - Bags of Visual Words [25 pts]
+        
+        
+      </h2>
+
+<p>Please answer the following questions; the complete writeup should be between 1/2 to 1 page.</p>
+
+<ol>
+  <li>Explain which components in a basic BoW-based place recognition system determine the robustness of the system to illumination and 3D viewpoint changes. Why? Aim for 75-125 words, and try to give specific examples.
+    <ul>
+      <li class="hint">Hint: You may find it enlightening to read the <a href="http://doriangalvez.com/papers/GalvezTRO12.pdf" target="_blank" rel="noopener noreferrer">DBoW paper</a> on the subject, though you should be able to answer based on this week’s lectures.</li>
+    </ul>
+  </li>
+  <li>Explain the purpose of Inverse Document Frequency (IDF) term in tf-idf. What would happen without this term and why? Aim for 75-125 words.
+    <ul>
+      <li class="hint">Hint: Consider the case where a few words are very common across almost all documents/images. Also, you can check for resources about IDF online (such as <a href="https://www.analyticsvidhya.com/blog/2020/02/quick-introduction-bag-of-words-bow-tf-idf/" target="_blank" rel="noopener noreferrer">this one</a>) if you would like to build your intuition.</li>
+    </ul>
+  </li>
+  <li>How does the vocabulary size in BoW-based systems affect the performance of the system, particularly in terms of computational cost and precision/recall? Aim for 75-125 words.
+    <ul>
+      <li class="hint">Hint: For precision, how would adding words to the vocabulary make it easier/harder to recognize when 2 documents/images are very similar or different? Likewise for recall?</li>
+    </ul>
+  </li>
+</ol>
+    
+      <h1 id="-team">
+        
+        
+          <a href="#-team" class="anchor-heading"><svg class="d-inline-block v-align-middle" viewbox="0 0 16 16" version="1.1" width="18" height="18" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> 👥 Team
+        
+        
+      </h1>
+    
+      <h2 id="using-neural-networks-for-object-detection">
+        
+        
+          <a href="#using-neural-networks-for-object-detection" class="anchor-heading"><svg class="d-inline-block v-align-middle" viewbox="0 0 16 16" version="1.1" width="18" height="18" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> Using Neural Networks for Object Detection
+        
+        
+      </h2>
+
+<p>YOLO is a Convolutional Neural Network that detects objects of multiple classes.
+It is based on the paper <a href="https://pjreddie.com/media/files/papers/yolo.pdf" target="_blank" rel="noopener noreferrer">“You Only Look Once: Unified, Real-Time Object
+Detection”</a>. Every detected
+object is marked by a bounding box. The level of confidence for each detection
+is given as a probability metric (more details can be found in <a href="https://pjreddie.com/darknet/yolo/" target="_blank" rel="noopener noreferrer">YOLOv3
+page</a>). Since we are using ROS for most of
+our software, we will use the repository in
+<a href="https://github.com/leggedrobotics/darknet_ros" target="_blank" rel="noopener noreferrer">darknet_ros</a>.</p>
+    
+      <h3 id="installation">
+        
+        
+          <a href="#installation" class="anchor-heading"><svg class="d-inline-block v-align-middle" viewbox="0 0 16 16" version="1.1" width="18" height="18" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> Installation
+        
+        
+      </h3>
+
+<p>First, ensure that you have OpenCV 3 installed in your system by running:</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>pkg-config --modversion opencv
+</code></pre></div></div>
+<p>You should see output that looks like <code class="highlighter-rouge">3.2.0</code> or similar (<code class="highlighter-rouge">3.X.Y</code>). Otherwise, the quickest
+way to install all relevant dependencies is to run</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo apt install ros-melodic-desktop
+</code></pre></div></div>
+<p>Alternatively, you can use <code class="highlighter-rouge">sudo apt-get install libopencv-*</code> (you need everything except libopencv-apps*).</p>
+
+<p>Concerning the installation of the <code class="highlighter-rouge">darknet_ros</code> package, we ask you to follow the
+<a href="https://github.com/leggedrobotics/darknet_ros#building" target="_blank" rel="noopener noreferrer">installation procedure</a>
+in the Readme of the repo. You can use the automatically downloaded weights that are acquired from
+building the package.</p>
+
+<p>Make sure the installation is correct:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>catkin build darknet_ros <span class="nt">--no-deps</span> <span class="nt">--verbose</span> <span class="nt">--catkin-make-args</span> run_tests
+</code></pre></div></div>
+<p>You should see an image with two bounding boxes indicating that there is a
+person (albeit incorrectly).</p>
+    
+      <h3 id="usage">
+        
+        
+          <a href="#usage" class="anchor-heading"><svg class="d-inline-block v-align-middle" viewbox="0 0 16 16" version="1.1" width="18" height="18" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> Usage
+        
+        
+      </h3>
+
+<p>Make sure you read the Readme in the repo, in particular the <a href="https://github.com/leggedrobotics/darknet_ros#nodes" target="_blank" rel="noopener noreferrer">Nodes
+section</a> which introduces
+the parameters used by YOLO and the ROS topics where the output is published.</p>
+
+<p>Now, download the following rosbags:</p>
+
+<ol>
+  <li>
+<a href="https://vision.in.tum.de/data/datasets/rgbd-dataset/download" target="_blank" rel="noopener noreferrer">RGB-D TUM dataset</a>, download from the links below:
+    <ol>
+      <li>
+<a href="https://vision.in.tum.de/rgbd/dataset/freiburg3/rgbd_dataset_freiburg3_teddy.bag" target="_blank" rel="noopener noreferrer">Sequence freiburg3_teddy</a>.</li>
+    </ol>
+  </li>
+  <li>
+<a href="https://projects.asl.ethz.ch/datasets/doku.php?id=kmavvisualinertialdatasets" target="_blank" rel="noopener noreferrer">Euroc dataset</a>, download from the links below:
+    <ol>
+      <li>
+<a href="http://robotics.ethz.ch/~asl-datasets/ijrr_euroc_mav_dataset/machine_hall/MH_01_easy/MH_01_easy.bag" target="_blank" rel="noopener noreferrer">MH_01_easy.bag</a> and also <a href="http://robotics.ethz.ch/~asl-datasets/ijrr_euroc_mav_dataset/machine_hall/MH_01_easy/MH_01_easy.zip" target="_blank" rel="noopener noreferrer">dataset</a>.</li>
+      <li>
+<a href="http://robotics.ethz.ch/~asl-datasets/ijrr_euroc_mav_dataset/vicon_room1/V1_01_easy/V1_01_easy.bag" target="_blank" rel="noopener noreferrer">V1_01_easy.bag</a> and also <a href="http://robotics.ethz.ch/~asl-datasets/ijrr_euroc_mav_dataset/vicon_room1/V1_01_easy/V1_01_easy.zip" target="_blank" rel="noopener noreferrer">dataset</a>.</li>
+    </ol>
+  </li>
+</ol>
+
+<p>Now, change <code class="highlighter-rouge">~/vna2v_ws/src/darknet_ros/darknet_ros/config/ros.yaml</code> with the corresponding rgb topic in each
+dataset. For example, for sequence <code class="highlighter-rouge">freiburg3_teddy</code>, change
+<code class="highlighter-rouge">ros.yaml</code> as:</p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">subscribers</span><span class="pi">:</span>
+  <span class="na">camera_reading</span><span class="pi">:</span>
+    <span class="na">topic</span><span class="pi">:</span> <span class="s">/camera/rgb/image_color</span>
+    <span class="na">queue_size</span><span class="pi">:</span> <span class="m">1</span>
+</code></pre></div></div>
+
+<p>Now, open two terminals. In one, run YOLO:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>roslaunch darknet_ros darknet_ros.launch
+</code></pre></div></div>
+
+<p>While in the other terminal, you should play the actual rosbag (try with freiburg3_teddy rosbag):</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rosbag play PATH/TO/ROSBAG/DOWNLOADED
+</code></pre></div></div>
+
+<p>Great! Now you should be seeing YOLO detecting objects in the scene!</p>
+    
+      <h2 id="-deliverable-2---object-localization-45-pts">
+        
+        
+          <a href="#-deliverable-2---object-localization-45-pts" class="anchor-heading"><svg class="d-inline-block v-align-middle" viewbox="0 0 16 16" version="1.1" width="18" height="18" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> 📨 Deliverable 2 - Object Localization [45 pts]
+        
+        
+      </h2>
+
+<p>Our goal for this exercise is to localize the teddy bear that is at the center
+of the scene in the <em>freiburg3_teddy</em> dataset. To do so, we will use YOLO
+detections to know where the teddy bear is. With the bounding box of the teddy
+bear, we can calculate a crude approximation of the <em>bear’s 3D position</em> by
+using the center pixel of the bounding box. If we accumulate enough 2D
+measurements, we can formulate a least-squares problem in GTSAM to triangulate
+the 3D position of the teddy bear.</p>
+
+<p>For that, we will need to perform the following steps:</p>
+
+<ol>
+  <li>The <code class="highlighter-rouge">freiburg3_teddy</code> rosbag provides ground-truth transformation of the
+camera with respect to the world. Subscribe to the <code class="highlighter-rouge">tf</code> topic in ROS that
+gives the transform of the camera with respect to the world.</li>
+  <li>In parallel, you should be able to get the results from <code class="highlighter-rouge">darknet_ros</code> (YOLO)
+by either making the node subscribe to the stream of images, or using the
+<a href="https://github.com/leggedrobotics/darknet_ros#actions" target="_blank" rel="noopener noreferrer">Action message that the package
+offers</a>.</li>
+  <li>Use YOLO to detect the bounding box around the teddy bear.</li>
+  <li>Extract the center pixel of the bounding box.</li>
+  <li>While this is a rough approximation, formulate a GTSAM problem where we are
+trying to estimate the 3D position of the center pixel in the bounding box.
+You will need to use multiple <code class="highlighter-rouge">GenericProjectionFactors</code> in order
+to fully constrain the 3D position of the teddy bear. Try to use the
+<code class="highlighter-rouge">GenericProjectionFactor</code> to estimate the 3D position of the teddy
+bear. Recall the GTSAM exercise where you performed a toy-example of Bundle
+Adjustment problem and use the same factors to build the problem. Note that
+now, the poses of the camera are given to you as ground-truth information.
+Therefore, you might want to use priors on the poses as given by the
+ground-truth poses given by the <code class="highlighter-rouge">tf</code> topic.</li>
+  <li>Solve the problem in GTSAM. You can re-use previous code from lab_7.</li>
+  <li>Plot the 3D position of the teddy bear in Rviz.</li>
+  <li>Plot also the trajectory of the camera. You can re-use previous code from lab_7</li>
+</ol>
+
+<p>Since there are many ways to solve this problem, and since we have reached a
+point where you should be comfortable designing your own ROS callbacks and
+general code architecture, we leave this problem open to your own implementation
+style. Nonetheless, we do provide some minimal starter code and hints (see <code class="highlighter-rouge">deliverable_2.cpp</code>, along
+with <code class="highlighter-rouge">helper_functions.hpp</code>). Please feel free to post in Piazza or reach out
+via email or office hours if you need some advice on architecting a solution.</p>
+
+<p>When evaluating this deliverable we will not focus on the end result (although
+it will count), but on your implementation, as well as your assumptions and
+considerations. Therefore, we ask you to write a small summary of the
+assumptions, design choices and considerations that you have taken in order to
+solve this problem. There is no right or wrong answer as many approaches would
+reach a similar result, but we will look at the principles you apply when
+solving this problem. Consider this deliverable as a preparation for what we
+will look for in the final project. Aim for around 250 words, or half a page.</p>
+    
+      <h3 id="performance-expectations">
+        
+        
+          <a href="#performance-expectations" class="anchor-heading"><svg class="d-inline-block v-align-middle" viewbox="0 0 16 16" version="1.1" width="18" height="18" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> Performance Expectations
+        
+        
+      </h3>
+
+<p>Your final RVIZ figure should look something like the following image. In particular,
+try to show both the trajectory of the camera (green), the camera poses for which you
+got a good detection of the teddy bear (red arrows), and a geometry_msgs::PointStamped for the
+teddy bear’s estimated location (purple sphere). Note that the size of the sphere does
+not matter as long as it is visible, although you are welcome to compute the covariance
+of your estimate and draw a PoseWithCovariance if you would like the size to represent the covariance.</p>
+
+<p><img data-src="http://localhost:4000/VNA2V-W21-handouts/assets/images/lab8/deliverable_2.png" class="lazyload mx-auto d-block"></p>
+    
+      <h2 id="-optional-deliverable-3---object-reconstruction-20-pts">
+        
+        
+          <a href="#-optional-deliverable-3---object-reconstruction-20-pts" class="anchor-heading"><svg class="d-inline-block v-align-middle" viewbox="0 0 16 16" version="1.1" width="18" height="18" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> 📨 [Optional] Deliverable 3 - Object Reconstruction [+20 pts]
+        
+        
+      </h2>
+
+<p>Since we are given the bounding boxes of the object to detect, it would be
+possible to match keypoints inside the bounding box for as many frames as
+possible and triangulate a point cloud around the teddy bear. Doing this
+repeatedly for different viewpoints, you could perform a sparse 3D
+reconstruction of the teddy bear.</p>
+
+<p>No starter code is provided for this deliverable, although it will be have much
+overlap with your deliverable 2 code. You can reuse functions but please try to
+delineate a boundary between your deliverables (for grading purposes).</p>
+    
+      <h2 id="-deliverable-4---evaluating-bow-place-recognition-using-ransac-30-pts">
+        
+        
+          <a href="#-deliverable-4---evaluating-bow-place-recognition-using-ransac-30-pts" class="anchor-heading"><svg class="d-inline-block v-align-middle" viewbox="0 0 16 16" version="1.1" width="18" height="18" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> 📨 Deliverable 4 - Evaluating BoW Place Recognition using RANSAC [30 pts]
+        
+        
+      </h2>
+
+<p><a href="https://github.com/dorian3d/DBoW2" target="_blank" rel="noopener noreferrer">DBoW2</a> is a state-of-the-art algorithm for
+place recognition (loop closure). It is based in a Bag of Words technique
+(details in their <a href="http://doriangalvez.com/papers/GalvezTRO12.pdf" target="_blank" rel="noopener noreferrer">paper</a>).</p>
+
+<p>Place recognition is a common module in a SLAM pipeline and it is often used as
+a parallel process to the actual Visual Odometry pipeline. Whenever a place is
+recognized as having been visited previously, this module computes the relative
+pose between the camera that took the first image of the scene and the current
+camera. Then, the SLAM system fuses this result with the visual odometry (typically
+adding a new factor to the factor graph). Note that the module might fail at 
+recognizing a scene, which might result in a lack of loop closures, or - what
+is worst - provide wrong matches.</p>
+
+<p>For this exercise, we ask you to assess the quality of the loop closures
+extracted by DBoW2.</p>
+
+<p>To do this, we will be using the modified version of DBoW2 from
+<a href="https://github.com/raulmur/ORB_SLAM2" target="_blank" rel="noopener noreferrer">ORB-SLAM</a>, a state-of-the-art Visual
+Odometry SLAM pipeline.</p>
+    
+      <h3 id="installation-1">
+        
+        
+          <a href="#installation-1" class="anchor-heading"><svg class="d-inline-block v-align-middle" viewbox="0 0 16 16" version="1.1" width="18" height="18" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> Installation
+        
+        
+      </h3>
+
+<p>Follow the Readme in our github fork of <a href="https://github.com/ToniRV/ORB_SLAM2" target="_blank" rel="noopener noreferrer">ORB-SLAM</a> (which modifies ORB-SLAM in order to publish loop closures in ROS).</p>
+
+<div class="alert alert-warning"> <div class="alert-content">
+    
+      <h2 class="alert-title">
+        
+        
+           ATTENTION. 
+        
+        
+      </h2> <div class="alert-body"> <p>Please run the following commands somewhere <b>OUTSIDE</b> of your catkin workspace (i.e., <b>not</b> in `vna2v_ws`). It may still work for you if you run it inside, but some students have reported that ORB-SLAM will mistakenly link against other packages in your catkin workspace from previous labs and crash with a segmentation fault.</p>
+</div> </div> </div>
+
+<p>For most systems that have <code class="highlighter-rouge">ros-melodic-desktop</code> installed, the following steps should work:</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cd ~ # or some other folder OUTSIDE your catkin workspace
+sudo apt install -y libglew-dev autoconf
+cd PATH/TO/VNA2V_WS
+cd src/
+
+# Install Pangolin
+git clone https://github.com/stevenlovegrove/Pangolin.git pangolin
+mkdir pangolin/build
+pushd pangolin/build
+cmake .. &amp;&amp; make -j4
+sudo make install
+popd
+
+# Install ORB-SLAM2
+git clone https://github.com/ToniRV/ORB_SLAM2.git orb-slam2
+pushd orb-slam2
+./build.sh
+export ROS_PACKAGE_PATH=${ROS_PACKAGE_PATH}:$PWD/Examples/ROS
+./build_ros.sh
+
+# OPTIONAL: Run this so that you can  do `rosrun ORB_SLAM2 ...` from anywhere 
+echo 'export ROS_PACKAGE_PATH=${ROS_PACKAGE_PATH}:'$PWD/Examples/ROS &gt;&gt; ~/.bashrc
+</code></pre></div></div>
+
+<p>Make sure you follow all the installation steps, including <a href="https://github.com/raulmur/ORB_SLAM2#building-the-nodes-for-mono-monoar-stereo-and-rgb-d" target="_blank" rel="noopener noreferrer">building ORB-SLAM in ROS</a>.</p>
+    
+      <h3 id="usage-1">
+        
+        
+          <a href="#usage-1" class="anchor-heading"><svg class="d-inline-block v-align-middle" viewbox="0 0 16 16" version="1.1" width="18" height="18" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> Usage
+        
+        
+      </h3>
+
+<p>Once installed, you should be able to run the following from the <code class="highlighter-rouge">orb-slam2</code> directory:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rosrun ORB_SLAM2 Stereo Vocabulary/ORBvoc.txt Examples/Stereo/EuRoC.yaml <span class="nb">true</span>
+</code></pre></div></div>
+
+<p>In another terminal, you should run the corresponding Euroc rosbag:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rosbag play <span class="nt">--pause</span> ~/datasets/EuRoC/MH_01_easy/MH_01_easy.bag /cam0/image_raw:<span class="o">=</span>/camera/left/image_raw /cam1/image_raw:<span class="o">=</span>/camera/right/image_raw
+</code></pre></div></div>
+
+<p>Where we remap different topics to the ones that ORB-SLAM listens to. We also
+start the bag in <code class="highlighter-rouge">--pause</code> mode, in order to make it play you should press
+‘space’ in the terminal where you executed the command.</p>
+
+<p>We encourage you to try as well with the other Euroc rosbag, <code class="highlighter-rouge">V1_01_easy</code>, but
+this is not required. Alternatively, you can also see the output when using the
+RGB-D data of the TUM dataset for the teddy bear.</p>
+
+<p>All starter code for this deliverable is provided in <code class="highlighter-rouge">deliverable_4.cpp</code>. 
+<strong>Note that we only ask you to use the Euroc dataset.</strong></p>
+
+<ol>
+  <li>We have added a subscriber to the <code class="highlighter-rouge">loop_closure</code> topic advertised by ORB-SLAM
+(in <strong>Stereo</strong> mode). Whenever you receive a message with the indices of the
+frames that are supposedly a loop closure, upload the images from the dataset
+of images by using the function <code class="highlighter-rouge">getFilenameForImageIdx</code>. You will need to
+change the global variable <code class="highlighter-rouge">PATH_TO_DATASET_data_csv</code> to point to the folder
+where the file data.csv is (This is only for Euroc dataset!).</li>
+  <li>Compute the quality of the loop closure by re-using the code with RANSAC to
+estimate the number of inlier keypoint matches. Rank each loop closure with
+respect to the number of inliers you found (or in other words, the quality of
+the loop closure).</li>
+  <li>Visualize pairs of images for the loop closures that were retrieved by
+ORB-SLAM (implicitly by DBoW2), including inlier keypoint matches. Try to look for both the good and (in case there are) the bad
+ones.</li>
+  <li>In your writeup, describe at least one good loop closure and one bad. For the “good”, mention whether it looked “easy” or “hard”.
+For the “bad”, use the inlier matches to try to guess why it made a mistake.</li>
+</ol>
+
+<p><strong><em><span style="text-decoration:underline;">Tips</span></em></strong>:</p>
+
+<ul>
+  <li>To run the RGB-D example, use as <code class="highlighter-rouge">PATH_TO_SETTINGS_FILE </code>the file that there is inside <code class="highlighter-rouge">Examples/ROS/ORB-SLAM2/</code> named <code class="highlighter-rouge">Asus.yaml</code>, such as:</li>
+</ul>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rosrun ORB_SLAM2 RGBD Vocabulary/ORBvoc.txt Examples/ROS/ORB_SLAM2/Asus.yaml 
+</code></pre></div></div>
+
+<p>Make sure that when you play the corresponding rosbag, the topics are mapped correctly.</p>
+
+<p>You can either remap the topics in the rosbag by typing:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rosbag play PATH/TO/THE/ROSBAG original_topic_name:<span class="o">=</span>new_topic_name
+</code></pre></div></div>
+
+<p>Or by creating a launch file which uses the tag
+&lt;<a href="http://wiki.ros.org/roslaunch/XML/remap" target="_blank" rel="noopener noreferrer">remap</a>&gt; for the ORB-SLAM node (such
+as how we have done it in previous labs).</p>
+
+<p><strong><em><span style="text-decoration:underline;">FAQ:</span></em></strong></p>
+
+<ul>
+  <li>
+<em>ORB-SLAM tracking failure?</em> It is possible that ORB-SLAM has spurious
+tracking failures and just breaks, it should not happen very often though.</li>
+  <li>
+<em>ORB-SLAM does not detect any loop closure?</em> ORB-SLAM has built-in checks to
+ensure that any loop closure that is accepted is most probably correct.
+Therefore, unless the scene is clearly doing a loop-closure (and even in
+such occasions) it might not accept a potential loop closure.</li>
+  <li>
+<em>How can I increase the number of loop closures that ORB-SLAM returns?</em> You
+could have a look at the LoopClosing.h and .cc files, where the actual loop
+closure is computed. You might notice that there are many hardcoded
+parameters. Our fork of ORB-SLAM should have these values small enough to
+generate more loop-closures than usual while being reasonably correct. If you
+are curious, feel free to modify the parameters therein to increase the number
+of loop closures detected. You could also re-run the rosbag or
+alternatively, play the bag in a loop (only if the trajectory ends at the
+same spot where it started, and note that the frame ids returned will not be
+aligned with the actual name of the frames).</li>
+</ul>
+    
+      <h2 id="summary-of-team-deliverables">
+        
+        
+          <a href="#summary-of-team-deliverables" class="anchor-heading"><svg class="d-inline-block v-align-middle" viewbox="0 0 16 16" version="1.1" width="18" height="18" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> Summary of Team Deliverables
+        
+        
+      </h2>
+
+<ol>
+  <li>A 1/2 page summary of the implementation and assumptions made by your Object Localization code, along with a final position estimate of the teddy bear in the world reference frame.</li>
+  <li>An image showing the trajectory of the robot and the final estimated location of the teddy bear in RVIZ</li>
+  <li>[Optional] A screenshot of your sparse 3D reconstruction of the teddy bear</li>
+  <li>For one feature extractor (e.g. choose 1 of SIFT, SURF, ORB, FAST), show at least two loop closures (pairs of images) along with the number and ratio of inliers in each. Preferably one good loop closure + one bad loop closure, if possible.
+    <ul>
+      <li>If you only get one loop closure with the descriptor you chose, you can include it and rerun with a different descriptor to get a 2nd loop closure.</li>
+    </ul>
+  </li>
+</ol>
+            
+
+          
+
+          
+            <hr>
+            <footer role="contentinfo">
+              <p class="text-small text-grey-dk-000 mb-0">Enabled with the generous support of the MIT SPARK Lab. Copyright © MIT SPARK Lab and Vasileios Tzoumas of the University of Michigan. Using <a href="https://github.com/pmarsceill/just-the-docs/tree/master" target="_blank" rel="noopener noreferrer">Just the docs</a> theme.</p>
+            </footer>
+          
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div></body>
+</html>

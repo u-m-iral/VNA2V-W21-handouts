@@ -1,0 +1,721 @@
+
+
+<!DOCTYPE html>
+
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+
+  
+    <title>Shell basics - VNA2V-W21</title>
+
+    
+  
+
+  <link rel="shortcut icon" href="http://localhost:4000/VNA2V-W21-handouts/favicon.ico" type="image/x-icon">
+
+  <link rel="stylesheet" href="http://localhost:4000/VNA2V-W21-handouts/assets/css/just-the-docs.css">
+  <script src="https://use.fontawesome.com/d81b2d50d8.js"></script>
+  
+  
+
+  
+    <script type="text/javascript" src="http://localhost:4000/VNA2V-W21-handouts/assets/js/vendor/lunr.min.js"></script>
+  
+  <script type="text/javascript" src="http://localhost:4000/VNA2V-W21-handouts/assets/js/just-the-docs.js"></script>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>Shell basics | VNA2V-W21</title>
+<meta name="generator" content="Jekyll v3.8.6" />
+<meta property="og:title" content="Shell basics" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="AEROSP 740 - Visual Navigation for Autonomous Aerial Vehicles (W21)" />
+<meta property="og:description" content="AEROSP 740 - Visual Navigation for Autonomous Aerial Vehicles (W21)" />
+<link rel="canonical" href="http://localhost:4000/VNA2V-W21-handouts/lab1/shell" />
+<meta property="og:url" content="http://localhost:4000/VNA2V-W21-handouts/lab1/shell" />
+<meta property="og:site_name" content="VNA2V-W21" />
+<script type="application/ld+json">
+{"@type":"WebPage","headline":"Shell basics","description":"AEROSP 740 - Visual Navigation for Autonomous Aerial Vehicles (W21)","url":"http://localhost:4000/VNA2V-W21-handouts/lab1/shell","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+  
+
+<script type="text/javascript" src="http://localhost:4000/VNA2V-W21-handouts/assets/js/vendor/lazysizes.min.js" async=""></script>
+
+</head>
+
+<body>
+
+  <div class="page-wrap">
+    <div class="side-bar">
+      <div class="site-header">
+        <a href="http://localhost:4000/VNA2V-W21-handouts" class="site-title lh-tight">VNA2V-W21</a>
+        <button class="menu-button fs-3 js-main-nav-trigger" data-text-toggle="Hide" type="button">Menu</button>
+      </div>
+
+      <div class="navigation main-nav js-main-nav">
+        <nav role="navigation" aria-label="Main navigation">
+  <ul class="navigation-list">
+<li class="navigation-list-item"><a href="http://localhost:4000/VNA2V-W21-handouts/" class="navigation-list-link">Home</a></li>
+<li class="navigation-list-item active">
+<a href="http://localhost:4000/VNA2V-W21-handouts/lab1/" class="navigation-list-link">Lab 1</a><ul class="navigation-list-child-list ">
+<li class="navigation-list-item "><a href="http://localhost:4000/VNA2V-W21-handouts/lab1/ubuntu" class="navigation-list-link">Install Ubuntu 18.04</a></li>
+<li class="navigation-list-item  active"><a href="http://localhost:4000/VNA2V-W21-handouts/lab1/shell" class="navigation-list-link active">Shell basics</a></li>
+<li class="navigation-list-item "><a href="http://localhost:4000/VNA2V-W21-handouts/lab1/git" class="navigation-list-link">Git</a></li>
+<li class="navigation-list-item "><a href="http://localhost:4000/VNA2V-W21-handouts/lab1/cpp" class="navigation-list-link">C++</a></li>
+<li class="navigation-list-item "><a href="http://localhost:4000/VNA2V-W21-handouts/lab1/exercises" class="navigation-list-link">Exercises</a></li>
+</ul>
+</li>
+<li class="navigation-list-item">
+<a href="http://localhost:4000/VNA2V-W21-handouts/lab2/" class="navigation-list-link">Lab 2</a><ul class="navigation-list-child-list ">
+<li class="navigation-list-item "><a href="http://localhost:4000/VNA2V-W21-handouts/lab2/ros" class="navigation-list-link">Installing ROS</a></li>
+<li class="navigation-list-item "><a href="http://localhost:4000/VNA2V-W21-handouts/lab2/ros101" class="navigation-list-link">Introduction to ROS</a></li>
+<li class="navigation-list-item "><a href="http://localhost:4000/VNA2V-W21-handouts/lab2/exercises" class="navigation-list-link">Exercises</a></li>
+</ul>
+</li>
+<li class="navigation-list-item">
+<a href="http://localhost:4000/VNA2V-W21-handouts/lab3/" class="navigation-list-link">Lab 3</a><ul class="navigation-list-child-list "><li class="navigation-list-item "><a href="http://localhost:4000/VNA2V-W21-handouts/lab3/exercises" class="navigation-list-link">Exercises</a></li></ul>
+</li>
+<li class="navigation-list-item">
+<a href="http://localhost:4000/VNA2V-W21-handouts/lab4/" class="navigation-list-link">Lab 4</a><ul class="navigation-list-child-list "><li class="navigation-list-item "><a href="http://localhost:4000/VNA2V-W21-handouts/lab4/exercises" class="navigation-list-link">Exercises</a></li></ul>
+</li>
+<li class="navigation-list-item">
+<a href="http://localhost:4000/VNA2V-W21-handouts/lab5/" class="navigation-list-link">Lab 5</a><ul class="navigation-list-child-list "><li class="navigation-list-item "><a href="http://localhost:4000/VNA2V-W21-handouts/lab5/exercises" class="navigation-list-link">Exercises</a></li></ul>
+</li>
+<li class="navigation-list-item">
+<a href="http://localhost:4000/VNA2V-W21-handouts/lab6/" class="navigation-list-link">Lab 6</a><ul class="navigation-list-child-list "><li class="navigation-list-item "><a href="http://localhost:4000/VNA2V-W21-handouts/lab6/exercises" class="navigation-list-link">Exercises</a></li></ul>
+</li>
+<li class="navigation-list-item">
+<a href="http://localhost:4000/VNA2V-W21-handouts/lab7/" class="navigation-list-link">Lab 7</a><ul class="navigation-list-child-list "><li class="navigation-list-item "><a href="http://localhost:4000/VNA2V-W21-handouts/lab7/exercises" class="navigation-list-link">Exercises</a></li></ul>
+</li>
+<li class="navigation-list-item">
+<a href="http://localhost:4000/VNA2V-W21-handouts/lab8/" class="navigation-list-link">Lab 8</a><ul class="navigation-list-child-list "><li class="navigation-list-item "><a href="http://localhost:4000/VNA2V-W21-handouts/lab8/exercises" class="navigation-list-link">Exercises</a></li></ul>
+</li>
+<li class="navigation-list-item">
+<a href="http://localhost:4000/VNA2V-W21-handouts/lab9/" class="navigation-list-link">Lab 9</a><ul class="navigation-list-child-list "><li class="navigation-list-item "><a href="http://localhost:4000/VNA2V-W21-handouts/lab9/exercises" class="navigation-list-link">Exercises</a></li></ul>
+</li>
+<li class="navigation-list-item"><a href="http://localhost:4000/VNA2V-W21-handouts/about" class="navigation-list-link">How to print</a></li>
+</ul>
+</nav>
+
+      </div>
+      <footer class="site-footer">
+        <p class="text-small text-grey-dk-000 mb-4"><b>Last modified</b>:<br> Wednesday, January 13 at 06:06</p>
+      </footer>
+    </div>
+    <div class="main-content-wrap js-main-content" tabindex="0">
+      <div class="main-content">
+        <div class="page-header js-page-header">
+          
+          <div class="search">
+            <div class="search-input-wrap">
+              <input type="text" class="js-search-input search-input" tabindex="0" placeholder="Search VNA2V-W21" aria-label="Search VNA2V-W21" autocomplete="off">
+              <svg width="14" height="14" viewbox="0 0 28 28" xmlns="http://www.w3.org/2000/svg" class="search-icon"><title>Search</title>
+<g fill-rule="nonzero"><path d="M17.332 20.735c-5.537 0-10-4.6-10-10.247 0-5.646 4.463-10.247 10-10.247 5.536 0 10 4.601 10 10.247s-4.464 10.247-10 10.247zm0-4c3.3 0 6-2.783 6-6.247 0-3.463-2.7-6.247-6-6.247s-6 2.784-6 6.247c0 3.464 2.7 6.247 6 6.247z"></path><path d="M11.672 13.791L.192 25.271 3.02 28.1 14.5 16.62z"></path></g></svg>
+            </div>
+            <div class="js-search-results search-results-wrap"></div>
+          </div>
+          
+          
+        </div>
+        <div class="page">
+          
+            
+              <nav class="breadcrumb-nav">
+                <ol class="breadcrumb-nav-list">
+                  
+                    <li class="breadcrumb-nav-list-item"><a href="http://localhost:4000/VNA2V-W21-handouts/lab1/">Lab 1</a></li>
+                  
+                  <li class="breadcrumb-nav-list-item"><span>Shell basics</span></li>
+                </ol>
+              </nav>
+            
+          
+          <div id="main-content" class="page-content" role="main">
+            
+              <h1 class="no_toc text-delta fs-9" id="shell-basics">
+        
+        
+          <a href="#shell-basics" class="anchor-heading"><svg class="d-inline-block v-align-middle" viewbox="0 0 16 16" version="1.1" width="18" height="18" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> Shell basics
+        
+        
+      </h1>
+    
+      <h2 class="no_toc text-delta" id="table-of-contents">
+        
+        
+          <a href="#table-of-contents" class="anchor-heading"><svg class="d-inline-block v-align-middle" viewbox="0 0 16 16" version="1.1" width="18" height="18" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> Table of contents
+        
+        
+      </h2>
+
+<ol id="markdown-toc">
+  <li>
+<a href="#exploring-the-filesystem" id="markdown-toc-exploring-the-filesystem">Exploring the Filesystem</a>    <ol>
+      <li><a href="#pwd" id="markdown-toc-pwd"><code class="highlighter-rouge">pwd</code></a></li>
+      <li>
+<a href="#ls" id="markdown-toc-ls"><code class="highlighter-rouge">ls</code></a>        <ol>
+          <li><a href="#file-permissions-and-ownership" id="markdown-toc-file-permissions-and-ownership">File permissions and ownership</a></li>
+        </ol>
+      </li>
+      <li><a href="#cd" id="markdown-toc-cd"><code class="highlighter-rouge">cd</code></a></li>
+      <li><a href="#find" id="markdown-toc-find"><code class="highlighter-rouge">find</code></a></li>
+    </ol>
+  </li>
+  <li>
+<a href="#edit-filesystem" id="markdown-toc-edit-filesystem">Edit Filesystem</a>    <ol>
+      <li><a href="#mkdir" id="markdown-toc-mkdir"><code class="highlighter-rouge">mkdir</code></a></li>
+      <li><a href="#touch" id="markdown-toc-touch"><code class="highlighter-rouge">touch</code></a></li>
+      <li><a href="#rm" id="markdown-toc-rm"><code class="highlighter-rouge">rm</code></a></li>
+      <li><a href="#cp" id="markdown-toc-cp"><code class="highlighter-rouge">cp</code></a></li>
+      <li><a href="#mv" id="markdown-toc-mv"><code class="highlighter-rouge">mv</code></a></li>
+    </ol>
+  </li>
+  <li>
+<a href="#viewing-and-editing-files" id="markdown-toc-viewing-and-editing-files">Viewing and Editing Files</a>    <ol>
+      <li><a href="#cat" id="markdown-toc-cat"><code class="highlighter-rouge">cat</code></a></li>
+      <li><a href="#nano-and-vim" id="markdown-toc-nano-and-vim"><code class="highlighter-rouge">nano</code> and <code class="highlighter-rouge">vim</code></a></li>
+    </ol>
+  </li>
+  <li>
+<a href="#download-uncompress-and-execute-a-script" id="markdown-toc-download-uncompress-and-execute-a-script">Download, uncompress and execute a script</a>    <ol>
+      <li><a href="#download" id="markdown-toc-download">Download</a></li>
+      <li><a href="#uncompress" id="markdown-toc-uncompress">Uncompress</a></li>
+      <li><a href="#run" id="markdown-toc-run">Run</a></li>
+    </ol>
+  </li>
+  <li><a href="#pipe" id="markdown-toc-pipe">Pipe</a></li>
+  <li><a href="#output-redirect" id="markdown-toc-output-redirect">Output redirect</a></li>
+  <li><a href="#superuser" id="markdown-toc-superuser">Superuser</a></li>
+  <li><a href="#install-packages" id="markdown-toc-install-packages">Install packages</a></li>
+  <li><a href="#get-help" id="markdown-toc-get-help">Get help</a></li>
+</ol>
+    
+      <h2 id="exploring-the-filesystem">
+        
+        
+          <a href="#exploring-the-filesystem" class="anchor-heading"><svg class="d-inline-block v-align-middle" viewbox="0 0 16 16" version="1.1" width="18" height="18" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> Exploring the Filesystem
+        
+        
+      </h2>
+    
+      <h3 id="pwd">
+        
+        
+          <a href="#pwd" class="anchor-heading"><svg class="d-inline-block v-align-middle" viewbox="0 0 16 16" version="1.1" width="18" height="18" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> <code class="highlighter-rouge">pwd</code>
+        
+        
+      </h3>
+
+<p>Modern filesystems are organized in folders, being able to navigate the filesystem is fundamental.
+Everytime we work with the shell we are within one folder, to know where we are we can use the command <code class="highlighter-rouge">pwd</code> (<em>Print Working Directory</em>):</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">pwd</span>
+/home/username/vna2v2021/lab1
+</code></pre></div></div>
+
+<p>where <code class="highlighter-rouge">username</code> is the login username you set.</p>
+    
+      <h3 id="ls">
+        
+        
+          <a href="#ls" class="anchor-heading"><svg class="d-inline-block v-align-middle" viewbox="0 0 16 16" version="1.1" width="18" height="18" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> <code class="highlighter-rouge">ls</code>
+        
+        
+      </h3>
+
+<p>To list the contents of the current directory (files and/or child directories, etc.) we use <code class="highlighter-rouge">ls</code> (LiSt)</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">ls
+</span>ex0.cpp   ex1.cpp   ex2.cpp   final.cpp
+</code></pre></div></div>
+    
+      <h4 id="file-permissions-and-ownership">
+        
+        
+          <a href="#file-permissions-and-ownership" class="anchor-heading"><svg class="d-inline-block v-align-middle" viewbox="0 0 16 16" version="1.1" width="18" height="18" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> File permissions and ownership
+        
+        
+      </h4>
+
+<p>The concept of permissions and ownership is crucial in anu unix system. Every to file and directory is assigned 3 types of <strong>owner</strong>:</p>
+
+<ul>
+  <li>
+<em>User</em>: is the owner of the file, by default, the person who created a file</li>
+  <li>
+<em>Group</em>: user-group can contain multiple users, all users belonging to a group will have the same access permissions to the file</li>
+  <li>
+<em>Other</em>: Any other user who has access to a file</li>
+</ul>
+
+<p>At the same time to every file and directory is assigned a type of permission</p>
+<ul>
+  <li><em>Read</em></li>
+  <li><em>Write</em></li>
+  <li><em>Execute</em></li>
+</ul>
+
+<p>We get all this information using <code class="highlighter-rouge">ls -l</code>, for example:</p>
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">ls</span> <span class="nt">-l</span>
+total 1112
+<span class="nt">-rw-r--r--</span>  1 username  staff  557042 Aug 24 21:57 dante.txt
+<span class="nt">-rwxr-xr-x</span>  1 username  staff      40 Aug 23 18:36 hello.sh
+<span class="nt">-rw-r--r--</span>  1 username  staff     171 Aug 23 18:28 hello_vna2v2021.tar.gz
+<span class="nt">-rw-r--r--</span>  1 username  staff      49 Aug 24 22:55 numbers.txt
+</code></pre></div></div>
+<p>The permissions are specified by the 1st field, the ownership is specified by the 3rd and 4th fields. Fo example, the file <code class="highlighter-rouge">hello.sh</code> is owned by me (<code class="highlighter-rouge">username</code>) and the group is <code class="highlighter-rouge">staff</code>. THe permission string is <code class="highlighter-rouge">-rwxr-xr-x</code> meaning that:</p>
+<ul>
+  <li>The owner can read (r), write (w) and execute (x) the file</li>
+  <li>The group can read and execute</li>
+  <li>Other can read and execute</li>
+</ul>
+    
+      <h3 id="cd">
+        
+        
+          <a href="#cd" class="anchor-heading"><svg class="d-inline-block v-align-middle" viewbox="0 0 16 16" version="1.1" width="18" height="18" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> <code class="highlighter-rouge">cd</code>
+        
+        
+      </h3>
+<p>To change the current folder we can use <code class="highlighter-rouge">cd</code> (Change Directory). For example <code class="highlighter-rouge">cd /</code> moves to the file system root or</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">cd</span> /home
+</code></pre></div></div>
+
+<p>To move to the parent of the current folder we use <code class="highlighter-rouge">cd ..</code>, it can also be concatenated like <code class="highlighter-rouge">cd ../..</code> to move two (or more) levels up. To move back to your home folder we use <code class="highlighter-rouge">cd ~</code> (or simply <code class="highlighter-rouge">cd</code>).</p>
+    
+      <h3 id="find">
+        
+        
+          <a href="#find" class="anchor-heading"><svg class="d-inline-block v-align-middle" viewbox="0 0 16 16" version="1.1" width="18" height="18" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> <code class="highlighter-rouge">find</code>
+        
+        
+      </h3>
+
+<p>Image you have a folder containing many files and you want to locate a file called <code class="highlighter-rouge">findme.txt</code>. To accomplish it you can use</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>find <span class="nb">.</span> <span class="nt">-name</span> <span class="s2">"findme.txt"</span>
+</code></pre></div></div>
+<p>Let’s analyze the command. The <code class="highlighter-rouge">.</code> represent the current folder, so we are saying to <code class="highlighter-rouge">find</code> to look in the current folder recursively (you can change it with relative or absolute paths) for a file called <code class="highlighter-rouge">findme.txt</code>. Find is a powerful tool, you can have complex expression to match files, have a look at <code class="highlighter-rouge">find --help</code>.</p>
+    
+      <h2 id="edit-filesystem">
+        
+        
+          <a href="#edit-filesystem" class="anchor-heading"><svg class="d-inline-block v-align-middle" viewbox="0 0 16 16" version="1.1" width="18" height="18" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> Edit Filesystem
+        
+        
+      </h2>
+    
+      <h3 id="mkdir">
+        
+        
+          <a href="#mkdir" class="anchor-heading"><svg class="d-inline-block v-align-middle" viewbox="0 0 16 16" version="1.1" width="18" height="18" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> <code class="highlighter-rouge">mkdir</code>
+        
+        
+      </h3>
+<p><code class="highlighter-rouge">mkdir</code> (make directory) is used to create new, empty directories: let’s create a new dir named <code class="highlighter-rouge">newdir</code></p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">mkdir </span>newdir
+<span class="nv">$ </span><span class="nb">ls 
+</span>newdir
+<span class="nv">$ </span><span class="nb">cd </span>newdir
+</code></pre></div></div>
+    
+      <h3 id="touch">
+        
+        
+          <a href="#touch" class="anchor-heading"><svg class="d-inline-block v-align-middle" viewbox="0 0 16 16" version="1.1" width="18" height="18" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> <code class="highlighter-rouge">touch</code>
+        
+        
+      </h3>
+
+<p><code class="highlighter-rouge">touch</code> was created to modify file timestamps, but it can also be used to quickly create an empty file. You can easily create a <code class="highlighter-rouge">newfile.txt</code> with</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">touch </span>newfile.txt
+<span class="nv">$ </span><span class="nb">ls
+</span>newfile.txt
+</code></pre></div></div>
+    
+      <h3 id="rm">
+        
+        
+          <a href="#rm" class="anchor-heading"><svg class="d-inline-block v-align-middle" viewbox="0 0 16 16" version="1.1" width="18" height="18" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> <code class="highlighter-rouge">rm</code>
+        
+        
+      </h3>
+
+<p>You can remove any file with <code class="highlighter-rouge">rm</code> – <strong>be careful</strong>, this is non-recoverable! I suggest to add the flag <code class="highlighter-rouge">-i</code> to prompt a confirmation message</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">rm</span> <span class="nt">-i</span> newfile.txt
+<span class="nb">rm</span>: remove regular empty file <span class="s1">'newfile.txt'</span>? y
+</code></pre></div></div>
+
+<p>You can also remove directories with <code class="highlighter-rouge">rm</code>, the only catch is that it returns an error when the folder is not-empty. The common practice, but pretty prone to non-recoverable errors, is to run <code class="highlighter-rouge">rm -rf foldername</code>. The command will remove the folder with all its content (<code class="highlighter-rouge">r</code> - recursive) forcing the operation (<code class="highlighter-rouge">f</code> - force). This operation will not ask for confirmation. You can of course add the flag <code class="highlighter-rouge">i</code> (i.e. <code class="highlighter-rouge">rm -rfi foldername</code>) but will ask confirmation for <strong>every file</strong>, this is pretty annoying if the folder contains many files.</p>
+    
+      <h3 id="cp">
+        
+        
+          <a href="#cp" class="anchor-heading"><svg class="d-inline-block v-align-middle" viewbox="0 0 16 16" version="1.1" width="18" height="18" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> <code class="highlighter-rouge">cp</code>
+        
+        
+      </h3>
+
+<p>Copying file is as simple as running <code class="highlighter-rouge">cp</code> (CoPy). If we want to duplicate the file <code class="highlighter-rouge">numbers.txt</code> we can run</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">cp </span>numbers.txt numbers_copy.txt
+<span class="nv">$ls</span>
+numbers.txt  numbers_copy.txt
+</code></pre></div></div>
+    
+      <h3 id="mv">
+        
+        
+          <a href="#mv" class="anchor-heading"><svg class="d-inline-block v-align-middle" viewbox="0 0 16 16" version="1.1" width="18" height="18" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> <code class="highlighter-rouge">mv</code>
+        
+        
+      </h3>
+
+<p>If we want to rename <code class="highlighter-rouge">numbers_copy.txt</code> to <code class="highlighter-rouge">new_numbers.txt</code> we can run</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">mv </span>numbers_copy.txt new_numbers.txt
+<span class="nv">$ </span><span class="nb">ls
+</span>new_numbers.txt  numbers.txt
+</code></pre></div></div>
+
+<p>With the same command we can also move the file to another location, for example if we want to move <code class="highlighter-rouge">numbers.txt</code> to a newly create folder <code class="highlighter-rouge">dataset</code> we execute</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">mkdir </span>dataset
+<span class="nv">$ </span><span class="nb">mv </span>numbers.txt dataset/numbers.txt
+<span class="nv">$ </span><span class="nb">ls </span>dataset
+numbers.txt
+</code></pre></div></div>
+    
+      <h2 id="viewing-and-editing-files">
+        
+        
+          <a href="#viewing-and-editing-files" class="anchor-heading"><svg class="d-inline-block v-align-middle" viewbox="0 0 16 16" version="1.1" width="18" height="18" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> Viewing and Editing Files
+        
+        
+      </h2>
+    
+      <h3 id="cat">
+        
+        
+          <a href="#cat" class="anchor-heading"><svg class="d-inline-block v-align-middle" viewbox="0 0 16 16" version="1.1" width="18" height="18" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> <code class="highlighter-rouge">cat</code>
+        
+        
+      </h3>
+<p><code class="highlighter-rouge">cat</code> concatenates a list of files and sends them to the standard output stream and is often used to quickly view the content of a file. For example we can inspect the content of the file <code class="highlighter-rouge">numbers.txt</code>.</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">cat </span>numbers.txt
+One
+Two
+Three
+Four
+Five
+Six
+Seven
+Eight
+Nine
+Ten
+</code></pre></div></div>
+    
+      <h3 id="nano-and-vim">
+        
+        
+          <a href="#nano-and-vim" class="anchor-heading"><svg class="d-inline-block v-align-middle" viewbox="0 0 16 16" version="1.1" width="18" height="18" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> <code class="highlighter-rouge">nano</code> and <code class="highlighter-rouge">vim</code>
+        
+        
+      </h3>
+
+<p><code class="highlighter-rouge">nano</code> is a minimalistic command-line text editor. It’s a great editor for beginners. More demanding user pefer <code class="highlighter-rouge">vim</code>. It’s a powerful and highly customizable text editor (I love it!). I strongly suggest to learn how to use vim, one of the best way to learn vim is to simply run <code class="highlighter-rouge">vimtutor</code> in your terminal but if you prefer games try <a href="https://vim-adventures.com" target="_blank" rel="noopener noreferrer">Vim Adventures</a>!</p>
+    
+      <h2 id="download-uncompress-and-execute-a-script">
+        
+        
+          <a href="#download-uncompress-and-execute-a-script" class="anchor-heading"><svg class="d-inline-block v-align-middle" viewbox="0 0 16 16" version="1.1" width="18" height="18" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> Download, uncompress and execute a script
+        
+        
+      </h2>
+
+<p>In this section we will download a compressed file, extract the content, inspect and run a script.</p>
+    
+      <h3 id="download">
+        
+        
+          <a href="#download" class="anchor-heading"><svg class="d-inline-block v-align-middle" viewbox="0 0 16 16" version="1.1" width="18" height="18" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> Download
+        
+        
+      </h3>
+
+<p>Imagine you have to download (you have to, actually) <code class="highlighter-rouge">http://www.umich.edu/~username/hello_vna2v21.tar.gz</code> you can use <code class="highlighter-rouge">wget</code>.</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>wget http://www.umich.edu/~username/hello_vna2v21.tar.gz
+</code></pre></div></div>
+    
+      <h3 id="uncompress">
+        
+        
+          <a href="#uncompress" class="anchor-heading"><svg class="d-inline-block v-align-middle" viewbox="0 0 16 16" version="1.1" width="18" height="18" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> Uncompress
+        
+        
+      </h3>
+
+<p>As you see it is a compressed file, to uncompress it we can use <code class="highlighter-rouge">tar</code></p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">tar</span> <span class="nt">-xvf</span> hello_vna2v2021.tar.gz
+</code></pre></div></div>
+
+<p>The flags <code class="highlighter-rouge">xvf</code> are respectively extract, verbose file.
+Now we would like to run the script. We should first inspect the file (never run a script without inspection), let’s use <code class="highlighter-rouge">cat</code></p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">cat </span>hello.sh
+<span class="c">#!/usr/bin/env bash</span>
+<span class="nb">echo</span> <span class="s2">"Hello world!"</span>
+</code></pre></div></div>
+
+<p>The file is not dangerous, it only print something to the terminal.</p>
+    
+      <h3 id="run">
+        
+        
+          <a href="#run" class="anchor-heading"><svg class="d-inline-block v-align-middle" viewbox="0 0 16 16" version="1.1" width="18" height="18" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> Run
+        
+        
+      </h3>
+
+<p>Before running the script we should verify that we can actually run the script so let’s see its permissions</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">ls</span> <span class="nt">-l</span> hello.sh
+<span class="nt">-rw-r--r--</span>  1 username  staff  40 Aug 23 18:36 hello.sh
+</code></pre></div></div>
+
+<p>Ops! This time we have no right to run the script, we have to add it:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">chmod</span> +x hello.sh
+</code></pre></div></div>
+
+<p>Let’s check again:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">ls</span> <span class="nt">-l</span> hello.sh
+<span class="nt">-rwxr-xr-x</span>  1 username  staff  40 Aug 23 18:36 hello.sh
+</code></pre></div></div>
+
+<p>Ok, now we can execute the script. To execute the script it’s enough to add <code class="highlighter-rouge">./</code> before the name of the file to e</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>./hello.sh
+Hello world!
+</code></pre></div></div>
+
+<div class="alert alert-warning">
+  <div class="alert-content">
+    
+      <h2 class="alert-title">
+        
+        
+          
+      Keep in mind.
+    
+        
+        
+      </h2>
+    <div class="alert-body">
+      <p> When you use <code>./</code> the bash shell is creating a <strong>new</strong> shell, child of the current one and executing the code there. This is usually fine, sometimes you need to run a script like it was prompted directly in the current bash, in that case you should use the <code>source</code> command, e.g. <code>source hello.sh</code></p>
+    </div>
+  </div>
+</div>
+    
+      <h2 id="pipe">
+        
+        
+          <a href="#pipe" class="anchor-heading"><svg class="d-inline-block v-align-middle" viewbox="0 0 16 16" version="1.1" width="18" height="18" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> Pipe
+        
+        
+      </h2>
+
+<p>The Pipe is a command in Linux that lets you use two or more commands such that output of one command serves as input to the next. In short, the output of each process directly as input to the next one like a pipeline. The symbol <code class="highlighter-rouge">|</code> denotes a pipe.</p>
+
+<p>For example, consider the following file:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">cat </span>numbers.txt
+One
+Two
+Three
+Four
+Five
+Six
+Seven
+Eight
+Nine
+Ten
+</code></pre></div></div>
+
+<p>We can sort the lines piping <code class="highlighter-rouge">cat</code> with <code class="highlighter-rouge">sort</code></p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">cat </span>numbers.txt | <span class="nb">sort
+</span>Eight
+Five
+Four
+Nine
+One
+Seven
+Six
+Ten
+Three
+Two
+</code></pre></div></div>
+    
+      <h2 id="output-redirect">
+        
+        
+          <a href="#output-redirect" class="anchor-heading"><svg class="d-inline-block v-align-middle" viewbox="0 0 16 16" version="1.1" width="18" height="18" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> Output redirect
+        
+        
+      </h2>
+
+<p>We redirect the output of a command to a file. This is useful when we want to save the output of a program without writing specific code.</p>
+
+<p>The common commands that we use and their results are</p>
+
+<ul>
+  <li><code class="highlighter-rouge">command &gt; output.txt</code></li>
+</ul>
+
+<p>The standard output stream will be redirected to the file only, it will not be visible in the terminal. If the file already exists, it gets overwritten.</p>
+
+<ul>
+  <li><code class="highlighter-rouge">command &amp;&gt; output.txt</code></li>
+</ul>
+
+<p>Both the standard output and standard error stream will be redirected to the file only, nothing will be visible in the terminal. If the file already exists, it gets overwritten.</p>
+
+<ul>
+  <li><code class="highlighter-rouge">command | tee output.txt</code></li>
+</ul>
+
+<p>The standard output stream will be copied to the file, it will still be visible in the terminal. If the file already exists, it gets overwritten.</p>
+
+<ul>
+  <li><code class="highlighter-rouge">command |&amp; tee output.txt</code></li>
+</ul>
+
+<p>Both the standard output and standard error streams will be copied to the file while still being visible in the terminal. If the file already exists, it gets overwritten.</p>
+
+<div class="alert alert-info">
+  <div class="alert-content">
+    
+      <h2 class="alert-title">
+        
+        
+          
+      Moreover.
+    
+        
+        
+      </h2>
+    <div class="alert-body">
+      <p> If you want to append instead of overwrite you can use the double angle brackets <code>&gt;&gt;</code>.
+      With <code>tee</code> instead add the flag <code>-a</code> (e.g. <code>tee -a output.txt</code>).</p>
+    </div>
+  </div>
+</div>
+    
+      <h2 id="superuser">
+        
+        
+          <a href="#superuser" class="anchor-heading"><svg class="d-inline-block v-align-middle" viewbox="0 0 16 16" version="1.1" width="18" height="18" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> Superuser
+        
+        
+      </h2>
+
+<p>Working with the terminal you wil, sooner or later, get a “Permission denied” error. This occur because you do not have the right permission to run the command.</p>
+
+<p>For example if you try install vim you might get something like</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>apt <span class="nb">install </span>sl
+E: Could not open lock file /var/lib/dpkg/lock-frontend - open <span class="o">(</span>13: Permission denied<span class="o">)</span>
+E: Unable to acquire the dpkg frontend lock <span class="o">(</span>/var/lib/dpkg/lock-frontend<span class="o">)</span>, are you root?
+</code></pre></div></div>
+
+<p>The superuser (usually “root”) is the only person who can install software, to install vim we must elevate ourself to system administrator . The command we need to use is <code class="highlighter-rouge">sudo</code></p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">sudo </span>apt <span class="nb">install </span>sl
+<span class="o">[</span><span class="nb">sudo</span><span class="o">]</span> password <span class="k">for </span>username:
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+The following NEW packages will be installed:
+  sl
+0 upgraded, 1 newly installed, 0 to remove and 2 not upgraded.
+Need to get 26.4 kB of archives.
+After this operation, 98.3 kB of additional disk space will be used.
+Get:1 http://us.archive.ubuntu.com/ubuntu bionic/universe amd64 sl amd64 3.03-17build2 <span class="o">[</span>26.4 kB]
+Fetched 26.4 kB <span class="k">in </span>0s <span class="o">(</span>250 kB/s<span class="o">)</span>
+Selecting previously unselected package sl.
+<span class="o">(</span>Reading database ... 162980 files and directories currently installed.<span class="o">)</span>
+Preparing to unpack .../sl_3.03-17build2_amd64.deb ...
+Unpacking sl <span class="o">(</span>3.03-17build2<span class="o">)</span> ...
+Setting up sl <span class="o">(</span>3.03-17build2<span class="o">)</span> ...
+Processing triggers <span class="k">for </span>man-db <span class="o">(</span>2.8.3-2ubuntu0.1<span class="o">)</span> ...
+</code></pre></div></div>
+    
+      <h2 id="install-packages">
+        
+        
+          <a href="#install-packages" class="anchor-heading"><svg class="d-inline-block v-align-middle" viewbox="0 0 16 16" version="1.1" width="18" height="18" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> Install packages
+        
+        
+      </h2>
+
+<p>Ubuntu, like any other Linux distribution based on Debian, use the <a href="https://wiki.debian.org/DebianPackageManagement" target="_blank" rel="noopener noreferrer">dpkg packaging system</a>.
+A packaging system is a way to provide programs and applications for installation. This way, we don’t have to build every program from the source.</p>
+
+<p>APT (Advanced Package Tool) is the command line tool to interact with the packaging system. Installing a package that is available on one of the repository known by the system is as easy as running</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>apt <span class="nb">install</span> &lt;package_1&gt; &lt;package_2&gt; &lt;package_3&gt;
+</code></pre></div></div>
+
+<p>For example if we want to install the package <code class="highlighter-rouge">sl</code> we would simply run</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>apt <span class="nb">install </span>sl
+</code></pre></div></div>
+
+<blockquote>
+  <p>Try to run <code class="highlighter-rouge">sl</code> now!</p>
+</blockquote>
+    
+      <h2 id="get-help">
+        
+        
+          <a href="#get-help" class="anchor-heading"><svg class="d-inline-block v-align-middle" viewbox="0 0 16 16" version="1.1" width="18" height="18" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> Get help
+        
+        
+      </h2>
+
+<p>It’s hard remember all commands with all their flags, <code class="highlighter-rouge">man</code> command in Linux is used to display the user manual of any command that we can run on the terminal.</p>
+
+<p>Moreover many commands offer an help (for example try to run <code class="highlighter-rouge">ls --help</code>). The common ways to summon the help is via the flags <code class="highlighter-rouge">-h</code> or <code class="highlighter-rouge">--help</code>.</p>
+
+<p>Last but not least, Google is your friend!</p>
+            
+
+          
+
+          
+            <hr>
+            <footer role="contentinfo">
+              <p class="text-small text-grey-dk-000 mb-0">Enabled with the generous support of the MIT SPARK Lab. Copyright © MIT SPARK Lab and Vasileios Tzoumas of the University of Michigan. Using <a href="https://github.com/pmarsceill/just-the-docs/tree/master" target="_blank" rel="noopener noreferrer">Just the docs</a> theme.</p>
+            </footer>
+          
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div></body>
+</html>

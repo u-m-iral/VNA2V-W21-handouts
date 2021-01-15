@@ -1,0 +1,461 @@
+
+
+<!DOCTYPE html>
+
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+
+  
+    <title>Exercises - VNA2V-W21</title>
+
+    
+  
+
+  <link rel="shortcut icon" href="http://localhost:4000/VNA2V-W21-handouts/favicon.ico" type="image/x-icon">
+
+  <link rel="stylesheet" href="http://localhost:4000/VNA2V-W21-handouts/assets/css/just-the-docs.css">
+  <script src="https://use.fontawesome.com/d81b2d50d8.js"></script>
+  
+  
+
+  
+    <script type="text/javascript" src="http://localhost:4000/VNA2V-W21-handouts/assets/js/vendor/lunr.min.js"></script>
+  
+  <script type="text/javascript" src="http://localhost:4000/VNA2V-W21-handouts/assets/js/just-the-docs.js"></script>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>Exercises | VNA2V-W21</title>
+<meta name="generator" content="Jekyll v3.8.6" />
+<meta property="og:title" content="Exercises" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="AEROSP 740 - Visual Navigation for Autonomous Aerial Vehicles (W21)" />
+<meta property="og:description" content="AEROSP 740 - Visual Navigation for Autonomous Aerial Vehicles (W21)" />
+<link rel="canonical" href="http://localhost:4000/VNA2V-W21-handouts/lab1/exercises" />
+<meta property="og:url" content="http://localhost:4000/VNA2V-W21-handouts/lab1/exercises" />
+<meta property="og:site_name" content="VNA2V-W21" />
+<script type="application/ld+json">
+{"@type":"WebPage","headline":"Exercises","description":"AEROSP 740 - Visual Navigation for Autonomous Aerial Vehicles (W21)","url":"http://localhost:4000/VNA2V-W21-handouts/lab1/exercises","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+  
+
+<script type="text/javascript" src="http://localhost:4000/VNA2V-W21-handouts/assets/js/vendor/lazysizes.min.js" async=""></script>
+
+</head>
+
+<body>
+
+  <div class="page-wrap">
+    <div class="side-bar">
+      <div class="site-header">
+        <a href="http://localhost:4000/VNA2V-W21-handouts" class="site-title lh-tight">VNA2V-W21</a>
+        <button class="menu-button fs-3 js-main-nav-trigger" data-text-toggle="Hide" type="button">Menu</button>
+      </div>
+
+      <div class="navigation main-nav js-main-nav">
+        <nav role="navigation" aria-label="Main navigation">
+  <ul class="navigation-list">
+<li class="navigation-list-item"><a href="http://localhost:4000/VNA2V-W21-handouts/" class="navigation-list-link">Home</a></li>
+<li class="navigation-list-item active">
+<a href="http://localhost:4000/VNA2V-W21-handouts/lab1/" class="navigation-list-link">Lab 1</a><ul class="navigation-list-child-list ">
+<li class="navigation-list-item "><a href="http://localhost:4000/VNA2V-W21-handouts/lab1/ubuntu" class="navigation-list-link">Install Ubuntu 18.04</a></li>
+<li class="navigation-list-item "><a href="http://localhost:4000/VNA2V-W21-handouts/lab1/shell" class="navigation-list-link">Shell basics</a></li>
+<li class="navigation-list-item "><a href="http://localhost:4000/VNA2V-W21-handouts/lab1/git" class="navigation-list-link">Git</a></li>
+<li class="navigation-list-item "><a href="http://localhost:4000/VNA2V-W21-handouts/lab1/cpp" class="navigation-list-link">C++</a></li>
+<li class="navigation-list-item  active"><a href="http://localhost:4000/VNA2V-W21-handouts/lab1/exercises" class="navigation-list-link active">Exercises</a></li>
+</ul>
+</li>
+<li class="navigation-list-item">
+<a href="http://localhost:4000/VNA2V-W21-handouts/lab2/" class="navigation-list-link">Lab 2</a><ul class="navigation-list-child-list ">
+<li class="navigation-list-item "><a href="http://localhost:4000/VNA2V-W21-handouts/lab2/ros" class="navigation-list-link">Installing ROS</a></li>
+<li class="navigation-list-item "><a href="http://localhost:4000/VNA2V-W21-handouts/lab2/ros101" class="navigation-list-link">Introduction to ROS</a></li>
+<li class="navigation-list-item "><a href="http://localhost:4000/VNA2V-W21-handouts/lab2/exercises" class="navigation-list-link">Exercises</a></li>
+</ul>
+</li>
+<li class="navigation-list-item">
+<a href="http://localhost:4000/VNA2V-W21-handouts/lab3/" class="navigation-list-link">Lab 3</a><ul class="navigation-list-child-list "><li class="navigation-list-item "><a href="http://localhost:4000/VNA2V-W21-handouts/lab3/exercises" class="navigation-list-link">Exercises</a></li></ul>
+</li>
+<li class="navigation-list-item">
+<a href="http://localhost:4000/VNA2V-W21-handouts/lab4/" class="navigation-list-link">Lab 4</a><ul class="navigation-list-child-list "><li class="navigation-list-item "><a href="http://localhost:4000/VNA2V-W21-handouts/lab4/exercises" class="navigation-list-link">Exercises</a></li></ul>
+</li>
+<li class="navigation-list-item">
+<a href="http://localhost:4000/VNA2V-W21-handouts/lab5/" class="navigation-list-link">Lab 5</a><ul class="navigation-list-child-list "><li class="navigation-list-item "><a href="http://localhost:4000/VNA2V-W21-handouts/lab5/exercises" class="navigation-list-link">Exercises</a></li></ul>
+</li>
+<li class="navigation-list-item">
+<a href="http://localhost:4000/VNA2V-W21-handouts/lab6/" class="navigation-list-link">Lab 6</a><ul class="navigation-list-child-list "><li class="navigation-list-item "><a href="http://localhost:4000/VNA2V-W21-handouts/lab6/exercises" class="navigation-list-link">Exercises</a></li></ul>
+</li>
+<li class="navigation-list-item">
+<a href="http://localhost:4000/VNA2V-W21-handouts/lab7/" class="navigation-list-link">Lab 7</a><ul class="navigation-list-child-list "><li class="navigation-list-item "><a href="http://localhost:4000/VNA2V-W21-handouts/lab7/exercises" class="navigation-list-link">Exercises</a></li></ul>
+</li>
+<li class="navigation-list-item">
+<a href="http://localhost:4000/VNA2V-W21-handouts/lab8/" class="navigation-list-link">Lab 8</a><ul class="navigation-list-child-list "><li class="navigation-list-item "><a href="http://localhost:4000/VNA2V-W21-handouts/lab8/exercises" class="navigation-list-link">Exercises</a></li></ul>
+</li>
+<li class="navigation-list-item">
+<a href="http://localhost:4000/VNA2V-W21-handouts/lab9/" class="navigation-list-link">Lab 9</a><ul class="navigation-list-child-list "><li class="navigation-list-item "><a href="http://localhost:4000/VNA2V-W21-handouts/lab9/exercises" class="navigation-list-link">Exercises</a></li></ul>
+</li>
+<li class="navigation-list-item"><a href="http://localhost:4000/VNA2V-W21-handouts/about" class="navigation-list-link">How to print</a></li>
+</ul>
+</nav>
+
+      </div>
+      <footer class="site-footer">
+        <p class="text-small text-grey-dk-000 mb-4"><b>Last modified</b>:<br> Wednesday, January 13 at 06:06</p>
+      </footer>
+    </div>
+    <div class="main-content-wrap js-main-content" tabindex="0">
+      <div class="main-content">
+        <div class="page-header js-page-header">
+          
+          <div class="search">
+            <div class="search-input-wrap">
+              <input type="text" class="js-search-input search-input" tabindex="0" placeholder="Search VNA2V-W21" aria-label="Search VNA2V-W21" autocomplete="off">
+              <svg width="14" height="14" viewbox="0 0 28 28" xmlns="http://www.w3.org/2000/svg" class="search-icon"><title>Search</title>
+<g fill-rule="nonzero"><path d="M17.332 20.735c-5.537 0-10-4.6-10-10.247 0-5.646 4.463-10.247 10-10.247 5.536 0 10 4.601 10 10.247s-4.464 10.247-10 10.247zm0-4c3.3 0 6-2.783 6-6.247 0-3.463-2.7-6.247-6-6.247s-6 2.784-6 6.247c0 3.464 2.7 6.247 6 6.247z"></path><path d="M11.672 13.791L.192 25.271 3.02 28.1 14.5 16.62z"></path></g></svg>
+            </div>
+            <div class="js-search-results search-results-wrap"></div>
+          </div>
+          
+          
+        </div>
+        <div class="page">
+          
+            
+              <nav class="breadcrumb-nav">
+                <ol class="breadcrumb-nav-list">
+                  
+                    <li class="breadcrumb-nav-list-item"><a href="http://localhost:4000/VNA2V-W21-handouts/lab1/">Lab 1</a></li>
+                  
+                  <li class="breadcrumb-nav-list-item"><span>Exercises</span></li>
+                </ol>
+              </nav>
+            
+          
+          <div id="main-content" class="page-content" role="main">
+            
+              <h1 class="fs-9" id="exercises">
+        
+        
+          <a href="#exercises" class="anchor-heading"><svg class="d-inline-block v-align-middle" viewbox="0 0 16 16" version="1.1" width="18" height="18" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> Exercises
+        
+        
+      </h1>
+    
+      <h2 id="submission">
+        
+        
+          <a href="#submission" class="anchor-heading"><svg class="d-inline-block v-align-middle" viewbox="0 0 16 16" version="1.1" width="18" height="18" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> Submission
+        
+        
+      </h2>
+
+<p>To submit your solutions you are required to create a repository in the <em>VNA2V-W21-Submissions</em> group in gitlab.umich.edu (this will be your first exercise).</p>
+
+<p>VNA2V staff will clone your repository from gitlab.umich.edu on <strong><a href="https://www.timeanddate.com/worldclock/fixedtime.html?msg=VNA2V+Lab+Deadline&amp;iso=20200909T235959&amp;p1=43" target="_blank" rel="noopener noreferrer">January 27 at midnight (11:59 EST)</a></strong>.
+This will be considered as your submission and will be graded accordingly.</p>
+
+<div class="alert alert-warning">
+  <div class="alert-content">
+    
+      <h2 class="alert-title">
+        
+        
+          
+      Late Submission.
+    
+        
+        
+      </h2>
+    <div class="alert-body">
+      <p>We will assume your repository is ready to be graded at the deadline, so please email us if you want to submit later than the deadline.</p>
+    </div>
+  </div>
+</div>
+    
+      <h2 id="exercises-1">
+        
+        
+          <a href="#exercises-1" class="anchor-heading"><svg class="d-inline-block v-align-middle" viewbox="0 0 16 16" version="1.1" width="18" height="18" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> Exercises
+        
+        
+      </h2>
+    
+      <h3 id="git-5-pts">
+        
+        
+          <a href="#git-5-pts" class="anchor-heading"><svg class="d-inline-block v-align-middle" viewbox="0 0 16 16" version="1.1" width="18" height="18" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> Git (5 pts)
+        
+        
+      </h3>
+
+<p>In this exercise you are required to set a git repository inside the <em>VNA2V-W21-Submission</em> group.
+This is require for the correct submission of all the exercises of the class.</p>
+
+<ol>
+  <li>Create a repository for your personal submissions
+    <ul>
+      <li>Go to <a href="https://gitlab.umich.edu/VNA2V-W21-submissions/repositories/new" target="_blank" rel="noopener noreferrer">https://gitlab.umich.edu/VNA2V-W21-submissions/repositories/new</a> to create a new repository</li>
+      <li>Create a new <strong>Private</strong> repository and call it as your Kerberos username, e.g. if your UMICH email is <em>astark@umich.edu</em>, call it <em>astark</em>
+</li>
+      <li>Clone the repository to <code class="highlighter-rouge">~/vna2v-personal</code> (you will have a team submission later) running <code class="highlighter-rouge">git clone git@gitlab.umich.edu:VNA2V-W21-submissions/YOUR_USERNAME.git ~/vna2v-personal</code> (replace <code class="highlighter-rouge">YOUR_USERNAME</code> with the name of the repo you just created)</li>
+      <li>Create a folder called <code class="highlighter-rouge">lab1</code>
+</li>
+    </ul>
+  </li>
+  <li>Clone <a href="https://gitlab.umich.edu/VNA2V-W21/labs" target="_blank" rel="noopener noreferrer">https://gitlab.umich.edu/VNA2V-W21/labs</a> in a folder of your choice</li>
+</ol>
+
+<p>You are required to put your solutions in the repository you created in the first Git exercise.</p>
+
+<div class="alert alert-warning">
+  <div class="alert-content">
+    
+      <h2 class="alert-title">
+        
+        
+          
+     Warning. 
+    
+        
+        
+      </h2>
+    <div class="alert-body">
+      <p>If you created the repository in your personal account instead of VNA2V-W21-submissions you need to transfer the ownership in order to complete your submission. Scroll to the bottom of the page for instructions.</p>
+    </div>
+  </div>
+</div>
+    
+      <h3 id="shell-35-pts">
+        
+        
+          <a href="#shell-35-pts" class="anchor-heading"><svg class="d-inline-block v-align-middle" viewbox="0 0 16 16" version="1.1" width="18" height="18" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> Shell (35 pts)
+        
+        
+      </h3>
+
+<ol>
+  <li>Exercise 1 - Answer to the following questions
+    <ul>
+      <li>Download <code class="highlighter-rouge">https://raw.githubusercontent.com/dlang/druntime/master/benchmark/extra-files/dante.txt</code> (try using <code class="highlighter-rouge">wget</code>)</li>
+      <li>Create a file called <code class="highlighter-rouge">exercise1.txt</code> in <code class="highlighter-rouge">~/vna2v-personal/lab1</code> and answer to the following questions
+        <ol>
+          <li>How many lines does it contains?</li>
+          <li>How many words does it contains?</li>
+          <li>How many lines are not blank?</li>
+        </ol>
+      </li>
+      <li>Push the file to git</li>
+    </ul>
+  </li>
+  <li>Exercise 2 - Output redirecting
+    <ul>
+      <li>Install <code class="highlighter-rouge">fortune-mod</code> using <code class="highlighter-rouge">apt</code>
+</li>
+      <li>After installation, type <code class="highlighter-rouge">fortune</code> in your terminal to see a (hopefully) interesting proverb/quote</li>
+      <li>Run <code class="highlighter-rouge">fortune</code> 5 more times and each time redirect the output to a file called <code class="highlighter-rouge">fortunes.txt</code> in <code class="highlighter-rouge">~/vna2v-personal/lab1</code> (Hint: do not recreate the file 5 times - each time a new proverb should be added to the end of <code class="highlighter-rouge">fortunes.txt</code>)</li>
+      <li>Push the file to git</li>
+    </ul>
+  </li>
+</ol>
+
+<blockquote>
+  <p><strong>Hint</strong>: For the first exercise you might want to use the command <code class="highlighter-rouge">wc</code> (Word Count).</p>
+</blockquote>
+    
+      <h3 id="c-warm-up-exercises-20-pts">
+        
+        
+          <a href="#c-warm-up-exercises-20-pts" class="anchor-heading"><svg class="d-inline-block v-align-middle" viewbox="0 0 16 16" version="1.1" width="18" height="18" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> C++: Warm-up Exercises (20 pts)
+        
+        
+      </h3>
+
+<p>Feel free to refer to <a href="https://en.cppreference.com/w/" target="_blank" rel="noopener noreferrer">this</a> when answering the following questions.
+Some of the questions below are based on <a href="https://www.oreilly.com/library/view/c-primer-fifth/9780133053043/" target="_blank" rel="noopener noreferrer">C++ Primer</a>, which is also an excellent resource for C++ programming.
+Put all answers into a text file called <code class="highlighter-rouge">cpp-warmup.txt</code> and push it to git.</p>
+
+<p><em>Operators</em></p>
+<ol>
+  <li>What are the values of <code class="highlighter-rouge">i</code> and <code class="highlighter-rouge">j</code> after running the following code?
+    <div class="language-cpp highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">j</span><span class="p">;</span>
+<span class="n">j</span> <span class="o">=</span> <span class="o">++</span><span class="n">i</span><span class="p">;</span>
+<span class="n">j</span> <span class="o">=</span> <span class="n">i</span><span class="o">++</span><span class="p">;</span>
+</code></pre></div>    </div>
+  </li>
+  <li>What does the following code print?
+    <div class="language-cpp highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">42</span><span class="p">;</span>
+<span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">output</span> <span class="o">=</span> <span class="p">(</span><span class="n">i</span> <span class="o">&lt;</span> <span class="mi">42</span><span class="p">)</span> <span class="o">?</span> <span class="s">"a"</span> <span class="o">:</span> <span class="s">"b"</span><span class="p">;</span>
+<span class="n">std</span><span class="o">::</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">output</span> <span class="o">&lt;&lt;</span> <span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+</code></pre></div>    </div>
+  </li>
+</ol>
+
+<p><em>References and Pointers</em></p>
+<ol>
+  <li>What does the following code print?
+    <div class="language-cpp highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><span class="kt">int</span> <span class="n">i</span><span class="p">;</span>
+<span class="kt">int</span><span class="o">&amp;</span> <span class="n">ri</span> <span class="o">=</span> <span class="n">i</span><span class="p">;</span>
+<span class="n">i</span> <span class="o">=</span> <span class="mi">5</span><span class="p">;</span>
+<span class="n">ri</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span>
+<span class="n">std</span><span class="o">::</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">i</span> <span class="o">&lt;&lt;</span> <span class="s">" "</span> <span class="o">&lt;&lt;</span> <span class="n">ri</span> <span class="o">&lt;&lt;</span> <span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+</code></pre></div>    </div>
+  </li>
+  <li>What does the following code print?
+    <div class="language-cpp highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">42</span><span class="p">;</span>
+<span class="kt">int</span><span class="o">*</span> <span class="n">j</span> <span class="o">=</span> <span class="o">&amp;</span><span class="n">i</span><span class="p">;</span>
+<span class="o">*</span><span class="n">j</span> <span class="o">=</span> <span class="o">*</span><span class="n">j</span><span class="o">**</span><span class="n">j</span><span class="p">;</span>
+<span class="n">std</span><span class="o">::</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="o">*</span><span class="n">j</span> <span class="o">&lt;&lt;</span> <span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+</code></pre></div>    </div>
+  </li>
+  <li>What does the following code print?
+    <div class="language-cpp highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><span class="kt">int</span> <span class="n">i</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="mi">42</span><span class="p">,</span><span class="mi">24</span><span class="p">,</span><span class="mi">42</span><span class="p">,</span><span class="mi">24</span><span class="p">};</span>
+<span class="o">*</span><span class="p">(</span><span class="n">i</span><span class="o">+</span><span class="mi">2</span><span class="p">)</span> <span class="o">=</span> <span class="o">*</span><span class="p">(</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span><span class="o">-</span><span class="n">i</span><span class="p">[</span><span class="mi">3</span><span class="p">];</span>
+<span class="n">std</span><span class="o">::</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="o">*</span><span class="p">(</span><span class="n">i</span><span class="o">+</span><span class="mi">2</span><span class="p">)</span> <span class="o">&lt;&lt;</span> <span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+</code></pre></div>    </div>
+  </li>
+  <li>What does the following code print?</li>
+</ol>
+
+<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">void</span> <span class="nf">reset</span><span class="p">(</span><span class="kt">int</span> <span class="o">&amp;</span><span class="n">i</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">42</span><span class="p">;</span>
+<span class="n">reset</span><span class="p">(</span><span class="n">j</span><span class="p">);</span>
+<span class="n">std</span><span class="o">::</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">j</span> <span class="o">&lt;&lt;</span> <span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+</code></pre></div></div>
+
+<p><em>Numbers</em></p>
+<ol>
+  <li>What are the differences between <code class="highlighter-rouge">int</code>, <code class="highlighter-rouge">long</code>, <code class="highlighter-rouge">long long</code>, and <code class="highlighter-rouge">short</code>?</li>
+  <li>What are the differences between a <code class="highlighter-rouge">float</code> and <code class="highlighter-rouge">double</code>? What is the value of <code class="highlighter-rouge">i</code> after running the following code snippet?
+    <div class="language-cpp highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><span class="kt">int</span> <span class="n">i</span><span class="p">;</span>
+<span class="n">i</span> <span class="o">=</span> <span class="mf">3.14</span><span class="p">;</span>
+</code></pre></div>    </div>
+  </li>
+  <li>What are the differences between an unsigned and signed type? What is the value of <code class="highlighter-rouge">c</code> in the following code snippet assuming <code class="highlighter-rouge">chars</code> are 8-bit?
+    <div class="language-cpp highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><span class="kt">unsigned</span> <span class="kt">char</span> <span class="n">c</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span>
+</code></pre></div>    </div>
+  </li>
+  <li>What will the value of <code class="highlighter-rouge">i</code> be after running the following code snippet?
+    <div class="language-cpp highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">42</span><span class="p">;</span>
+<span class="k">if</span> <span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="p">{</span>
+ <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+ <span class="n">i</span> <span class="o">=</span> <span class="mi">43</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>    </div>
+  </li>
+</ol>
+    
+      <h3 id="c-randomvector-40-pts">
+        
+        
+          <a href="#c-randomvector-40-pts" class="anchor-heading"><svg class="d-inline-block v-align-middle" viewbox="0 0 16 16" version="1.1" width="18" height="18" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> C++: RandomVector (40 pts)
+        
+        
+      </h3>
+
+<p>In this exercise we will implement the class <code class="highlighter-rouge">RandomVector</code>.
+Inside <code class="highlighter-rouge">~/vna2v-personal/lab1</code> create a folder called <code class="highlighter-rouge">RandomVector</code> and copy the content from <a href="https://gitlab.umich.edu/VNA2V-W21/labs/tree/master/lab1" target="_blank" rel="noopener noreferrer">https://gitlab.umich.edu/VNA2V-W21/Labs/tree/master/lab1</a>.</p>
+
+<p>The class <code class="highlighter-rouge">RandomVector</code> defined in the header file <code class="highlighter-rouge">random_vector.h</code> abstract a vector of doubles.
+You are required to implement the following methods:</p>
+
+<ul>
+  <li>
+<code class="highlighter-rouge">RandomVector(int size, double max_val = 1)</code> (constructor): initialize a vector of doubles of size <code class="highlighter-rouge">size</code> with random values between 0 and <code class="highlighter-rouge">max_val</code> (default value 1)</li>
+  <li>
+<code class="highlighter-rouge">double mean()</code> returns the mean of the values in random vector</li>
+  <li>
+<code class="highlighter-rouge">double max()</code> returns the max of the values in random vector</li>
+  <li>
+<code class="highlighter-rouge">double min()</code> returns the min of the values in random vector</li>
+  <li>
+<code class="highlighter-rouge">void print()</code> prints all the values in the random vector</li>
+  <li>
+<code class="highlighter-rouge">void printHistogram(int bins)</code> computes the histogram of the values using <code class="highlighter-rouge">bins</code> number of bins between <code class="highlighter-rouge">min()</code> and <code class="highlighter-rouge">max()</code> and print the histogram itself (see the example below).</li>
+</ul>
+
+<p>To to so complete all the <code class="highlighter-rouge">TODO</code>s in the file <code class="highlighter-rouge">random_vector.cpp</code>. When you are done compile the application by running</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>g++ <span class="nt">-std</span><span class="o">=</span>c++11 <span class="nt">-Wall</span> <span class="nt">-pedantic</span> <span class="nt">-o</span> random_vector main.cpp random_vector.cpp
+</code></pre></div></div>
+
+<p><strong>Note:</strong> we expect you to not use the function from the <code class="highlighter-rouge">&lt;algorithm&gt;</code> header.</p>
+
+<p>If you complete correctly the exercise you should see something like</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>./random_vector
+0.458724 0.779985 0.212415 0.0667949 0.622538 0.999018 0.489585 0.460587 0.0795612 0.185496 0.629162 0.328032 0.242169 0.139671 0.453804 0.083038 0.619352 0.454482 0.477426 0.0904966
+Mean: 0.393617
+Min: 0.0667949
+Max: 0.999018
+Histogram:
+<span class="k">***</span>     <span class="k">***</span>
+<span class="k">***</span>     <span class="k">***</span>
+<span class="k">***</span>     <span class="k">***</span>
+<span class="k">***</span>     <span class="k">***</span>
+<span class="k">***</span>     <span class="k">***</span>
+<span class="k">***</span>     <span class="k">***</span>
+<span class="k">***</span>     <span class="k">***</span> <span class="k">***</span>
+<span class="k">***</span> <span class="k">***</span> <span class="k">***</span> <span class="k">***</span> <span class="k">***</span>
+</code></pre></div></div>
+
+<blockquote>
+  <p><strong>Optional (10 pts)</strong>: Try to implement the methods <strong>with and without</strong> the functions available in the header <code class="highlighter-rouge">&lt;algorithm&gt;</code>.</p>
+</blockquote>
+    <hr>
+      <h2 id="transfer-ownership-of-git-repository">
+        
+        
+          <a href="#transfer-ownership-of-git-repository" class="anchor-heading"><svg class="d-inline-block v-align-middle" viewbox="0 0 16 16" version="1.1" width="18" height="18" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> Transfer ownership of Git repository
+        
+        
+      </h2>
+
+<p>If you created the repository in your personal account instead of <em>VNA2V-W21-submissions</em> you might want to transfer the ownership in order to complete your submission.</p>
+
+<ol>
+  <li>On GitHub, navigate to the main page of the repository.</li>
+  <li>On the side bar menu, click <strong>Settings -&gt; General</strong> and Expand on <strong>Advanced</strong>.<br>
+<img src="/VNA2V-W21-handouts/assets/images/lab1/TransferOwnershipStep1.png" alt="Step 1">
+</li>
+  <li>Scroll down until your reach the <strong>Danger Zone</strong>, then click <strong>Transfer</strong>.<br>
+<img src="/VNA2V-W21-handouts/assets/images/lab1/TransferOwnershipStep2.png" alt="Step 1">
+</li>
+  <li>Type the name of your repository in the first row and <em>VNA2V-W21-submissions</em> in the second, then click <strong>I understand, transfer this repository</strong>.<br>
+<img src="/VNA2V-W21-handouts/assets/images/lab1/TransferOwnershipStep3.png" alt="Step 1">
+</li>
+  <li>Done!</li>
+</ol>
+            
+
+          
+
+          
+            <hr>
+            <footer role="contentinfo">
+              <p class="text-small text-grey-dk-000 mb-0">Enabled with the generous support of the MIT SPARK Lab. Copyright © MIT SPARK Lab and Vasileios Tzoumas of the University of Michigan. Using <a href="https://github.com/pmarsceill/just-the-docs/tree/master" target="_blank" rel="noopener noreferrer">Just the docs</a> theme.</p>
+            </footer>
+          
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div></body>
+</html>

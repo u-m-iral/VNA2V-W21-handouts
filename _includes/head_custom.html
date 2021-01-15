@@ -1,0 +1,30 @@
+{% if page.has_math %}
+<script>
+  window.MathJax = {
+    options: {
+      skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+    },
+    loader: {
+      load: ['input/tex', '[tex]/ams', '[tex]/configMacros']
+    },
+    tex: {
+      packages: {'[+]': ['boldsymbol', 'ams', 'configMacros']},
+      inlineMath: [['$','$'], ['\\(','\\)']],
+      displayMath: [["$$", "$$"], ["\\[","\\]"]],
+      processEscapes: true,
+      tags: "ams",
+      macros: {
+        SE: ['\\mathrm{SE}(#1)', 1],
+        SO: ['\\mathrm{SO}(#1)', 1],
+        argmin: '\\mathop{\\operatorname{argmin}}',
+        argmax: '\\mathop{\\operatorname{argmax}}',
+        trace: '\\operatorname{trace}',
+        tran: '^{\\mathsf{T}}',
+      },
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+{% endif %}
+
+<script type="text/javascript" src="{{ '/assets/js/vendor/lazysizes.min.js' | absolute_url }}" async=""></script>
