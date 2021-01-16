@@ -9,7 +9,7 @@ has_toc: true
 # {{ site.description }}
 {: .fs-9 }
 
-![]({{ '/assets/images/intel-aero-alpha.png' | relative_url }}){: .mx-auto .d-block .img-size-75 }
+![]({{ '/assets/images/NASA-UAM-GC.jpg' | relative_url }}){: .mx-auto .d-block .img-size-75 }
 
 Learn about the mathematical foundations of visual navigation (spanning from geometry to optimization), state-of-the-art algorithms, and software packages.
 
