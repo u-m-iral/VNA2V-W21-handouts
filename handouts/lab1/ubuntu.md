@@ -14,7 +14,7 @@ For this and the following labs, you need a (preferably clean) Ubuntu 18.04 LTS 
 
 ## Steps
 
-1. Download the ISO image from [ubuntu.com](http://releases.ubuntu.com/18.04/ubuntu-18.04.3-desktop-amd64.iso){:target="_blank"}
+1. Download the ISO image from [ubuntu.com](https://releases.ubuntu.com/18.04/){:target="_blank"}
 2. Create a bootable USB stick
    - [How to create a bootable USB stick on **Windows**](https://tutorials.ubuntu.com/tutorial/tutorial-create-a-usb-stick-on-windows){:target="_blank"}
    - [How to create a bootable USB stick on **Mac OS**](https://tutorials.ubuntu.com/tutorial/tutorial-create-a-usb-stick-on-macos){:target="_blank"}
