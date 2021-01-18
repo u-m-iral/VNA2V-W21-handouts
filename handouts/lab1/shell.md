@@ -185,7 +185,7 @@ wget http://www.umich.edu/~username/hello_vna2v21.tar.gz
 As you see it is a compressed file, to uncompress it we can use `tar`
 
 ```bash
-tar -xvf hello_vna2v2021.tar.gz
+tar -xvf hello_vna2v21.tar.gz
 ```
 
 The flags `xvf` are respectively extract, verbose file.
