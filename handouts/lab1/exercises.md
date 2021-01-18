@@ -36,7 +36,7 @@ In this exercise you are required to set a git repository inside the _VNA2V-W21-
 This is require for the correct submission of all the exercises of the class.
 
 1. Create a repository for your personal submissions
-   - Go to [https://gitlab.umich.edu/VNA2V-W21-submissions/repositories/new](https://gitlab.umich.edu/VNA2V-W21-submissions/repositories/new){:target="_blank"} to create a new repository
+   - Go to [https://gitlab.umich.edu/VNA2V-W21-submissions](https://gitlab.umich.edu/VNA2V-W21-submissions){:target="_blank"} and click on "New Project" to create a new repository
    - Create a new **Private** repository and call it as your Kerberos username, e.g. if your UMICH email is _astark@umich.edu_, call it _astark_
    - Clone the repository to `~/vna2v-personal` (you will have a team submission later) running `git clone git@gitlab.umich.edu:VNA2V-W21-submissions/YOUR_USERNAME.git ~/vna2v-personal` (replace `YOUR_USERNAME` with the name of the repo you just created)
    - Create a folder called `lab1`

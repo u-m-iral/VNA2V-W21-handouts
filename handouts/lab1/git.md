@@ -49,7 +49,7 @@ git config --global user.email YOUR_UMICH_EMAIL_ADDRESS
 
 3. [Generate](https://docs.gitlab.com/ee/ssh/#generating-a-new-ssh-key-pair){:target="_blank"} SSH keys (do not forget the passphrase if you choose to set one)
 4. [Add](https://docs.gitlab.com/ee/ssh/#adding-an-ssh-key-to-your-gitlab-account){:target="_blank"} SSH keys to your [github.umich.edu account](https://gitlab.umich.edu/profile/keys){:target="_blank"}
-5. [Create a new repository](https://docs.gitlab.com/ee/user/project/repository/#create-a-repository){:target="_blank"} on [https://github.umich.edu](https://gitlab.umich.edu/)](https://gitlab.umich.edu/){:target="_blank"}
+5. [Create a new repository](https://docs.gitlab.com/ee/user/project/repository/#create-a-repository){:target="_blank"} on [https://github.umich.edu](https://gitlab.umich.edu/){:target="_blank"}
 6. Open a terminal and create a new directory using `mkdir` named `vna2v21` in your HOME directory
 7. Clone your (empty) Git repo (earn street cred by calling by using "repo" instead of "repository")
 
