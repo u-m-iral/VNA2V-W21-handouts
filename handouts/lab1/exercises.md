@@ -14,7 +14,7 @@ parent: Lab 1
 
 To submit your solutions you are required to create a repository in the _VNA2V-W21-Submissions_ group in gitlab.umich.edu (this will be your first exercise).
 
-VNA2V staff will clone your repository from gitlab.umich.edu on **[January 27 at midnight (11:59 EST)](https://www.timeanddate.com/worldclock/fixedtime.html?msg=VNA2V+Lab+Deadline&iso=20200909T235959&p1=43)**.
+VNA2V staff will clone your repository from gitlab.umich.edu on **[January 27 at midnight (11:59 EST)](https://www.timeanddate.com/worldclock/fixedtime.html?msg=VNA2V+Lab+Deadline&iso=20210127T235959&p1=784)**.
 This will be considered as your submission and will be graded accordingly.
 
 <div class="alert alert-warning">
