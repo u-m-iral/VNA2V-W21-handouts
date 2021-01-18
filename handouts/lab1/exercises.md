@@ -202,8 +202,8 @@ If you created the repository in your personal account instead of _VNA2V-W21-sub
 1. On GitHub, navigate to the main page of the repository.
 2. On the side bar menu, click **Settings -> General** and Expand on **Advanced**.  
 ![Step 1]({{ '/assets/images/lab1/TransferOwnershipStep1.png' | relative_url}})
-3. Scroll down until your reach the **Danger Zone**, then click **Transfer**.  
+1. Scroll down until your reach **transfer project**, select a suitable repository from the drop-down list, and click on **Transfer Project**.
 ![Step 1]({{ '/assets/images/lab1/TransferOwnershipStep2.png' | relative_url}})
-4. Type the name of your repository in the first row and _VNA2V-W21-submissions_ in the second, then click **I understand, transfer this repository**.  
+1. Type the name of your repository, then click **Confirm**.  
 ![Step 1]({{ '/assets/images/lab1/TransferOwnershipStep3.png' | relative_url}})
 5. Done!
