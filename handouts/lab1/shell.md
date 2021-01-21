@@ -43,9 +43,9 @@ ex0.cpp   ex1.cpp   ex2.cpp   final.cpp
 
 The concept of permissions and ownership is crucial in anu unix system. Every to file and directory is assigned 3 types of **owner**:
 
-- _User_: is the owner of the file, by default, the person who created a file
+- _User_: owner of the file, by default, the person who created a file
 - _Group_: user-group can contain multiple users, all users belonging to a group will have the same access permissions to the file
-- _Other_: Any other user who has access to a file
+- _Other_: any other user who has access to a file
 
 At the same time to every file and directory is assigned a type of permission
 - _Read_
@@ -61,7 +61,7 @@ total 1112
 -rw-r--r--  1 username  staff     171 Aug 23 18:28 hello_vna2v2021.tar.gz
 -rw-r--r--  1 username  staff      49 Aug 24 22:55 numbers.txt
 ```
-The permissions are specified by the 1st field, the ownership is specified by the 3rd and 4th fields. Fo example, the file `hello.sh` is owned by me (`username`) and the group is `staff`. THe permission string is `-rwxr-xr-x` meaning that:
+The permissions are specified by the 1st field, the ownership is specified by the 3rd and 4th fields. For example, the file `hello.sh` is owned by me (`username`) and the group is `staff`. The permission string is `-rwxr-xr-x` meaning that:
 - The owner can read (r), write (w) and execute (x) the file
 - The group can read and execute
 - Other can read and execute
@@ -180,11 +180,11 @@ Imagine you have to download `http://www.umich.edu/~username/hello_vna2v21.tar.g
 wget http://www.umich.edu/~username/hello_vna2v21.tar.gz
 ```
 
-But you will actually download the file `hello_vna2v21.tar.gz` from our GoogleDrive folder by opening the following link in your browser:
+You will get to actually use `wget` in the future labs.  For now, you can actually download the file `hello_vna2v21.tar.gz` from our GoogleDrive folder by opening the following link in your browser:
 
 `https://drive.google.com/drive/folders/17UD1bS81QHFfZ0PGL_28FRTBiNYt3KnM?usp=sharing`
 
-and click on **Download** to download it. Then you can proceed with the following examples.
+and click on **Download** to download it. Then, you can proceed with the following.
 
 ### Uncompress
 
