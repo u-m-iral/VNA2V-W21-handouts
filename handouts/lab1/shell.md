@@ -174,11 +174,17 @@ In this section we will download a compressed file, extract the content, inspect
 
 ### Download
 
-Imagine you have to download (you have to, actually) `http://www.umich.edu/~username/hello_vna2v21.tar.gz` you can use `wget`.
+Imagine you have to download `http://www.umich.edu/~username/hello_vna2v21.tar.gz`, you can use `wget`.
 
 ```bash
 wget http://www.umich.edu/~username/hello_vna2v21.tar.gz
 ```
+
+But you will actually download the file `hello_vna2v21.tar.gz` from our GoogleDrive folder by opening the following link in your browser:
+
+`https://drive.google.com/drive/folders/17UD1bS81QHFfZ0PGL_28FRTBiNYt3KnM?usp=sharing`
+
+and click on **Download** to download it. Then you can proceed with the following examples.
 
 ### Uncompress
 
@@ -311,7 +317,7 @@ Both the standard output and standard error streams will be copied to the file w
 
 ## Superuser
 
-Working with the terminal you wil, sooner or later, get a "Permission denied" error. This occur because you do not have the right permission to run the command.
+Working with the terminal you will, sooner or later, get a "Permission denied" error. This occur because you do not have the right permission to run the command.
 
 For example if you try install vim you might get something like
 
