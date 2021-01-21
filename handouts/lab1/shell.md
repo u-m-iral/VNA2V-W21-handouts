@@ -191,7 +191,7 @@ and click on **Download** to download it. Then you can proceed with the followin
 As you see it is a compressed file, to uncompress it we can use `tar`
 
 ```bash
-tar -xvf hello_vna2v2021.tar.gz
+tar -xvf hello_vna2v21.tar.gz
 ```
 
 The flags `xvf` are respectively extract, verbose file.
