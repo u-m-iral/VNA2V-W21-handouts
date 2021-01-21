@@ -21,7 +21,7 @@ To submit your solutions create a folder called `lab2` and push one or more file
 - for **math-related** deliverables, LaTeX is preferred but handwritten is accepted too
 - for **code-based** deliverables, push the source code of the entire package
 
-**Deadline:** the VNA2V staff will clone your repository on **Wednesday 16th** at midnight EDT.
+**Deadline:** the VNA2V staff will clone your repository on **Wed, Feb 3, 11:59 EST**.
 
 ### Find a team
 
@@ -33,32 +33,12 @@ Next lab will have a team section, you should start thinking about your team!
       Find a team.
     </h2>
     <div class="alert-body">
-      <p> Please find your team members, fill out this <a href="https://docs.google.com/spreadsheets/d/1Mzy48yELRTpwzNxv4nCpims9kL3TsNBiMRgnQo3r830/edit?usp=sharing">spreadsheet</a>.</p>
+      <p> Please find your team members, fill out this <a href="https://docs.google.com/spreadsheets/d/1G1pSrMQH8uDWfnm-mwNYIVEa89GTFB-f1PuaXlbjJbQ/edit?usp=sharing">spreadsheet</a>.</p>
     </div>
   </div>
 </div>
 
-Please fill it before **Wednesday 16th**.
-
-
-<!-- ### Flying space (high-bay) area access
-
-It is the policy of AeroAstro that everyone who uses our space goes through the _Emergency Preparedness and General Safety Guidelines Presentation for AeroAstro_ (EHS000404) prior to being granted access to the departmental spaces.
-
-<div class="alert alert-info">
-  <div class="alert-content">
-    <h2 class="alert-title">
-      Required training.
-    </h2>
-    <div class="alert-body">
-      <p> Access to the required training can be found on the following <a href="https://aeroastro-ehs.mit.edu/emergency-preparedness-and-general-safety-guidelines-presentation-aeroastro">link</a>.</p>
-    </div>
-  </div>
-</div>
-
-Please complete the training, fill in the course number (16.485) when asked, and add _'high bay access'_ to the comment fields, such that our space manager can enable your MIT IDs for access as you complete the training.
-
-**Important**: The final page is a link to an e-form that once submitted will give you credit for going through the presentation. Once you get credit for this course, you will be provided general card access. -->
+Please fill it by **Wed, Feb 3, 11:59 EST**.
 
 ## Setup workspace
 
@@ -72,17 +52,17 @@ In a terminal, run:
 $ mkdir -p ~/vna2v_ws/src
 $ cd ~/vna2v_ws/
 $ catkin init
-Initializing catkin workspace in `/home/antonap/vna2v_ws`.
+Initializing catkin workspace in `/home/vtzoumas/vna2v_ws`.
 --------------------------------------------------------------
 Profile:                     default
 Extending:             [env] /opt/ros/melodic
-Workspace:                   /home/antonap/vna2v_ws
+Workspace:                   /home/vtzoumas/vna2v_ws
 --------------------------------------------------------------
-Build Space:       [missing] /home/antonap/vna2v_ws/build
-Devel Space:       [missing] /home/antonap/vna2v_ws/devel
-Install Space:      [unused] /home/antonap/vna2v_ws/install
-Log Space:         [missing] /home/antonap/vna2v_ws/logs
-Source Space:       [exists] /home/antonap/vna2v_ws/src
+Build Space:       [missing] /home/vtzoumas/vna2v_ws/build
+Devel Space:       [missing] /home/vtzoumas/vna2v_ws/devel
+Install Space:      [unused] /home/vtzoumas/vna2v_ws/install
+Log Space:         [missing] /home/vtzoumas/vna2v_ws/logs
+Source Space:       [exists] /home/vtzoumas/vna2v_ws/src
 DESTDIR:            [unused] None
 --------------------------------------------------------------
 Devel Space Layout:          linked
