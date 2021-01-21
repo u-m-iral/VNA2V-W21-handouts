@@ -44,7 +44,6 @@ In this exercise you are required to set a git repository, for example inside yo
   - Create a folder called `lab1`
 2. Clone [https://gitlab.umich.edu/VNA2V-W21/labs](https://gitlab.umich.edu/VNA2V-W21/labs){:target="_blank"} in a folder of your choice
 
-You are required to put your solutions in the repository you created in the first Git exercise.
 
 <!-- ~~In this exercise you are required to set a git repository inside the _VNA2V-W21-Submission_ group.
 This is require for the correct submission of all the exercises of the class.~~
