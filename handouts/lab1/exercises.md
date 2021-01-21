@@ -32,19 +32,31 @@ This will be considered as your submission and will be graded accordingly.
 
 ### Git (5 pts)
 
-In this exercise you are required to set a git repository inside the _VNA2V-W21-Submission_ group.
-This is require for the correct submission of all the exercises of the class.
+
+In this exercise you are required to set a git repository inside your own GitLab namespace. You will be downloading the zip file of this repository and submit it elsewhere.
 
 1. Create a repository for your personal submissions
-   - Go to [https://gitlab.umich.edu/VNA2V-W21-submissions](https://gitlab.umich.edu/VNA2V-W21-submissions){:target="_blank"} and click on "New Project" to create a new repository
-   - Create a new **Private** repository and call it as your Kerberos username, e.g. if your UMICH email is _astark@umich.edu_, call it _astark_
-   - Clone the repository to `~/vna2v-personal` (you will have a team submission later) running `git clone git@gitlab.umich.edu:VNA2V-W21-submissions/YOUR_USERNAME.git ~/vna2v-personal` (replace `YOUR_USERNAME` with the name of the repo you just created)
-   - Create a folder called `lab1`
+  - Go to [https://gitlab.umich.edu/your_namespace](https://gitlab.umich.edu/){:target="_blank"} and click on "New Project" to create a new repository
+  - Create a new **Private** repository and call it as your Kerberos username (let's call it "YOUR_USERNAME"), e.g. if your UMICH email is _astark@umich.edu_, call it _astark_
+  - Clone the repository to `~/vna2v-personal` (you will have a team submission later) running `git clone git@gitlab.umich.edu:your_namespace/YOUR_USERNAME.git ~/vna2v-personal` (replace `YOUR_USERNAME` with the name of the repo you just created)
+  - Create a folder called `lab1`
 2. Clone [https://gitlab.umich.edu/VNA2V-W21/labs](https://gitlab.umich.edu/VNA2V-W21/labs){:target="_blank"} in a folder of your choice
 
 You are required to put your solutions in the repository you created in the first Git exercise.
 
-<div class="alert alert-warning">
+~~In this exercise you are required to set a git repository inside the _VNA2V-W21-Submission_ group.
+This is require for the correct submission of all the exercises of the class.~~
+
+1. ~~Create a repository for your personal submissions~~
+   - ~~Go to [https://gitlab.umich.edu/VNA2V-W21-submissions](https://gitlab.umich.edu/VNA2V-W21-submissions){:target="_blank"} and click on "New Project" to create a new repository~~
+   - ~~Create a new **Private** repository and call it as your Kerberos username, e.g. if your UMICH email is _astark@umich.edu_, call it _astark_~~
+   - ~~Clone the repository to `~/vna2v-personal` (you will have a team submission later) running `git clone git@gitlab.umich.edu:VNA2V-W21-submissions/YOUR_USERNAME.git ~/vna2v-personal` (replace `YOUR_USERNAME` with the name of the repo you just created)~~
+   - ~~Create a folder called `lab1`~~
+2. ~~Clone [https://gitlab.umich.edu/VNA2V-W21/labs](https://gitlab.umich.edu/VNA2V-W21/labs){:target="_blank"} in a folder of your choice~~
+
+~~You are required to put your solutions in the repository you created in the first Git exercise.~~
+
+<!-- <div class="alert alert-warning">
   <div class="alert-content">
     <h2 class="alert-title">
      Warning. 
@@ -53,7 +65,7 @@ You are required to put your solutions in the repository you created in the firs
       <p>If you created the repository in your personal account instead of VNA2V-W21-submissions you need to transfer the ownership in order to complete your submission. Scroll to the bottom of the page for instructions.</p>
     </div>
   </div>
-</div>
+</div> -->
 
 ### Shell (35 pts)
 
@@ -197,7 +209,9 @@ Histogram:
 
 ## Transfer ownership of Git repository
 
-If you created the repository in your personal account instead of _VNA2V-W21-submissions_ you might want to transfer the ownership in order to complete your submission.
+You do not transfer the ownership of your personal repository to _VNA2V-W21-submissions_ anymore, as we will be using other form of submission.
+
+~~If you created the repository in your personal account instead of _VNA2V-W21-submissions_ you might want to transfer the ownership in order to complete your submission.~~
 
 1. On GitHub, navigate to the main page of the repository.
 2. On the side bar menu, click **Settings -> General** and Expand on **Advanced**.  
