@@ -76,7 +76,7 @@
 
       </div>
       <footer class="site-footer">
-        <p class="text-small text-grey-dk-000 mb-4"><b>Last modified</b>:<br> Thursday, January 21 at 13:25</p>
+        <p class="text-small text-grey-dk-000 mb-4"><b>Last modified</b>:<br> Thursday, January 21 at 16:29</p>
       </footer>
     </div>
     <div class="main-content-wrap js-main-content" tabindex="0">
@@ -125,10 +125,12 @@
         
       </h2>
 
-<p>To submit your solutions you are required to create a repository in the <em>VNA2V-W21-Submissions</em> group in gitlab.umich.edu (this will be your first exercise).</p>
+<p>To submit your solution, you will be creating a <code class="highlighter-rouge">.zip</code> file following the exercises below and upload it on Canvas under <strong>Assignment &gt; Lab 1: Linux, Git, C++ - handout</strong> by <strong><a href="https://www.timeanddate.com/worldclock/fixedtime.html?msg=VNA2V+Lab+Deadline&amp;iso=20210127T235959&amp;p1=784" target="_blank" rel="noopener noreferrer">January 27 at midnight (11:59 EST)</a></strong>.</p>
 
-<p>VNA2V staff will clone your repository from gitlab.umich.edu on <strong><a href="https://www.timeanddate.com/worldclock/fixedtime.html?msg=VNA2V+Lab+Deadline&amp;iso=20210127T235959&amp;p1=784" target="_blank" rel="noopener noreferrer">January 27 at midnight (11:59 EST)</a></strong>.
-This will be considered as your submission and will be graded accordingly.</p>
+<!-- ~~To submit your solutions you are required to create a repository in the _VNA2V-W21-Submissions_ group in gitlab.umich.edu (this will be your first exercise).~~
+
+~~VNA2V staff will clone your repository from gitlab.umich.edu on **[January 27 at midnight (11:59 EST)](https://www.timeanddate.com/worldclock/fixedtime.html?msg=VNA2V+Lab+Deadline&iso=20210127T235959&p1=784)**.
+This will be considered as your submission and will be graded accordingly.~~ -->
 
 <div class="alert alert-warning">
   <div class="alert-content">
@@ -143,7 +145,7 @@ This will be considered as your submission and will be graded accordingly.</p>
         
       </h2>
     <div class="alert-body">
-      <p>We will assume your repository is ready to be graded at the deadline, so please email us if you want to submit later than the deadline.</p>
+      <p>Please email us if you want to submit later than the deadline. Otherwise late penalty will be applied.</p>
     </div>
   </div>
 </div>
@@ -164,15 +166,15 @@ This will be considered as your submission and will be graded accordingly.</p>
         
       </h3>
 
-<p>In this exercise you are required to set a git repository inside your own GitLab namespace. You will be downloading the zip file of this repository and submit it elsewhere.</p>
+<p>In this exercise you are required to set a git repository, for example inside your own GitLab namespace. You will be downloading the zip file of this repository and submit it to Canvas.</p>
 
 <ol>
   <li>Create a repository for your personal submissions
     <ul>
       <li>Go to <a href="https://gitlab.umich.edu/" target="_blank" rel="noopener noreferrer">https://gitlab.umich.edu/your_namespace</a> and click on “New Project” to create a new repository</li>
-      <li>Create a new <strong>Private</strong> repository and call it as your Kerberos username (let’s call it “YOUR_USERNAME”), e.g. if your UMICH email is <em>astark@umich.edu</em>, call it <em>astark</em>
+      <li>Create a new <strong>Private</strong> repository and call it as your UMICH unique-name (let’s call it “YOUR_UNIQUENAME”), e.g. if your UMICH email is <em>astark@umich.edu</em>, call it <em>astark</em>
 </li>
-      <li>Clone the repository to <code class="highlighter-rouge">~/vna2v-personal</code> (you will have a team submission later) running <code class="highlighter-rouge">git clone git@gitlab.umich.edu:your_namespace/YOUR_USERNAME.git ~/vna2v-personal</code> (replace <code class="highlighter-rouge">YOUR_USERNAME</code> with the name of the repo you just created)</li>
+      <li>Clone the repository to <code class="highlighter-rouge">~/vna2v-personal</code> (you will have a team submission later) running <code class="highlighter-rouge">git clone git@gitlab.umich.edu:your_namespace/YOUR_UNIQUENAME.git ~/vna2v-personal</code> (replace <code class="highlighter-rouge">YOUR_UNIQUENAME</code> with the name of the repo you just created)</li>
       <li>Create a folder called <code class="highlighter-rouge">lab1</code>
 </li>
     </ul>
@@ -182,25 +184,19 @@ This will be considered as your submission and will be graded accordingly.</p>
 
 <p>You are required to put your solutions in the repository you created in the first Git exercise.</p>
 
-<p><del>In this exercise you are required to set a git repository inside the <em>VNA2V-W21-Submission</em> group.
-This is require for the correct submission of all the exercises of the class.</del></p>
+<!-- ~~In this exercise you are required to set a git repository inside the _VNA2V-W21-Submission_ group.
+This is require for the correct submission of all the exercises of the class.~~
 
-<ol>
-  <li>
-<del>Create a repository for your personal submissions</del>
-    <ul>
-      <li><del>Go to <a href="https://gitlab.umich.edu/VNA2V-W21-submissions" target="_blank" rel="noopener noreferrer">https://gitlab.umich.edu/VNA2V-W21-submissions</a> and click on “New Project” to create a new repository</del></li>
-      <li><del>Create a new <strong>Private</strong> repository and call it as your Kerberos username, e.g. if your UMICH email is <em>astark@umich.edu</em>, call it <em>astark</em></del></li>
-      <li><del>Clone the repository to <code class="highlighter-rouge">~/vna2v-personal</code> (you will have a team submission later) running <code class="highlighter-rouge">git clone git@gitlab.umich.edu:VNA2V-W21-submissions/YOUR_USERNAME.git ~/vna2v-personal</code> (replace <code class="highlighter-rouge">YOUR_USERNAME</code> with the name of the repo you just created)</del></li>
-      <li><del>Create a folder called <code class="highlighter-rouge">lab1</code></del></li>
-    </ul>
-  </li>
-  <li><del>Clone <a href="https://gitlab.umich.edu/VNA2V-W21/labs" target="_blank" rel="noopener noreferrer">https://gitlab.umich.edu/VNA2V-W21/labs</a> in a folder of your choice</del></li>
-</ol>
+1. ~~Create a repository for your personal submissions~~
+   - ~~Go to [https://gitlab.umich.edu/VNA2V-W21-submissions](https://gitlab.umich.edu/VNA2V-W21-submissions){:target="_blank"} and click on "New Project" to create a new repository~~
+   - ~~Create a new **Private** repository and call it as your Kerberos username, e.g. if your UMICH email is _astark@umich.edu_, call it _astark_~~
+   - ~~Clone the repository to `~/vna2v-personal` (you will have a team submission later) running `git clone git@gitlab.umich.edu:VNA2V-W21-submissions/YOUR_USERNAME.git ~/vna2v-personal` (replace `YOUR_USERNAME` with the name of the repo you just created)~~
+   - ~~Create a folder called `lab1`~~
+2. ~~Clone [https://gitlab.umich.edu/VNA2V-W21/labs](https://gitlab.umich.edu/VNA2V-W21/labs){:target="_blank"} in a folder of your choice~~
 
-<p><del>You are required to put your solutions in the repository you created in the first Git exercise.</del></p>
+~~You are required to put your solutions in the repository you created in the first Git exercise.~~
 
-<!-- <div class="alert alert-warning">
+<div class="alert alert-warning">
   <div class="alert-content">
     
       <h2 class="alert-title">
@@ -406,32 +402,22 @@ Histogram:
 <blockquote>
   <p><strong>Optional (10 pts)</strong>: Try to implement the methods <strong>with and without</strong> the functions available in the header <code class="highlighter-rouge">&lt;algorithm&gt;</code>.</p>
 </blockquote>
-    <hr>
-      <h2 id="transfer-ownership-of-git-repository">
-        
-        
-          <a href="#transfer-ownership-of-git-repository" class="anchor-heading"><svg class="d-inline-block v-align-middle" viewbox="0 0 16 16" version="1.1" width="18" height="18" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> Transfer ownership of Git repository
-        
-        
-      </h2>
 
-<p>You do not transfer the ownership of your personal repository to <em>VNA2V-W21-submissions</em> anymore, as we will be using other form of submission.</p>
+<!-- 
+## Transfer ownership of Git repository
 
-<p><del>If you created the repository in your personal account instead of <em>VNA2V-W21-submissions</em> you might want to transfer the ownership in order to complete your submission.</del></p>
+It is possible to transfer ownership of your projects on GitLab.
 
-<ol>
-  <li>On GitHub, navigate to the main page of the repository.</li>
-  <li>On the side bar menu, click <strong>Settings -&gt; General</strong> and Expand on <strong>Advanced</strong>.<br>
-<img src="/VNA2V-W21-handouts/assets/images/lab1/TransferOwnershipStep1.png" alt="Step 1">
-</li>
-  <li>Scroll down until your reach <strong>transfer project</strong>, select a suitable repository from the drop-down list, and click on <strong>Transfer Project</strong>.
-<img src="/VNA2V-W21-handouts/assets/images/lab1/TransferOwnershipStep2.png" alt="Step 1">
-</li>
-  <li>Type the name of your repository, then click <strong>Confirm</strong>.<br>
-<img src="/VNA2V-W21-handouts/assets/images/lab1/TransferOwnershipStep3.png" alt="Step 1">
-</li>
-  <li>Done!</li>
-</ol>
+~~If you created the repository in your personal account instead of _VNA2V-W21-submissions_ you might want to transfer the ownership in order to complete your submission.~~
+
+1. On GitHub, navigate to the main page of the repository.
+2. On the side bar menu, click **Settings -> General** and Expand on **Advanced**.  
+![Step 1](/VNA2V-W21-handouts/assets/images/lab1/TransferOwnershipStep1.png)
+1. Scroll down until your reach **transfer project**, select a suitable repository from the drop-down list, and click on **Transfer Project**.
+![Step 1](/VNA2V-W21-handouts/assets/images/lab1/TransferOwnershipStep2.png)
+1. Type the name of your repository, then click **Confirm**.  
+![Step 1](/VNA2V-W21-handouts/assets/images/lab1/TransferOwnershipStep3.png)
+5. Done! -->
             
 
           

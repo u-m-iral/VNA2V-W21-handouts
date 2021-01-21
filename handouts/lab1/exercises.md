@@ -12,10 +12,13 @@ parent: Lab 1
 
 ## Submission
 
-To submit your solutions you are required to create a repository in the _VNA2V-W21-Submissions_ group in gitlab.umich.edu (this will be your first exercise).
+To submit your solution, you will be creating a `.zip` file following the exercises below and upload it on Canvas under **Assignment > Lab 1: Linux, Git, C++ - handout** by **[January 27 at midnight (11:59 EST)](https://www.timeanddate.com/worldclock/fixedtime.html?msg=VNA2V+Lab+Deadline&iso=20210127T235959&p1=784)**.
 
-VNA2V staff will clone your repository from gitlab.umich.edu on **[January 27 at midnight (11:59 EST)](https://www.timeanddate.com/worldclock/fixedtime.html?msg=VNA2V+Lab+Deadline&iso=20210127T235959&p1=784)**.
-This will be considered as your submission and will be graded accordingly.
+
+<!-- ~~To submit your solutions you are required to create a repository in the _VNA2V-W21-Submissions_ group in gitlab.umich.edu (this will be your first exercise).~~
+
+~~VNA2V staff will clone your repository from gitlab.umich.edu on **[January 27 at midnight (11:59 EST)](https://www.timeanddate.com/worldclock/fixedtime.html?msg=VNA2V+Lab+Deadline&iso=20210127T235959&p1=784)**.
+This will be considered as your submission and will be graded accordingly.~~ -->
 
 <div class="alert alert-warning">
   <div class="alert-content">
@@ -23,7 +26,7 @@ This will be considered as your submission and will be graded accordingly.
       Late Submission.
     </h2>
     <div class="alert-body">
-      <p>We will assume your repository is ready to be graded at the deadline, so please email us if you want to submit later than the deadline.</p>
+      <p>Please email us if you want to submit later than the deadline. Otherwise late penalty will be applied.</p>
     </div>
   </div>
 </div>
@@ -32,19 +35,18 @@ This will be considered as your submission and will be graded accordingly.
 
 ### Git (5 pts)
 
-
-In this exercise you are required to set a git repository inside your own GitLab namespace. You will be downloading the zip file of this repository and submit it elsewhere.
+In this exercise you are required to set a git repository, for example inside your own GitLab namespace. You will be downloading the zip file of this repository and submit it to Canvas.
 
 1. Create a repository for your personal submissions
   - Go to [https://gitlab.umich.edu/your_namespace](https://gitlab.umich.edu/){:target="_blank"} and click on "New Project" to create a new repository
-  - Create a new **Private** repository and call it as your Kerberos username (let's call it "YOUR_USERNAME"), e.g. if your UMICH email is _astark@umich.edu_, call it _astark_
-  - Clone the repository to `~/vna2v-personal` (you will have a team submission later) running `git clone git@gitlab.umich.edu:your_namespace/YOUR_USERNAME.git ~/vna2v-personal` (replace `YOUR_USERNAME` with the name of the repo you just created)
+  - Create a new **Private** repository and call it as your UMICH unique-name (let's call it "YOUR_UNIQUENAME"), e.g. if your UMICH email is _astark@umich.edu_, call it _astark_
+  - Clone the repository to `~/vna2v-personal` (you will have a team submission later) running `git clone git@gitlab.umich.edu:your_namespace/YOUR_UNIQUENAME.git ~/vna2v-personal` (replace `YOUR_UNIQUENAME` with the name of the repo you just created)
   - Create a folder called `lab1`
 2. Clone [https://gitlab.umich.edu/VNA2V-W21/labs](https://gitlab.umich.edu/VNA2V-W21/labs){:target="_blank"} in a folder of your choice
 
 You are required to put your solutions in the repository you created in the first Git exercise.
 
-~~In this exercise you are required to set a git repository inside the _VNA2V-W21-Submission_ group.
+<!-- ~~In this exercise you are required to set a git repository inside the _VNA2V-W21-Submission_ group.
 This is require for the correct submission of all the exercises of the class.~~
 
 1. ~~Create a repository for your personal submissions~~
@@ -56,7 +58,7 @@ This is require for the correct submission of all the exercises of the class.~~
 
 ~~You are required to put your solutions in the repository you created in the first Git exercise.~~
 
-<!-- <div class="alert alert-warning">
+<div class="alert alert-warning">
   <div class="alert-content">
     <h2 class="alert-title">
      Warning. 
@@ -65,7 +67,7 @@ This is require for the correct submission of all the exercises of the class.~~
       <p>If you created the repository in your personal account instead of VNA2V-W21-submissions you need to transfer the ownership in order to complete your submission. Scroll to the bottom of the page for instructions.</p>
     </div>
   </div>
-</div> -->
+</div> --> 
 
 ### Shell (35 pts)
 
@@ -205,11 +207,10 @@ Histogram:
 > **Optional (10 pts)**: Try to implement the methods **with and without** the functions available in the header `<algorithm>`.
 
 
----
-
+<!-- 
 ## Transfer ownership of Git repository
 
-You do not transfer the ownership of your personal repository to _VNA2V-W21-submissions_ anymore, as we will be using other form of submission.
+It is possible to transfer ownership of your projects on GitLab.
 
 ~~If you created the repository in your personal account instead of _VNA2V-W21-submissions_ you might want to transfer the ownership in order to complete your submission.~~
 
@@ -220,4 +221,4 @@ You do not transfer the ownership of your personal repository to _VNA2V-W21-subm
 ![Step 1]({{ '/assets/images/lab1/TransferOwnershipStep2.png' | relative_url}})
 1. Type the name of your repository, then click **Confirm**.  
 ![Step 1]({{ '/assets/images/lab1/TransferOwnershipStep3.png' | relative_url}})
-5. Done!
+5. Done! -->
