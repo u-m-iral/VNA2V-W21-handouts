@@ -19,9 +19,9 @@ parent: Lab 2
 To submit your solutions create a folder called `lab2` and push one or more file to your repository with your answers (it can be plain text, markdown, pdf or whatever other format is reasonably easy to read)
 
 - for **math-related** deliverables, LaTeX is preferred but handwritten is accepted too
-- for **code-based** deliverables, push the source code of the entire package
+- for **code-based** deliverables, submit the source code of the entire package to Canvas.
 
-**Deadline:** the VNA2V staff will clone your repository on **Wed, Feb 3, 11:59 EST**.
+**Deadline:** To submit your solution, you will be creating a .zip file containing all of your solutions and upload it on Canvas under `Assignment > Lab 2: ROS, \tf, and Homogeneous Transforms` by **Wed, Feb 3, 11:59 EST**.
 
 ### Find a team
 
@@ -132,7 +132,7 @@ Just like most processes in the ROS ecosystem, rViz is a ROS node. Like all othe
 
 As a first experience with rViz, let us:
 
-- Add the visualization of `\tf`. In the Displays panel, click Add, select the By display type Tab in the pop-up and finally select “TF” and confirm with Ok. You should see all the reference frames, with names and their axes represented in red (x), green (y) and blue (z).  
+- Add the visualization of `\tf`. In the Displays panel, click Add, select the "By display type Tab" in the pop-up and finally select "TF" and confirm with Ok. You should see all the reference frames, with names and their axes represented in red (x), green (y) and blue (z).  
 - Save the configuration file. So that we don’t have to repeat the step above every time we launch it! Hit <kbd>CTRL</kbd> + <kbd>s</kbd> or select _File_ > _Save Config_.
 
 Other published topics can be added to the visualizer in a similar way.
@@ -281,7 +281,7 @@ You should eventually see three trajectories, namely:
 So far, we have used ROS and tf to get a visual understanding of the motion of AV2 relative to AV1’s body frame.
 In this section, you are asked to use your knowledge about homogeneous transformations and study the relative trajectory explicitly.
 
-The visualization we have built should provide you with great guidance while working out the following questions. Since this exercise is designed for you to familiarize with the math of 3D transformations, we require that you explicitly write down all the homogeneous transformation matrices used in the process and precisely outline the logic and algebraic steps taken.
+The visualization we have built should provide you with great guidance while working out the following questions. Since this exercise is designed for you to familiarize with the math of 3D transformations, we require that you **explicitly write down all the homogeneous transformation matrices used in the process** and **precisely outline the logic and algebraic steps taken**.
 
 ### 📨 Deliverable 4 - Mathematical derivations (25 pts)
 
