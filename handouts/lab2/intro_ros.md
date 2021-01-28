@@ -144,7 +144,7 @@ If you select _Nodes/Topics (all)_ from the top left and deselect _Debug_ you wi
 In the graph the ellipses are nodes and the squares are topics. From the picture it's easy to see that `teleop_turtle` is publishing to `/turtle1/cmd_vel` topic. The node `/turtlesim` is subscribed to the topic and uses the incoming messages to move the turtle.
 
 You can also print the messages to the terminal.
-Try tu run `rostopic echo /turtle1/cmd_vel` and move the turtle, you should get something like
+Try to run `rostopic echo /turtle1/cmd_vel` and move the turtle, you should get something like
 
 ```bash
 $ rostopic echo /turtle1/cmd_vel
