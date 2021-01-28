@@ -213,7 +213,7 @@ ros::Rate loop_rate(50);
 
 which is setting the desired rate at 50 Hz.
 Then we have the **main loop** of the node.
-Since we want to run this node until the ROS we need to the check the various states of shutdown.
+Since we want to run this node until ROS shuts down, we need to the check the various states of shutdown.
 The most common way to do it is to call `ros::ok()`.
 Once `ros::ok()` returns false, the node has finished shutting down.
 That's why we have
