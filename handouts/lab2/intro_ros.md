@@ -90,7 +90,7 @@ Any ROS system must have **only one master**, even in a distributed system, and 
 
 Basically, nodes are regular processes but with the capability to register with the ROS Master node and communicate with other nodes in the system. The ROS design idea is that each node is an independent module that interacts with other nodes using the ROS communication capability.
 
-The nodes can be created in various ways. From a terminal window a node can be created directly by typing a command after the command prompt, as shown in the examples to follow. Alternatively, nodes can be created as part of a program written in Python or C++. In this lab, we will use both the ROS commands in a terminal window and Python programs to create nodes.
+The nodes can be created in various ways. From a terminal window a node can be created directly by typing a command after the command prompt, as shown in the examples to follow. Alternatively, nodes can be created as part of a program written in Python or C++. In this lab, we will use both the ROS commands in a terminal window and C++ programs to create nodes.
 
 As example let's run the `turtlesim` node, in a new terminal run
 

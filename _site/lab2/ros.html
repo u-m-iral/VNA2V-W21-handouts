@@ -83,7 +83,7 @@
 
       </div>
       <footer class="site-footer">
-        <p class="text-small text-grey-dk-000 mb-4"><b>Last modified</b>:<br> Tuesday, January 26 at 01:44</p>
+        <p class="text-small text-grey-dk-000 mb-4"><b>Last modified</b>:<br> Wednesday, January 27 at 23:31</p>
       </footer>
     </div>
     <div class="main-content-wrap js-main-content" tabindex="0">
@@ -140,8 +140,6 @@
       <li><a href="#setup-repositories" id="markdown-toc-setup-repositories">Setup repositories</a></li>
       <li><a href="#installation" id="markdown-toc-installation">Installation</a></li>
       <li><a href="#environment-setup" id="markdown-toc-environment-setup">Environment setup</a></li>
-      <li><a href="#dependencies-for-building-packages" id="markdown-toc-dependencies-for-building-packages">Dependencies for building packages</a></li>
-      <li><a href="#initialization" id="markdown-toc-initialization">Initialization</a></li>
     </ol>
   </li>
 </ol>
@@ -239,33 +237,24 @@ E: Unable to correct problems, you have held broken packages.
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">echo</span> <span class="s2">"source /opt/ros/melodic/setup.bash"</span> <span class="o">&gt;&gt;</span> ~/.bashrc
 <span class="nb">source</span> ~/.bashrc
 </code></pre></div></div>
-    
-      <h3 id="dependencies-for-building-packages">
-        
-        
-          <a href="#dependencies-for-building-packages" class="anchor-heading"><svg class="d-inline-block v-align-middle" viewbox="0 0 16 16" version="1.1" width="18" height="18" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> Dependencies for building packages
-        
-        
-      </h3>
-<p>Up to now you have installed what you need to run the core ROS packages. To create and manage your own ROS workspaces, there are various tools and requirements that are distributed separately. For example, rosinstall is a frequently used command-line tool that enables you to easily download many source trees for ROS packages with one command.</p>
 
-<p>To install this tool and other dependencies for building ROS packages, run:</p>
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>apt <span class="nb">install </span>python-rosdep python-rosinstall python-rosinstall-generator python-wstool build-essential python-catkin-tools rosbash
-</code></pre></div></div>
-    
-      <h3 id="initialization">
-        
-        
-          <a href="#initialization" class="anchor-heading"><svg class="d-inline-block v-align-middle" viewbox="0 0 16 16" version="1.1" width="18" height="18" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> Initialization
-        
-        
-      </h3>
+<!-- ### Dependencies for building packages
+Up to now you have installed what you need to run the core ROS packages. To create and manage your own ROS workspaces, there are various tools and requirements that are distributed separately. For example, rosinstall is a frequently used command-line tool that enables you to easily download many source trees for ROS packages with one command.
 
-<p>Before using ROS, we need to initialize <code class="highlighter-rouge">rosdep</code>.</p>
+To install this tool and other dependencies for building ROS packages, run:
+```bash
+sudo apt install python-rosdep python-rosinstall python-rosinstall-generator python-wstool build-essential python-catkin-tools rosbash
+```
 
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>rosdep init
+### Initialization
+
+Before using ROS, we need to initialize `rosdep`.
+
+```bash
+sudo rosdep init
 rosdep update
-</code></pre></div></div>
+```
+ -->
             
 
           

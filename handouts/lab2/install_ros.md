@@ -89,7 +89,7 @@ echo "source /opt/ros/melodic/setup.bash" >> ~/.bashrc
 source ~/.bashrc
 ```
 
-### Dependencies for building packages
+<!-- ### Dependencies for building packages
 Up to now you have installed what you need to run the core ROS packages. To create and manage your own ROS workspaces, there are various tools and requirements that are distributed separately. For example, rosinstall is a frequently used command-line tool that enables you to easily download many source trees for ROS packages with one command.
 
 To install this tool and other dependencies for building ROS packages, run:
@@ -105,4 +105,4 @@ Before using ROS, we need to initialize `rosdep`.
 sudo rosdep init
 rosdep update
 ```
-
+ -->
