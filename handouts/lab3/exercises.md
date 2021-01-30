@@ -15,24 +15,19 @@ parent: Lab 3
 {:toc}
 
 ## Submission
-
-To submit your solutions create a folder called `lab3` and push one or more file to your repository with your answers (it can be plain text, markdown, pdf or whatever other format is reasonably easy to read)
-
 ### Individual
 
-Please push the deliverables into your personal repository, for math-related questions LaTeX is preferred but handwritten is accepted too.
+Create a folder called `lab3` that includes your answers (for math-related questions LaTeX is preferred but handwritten is accepted too). Zip the folder and upload on Canvas.
+
+**Each student needs to submit their own `lab3` folder to Canvas.**
 
 ### Team
 
-Create a new repository in [VNA2V-W21-submission](https://github.mit.edu/VNA2V-W21-submissions) called `TEAM_<N>`, replacing `<N>` with your team number.
-For example team 2 will create the repository `TEAM_2`.
+Each group should create a new folder called `TEAM_<N>`, replacing `<N>` with your team number. For example team 2 will name their folder `TEAM_2`. Please put the source code of the entire `controller_pkg` package in the foder `TEAM_2`. Zip the folder and submit to Canvas.
 
-Please push the source code of the entire `controller_pkg` package in the foder `lab3` of the team repository.
+**Each team will only need to submit one `TEAM_<N>.zip` to Canvas.**
 
-### Deadline
-
-**Deadline:** the VNA2V staff will clone your repository on **September 23th, 2020** at midnight.
-
+**Deadline:** To submit your solution, please upload the corresponding files under `Assignment > Lab 3` by **Wed, Feb 10 11:59 EST**.
 ## Individual
 
 ### Deliverable 1 - Transformations in Practice (10 pts)
