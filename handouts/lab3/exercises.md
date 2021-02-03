@@ -23,7 +23,7 @@ Create a folder called `lab3` that includes your answers (for math-related quest
 
 ### Team
 
-Each group should create a new folder called `TEAM_<N>`, replacing `<N>` with your team number. For example team 2 will name their folder `TEAM_2`. Please put the source code of the entire `controller_pkg` package in the foder `TEAM_2`. Zip the folder and submit to Canvas.
+Each group should create a new folder called `TEAM_<N>`, replacing `<N>` with your team number. For example team 2 will name their folder `TEAM_2`. Please put the source code of the entire `controller_pkg` package in the folder `TEAM_2`. Zip the folder and submit to Canvas.
 
 **Each team will only need to submit one `TEAM_<N>.zip` to Canvas.**
 
@@ -130,12 +130,12 @@ catkin build
 source devel/setup.bash
 ```
 
-After doing so, please proceed [here](https://drive.google.com/file/d/14LoVC9qOh-D6OlkXZd9uhdUzthpfCQh1/view?usp=sharing) to download the binary executable for the simulator we are going to use for lab 3. 
+After doing so, please proceed [here](https://drive.google.com/file/d/1wIUc8kZ4W-6DLLuu7Lu1NIhrLofEcmeI/view?usp=sharing) to download the binary executable for the simulator we are going to use for lab 3. 
 Unzip the file, put the folder in `~/vna2v-builds`, and run the following commands:
 
 ```bash
-cd ~/vna2v-builds/vna2v-2020-lab3/
-chmod +x vna2v-2020-lab3.x86_64
+cd ~/vna2v-builds/vna2v-2021-lab3/
+chmod +x vna2v-2021-lab3.x86_64
 ```
 
 This will make sure you can run the executable in the command line. 
@@ -145,11 +145,11 @@ This will make sure you can run the executable in the command line.
 In a terminal window, run this command to start the simulator:
 
 ```bash
-cd ~/vna2v-builds/vna2v-2020-lab3/
-./vna2v-2020-lab3.x86_64
+cd ~/vna2v-builds/vna2v-2021-lab3/
+./vna2v-2021-lab3.x86_64
 ```
 
-One the simulator starts, you should see the unity simulator (fig. below).
+One the simulator starts, you should see the unity simulator (fig. below). Let's salute the MIT logo and thank the teaching team at MIT for creating this amazing simulator.
 
 ![Unity example]({{'assets/images/lab3/sim.png' | absolute_url}}){: .mx-auto .d-block}
 
