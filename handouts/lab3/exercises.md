@@ -130,7 +130,7 @@ catkin build
 source devel/setup.bash
 ```
 
-After doing so, please proceed [here](https://drive.google.com/file/d/1wIUc8kZ4W-6DLLuu7Lu1NIhrLofEcmeI/view?usp=sharing) to download the binary executable for the simulator we are going to use for lab 3. 
+After doing so, please proceed [here](https://drive.google.com/file/d/1HLLR26aCxPim4C4IKJEZ1uEgZg4jH6vn/view?usp=sharing) to download the binary executable for the simulator we are going to use for lab 3. 
 Unzip the file, put the folder in `~/vna2v-builds`, and run the following commands:
 
 ```bash
