@@ -106,11 +106,11 @@ cd ~/labs
 git pull
 ```
 
-In `~/labs/lab_3` we now have the `tesse_ros_bridge` and the `controller_pkg` folders, which are both ROS packages.
+In `~/labs/lab3` we now have the `tesse_ros_bridge` and the `controller_pkg` folders, which are both ROS packages.
 Let us copy these folders in our VNA2V workspace and build the workspace as follows:
 
 ```bash
-cp -r ~/labs/lab_3/. ~/vna2v_ws/src
+cp -r ~/labs/lab3/. ~/vna2v_ws/src
 cd ~/vna2v_ws
 ```
 
