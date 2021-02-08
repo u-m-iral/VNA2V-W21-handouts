@@ -67,7 +67,7 @@ The figure above depicts two quadrotors _(a)_ and _(b)_. Quadrotor _(a)_ is a fu
 
 Show mathematically that quadrotor _(b)_ is not able to track a trajectory defined in position $[x,y,z]$ and yaw orientation $\Psi$.
 
-- {: .hint} Hint: write down the $F$ matrix (see lecture notes eq. (6.9)) for the two cases _(a)_ and _(b)_ and compare the rank of the two matrices
+- {: .hint} Hint: write down the $F$ matrix (see lecture notes eq. (7.9)) for the two cases _(a)_ and _(b)_ and compare the rank of the two matrices
 
 #### _B_. Control of quadrotors 
 {: .no_toc}
