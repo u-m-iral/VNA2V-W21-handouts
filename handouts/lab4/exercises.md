@@ -193,7 +193,7 @@ catkin build
 source devel/setup.bash
 ```
 
-After doing so, please proceed [here](https://drive.google.com/file/d/1zsgEOfvoiOQprgGOJofDwDgnzp_i_lQO/view?usp=sharing) to download the new  binary executable for the simulator we are going to use for lab 4. 
+After doing so, please proceed [here](https://drive.google.com/file/d/1-1oUnTLP7wDmiaWCku0KNuRABe6pe1K5/view?usp=sharing) to download the new  binary executable for the simulator we are going to use for lab 4. 
 Unzip the file, put the folder in `~/vna2v-builds`, and run the following commands:
 
 ```bash
