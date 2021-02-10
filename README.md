@@ -42,5 +42,5 @@ To run local webserver simply run
 make serve
 ```
 
-## Deploy to public github
-Clone the public website repo at `website-2020` on the same level as this repo. Then, after you `make build`, run `make deploy`. This will copy all files in `_site` to the public site repo.
+<!-- ## Deploy to public github
+Clone the public website repo at `website-2020` on the same level as this repo. Then, after you `make build`, run `make deploy`. This will copy all files in `_site` to the public site repo. -->

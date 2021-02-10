@@ -20,7 +20,7 @@ url: "https://u-m-iral.github.io" # the base hostname & protocol for your site, 
 
 permalink: pretty
 # To hide lab folder or pages, add to the "exclude" list
-exclude: ["node_modules/", "*.gemspec", "*.gem", "Gemfile", "Gemfile.lock", "package.json", "package-lock.json",  "script/", "LICENSE.txt", "lib/", "bin/", "README.md", "Rakefile", "Makefile", "vendor", "handouts/lab4/", "handouts/lab5/", "handouts/lab6/", "handouts/lab7/", "handouts/lab8/", "handouts/lab9/"]
+exclude: ["node_modules/", "*.gemspec", "*.gem", "Gemfile", "Gemfile.lock", "package.json", "package-lock.json",  "script/", "LICENSE.txt", "lib/", "bin/", "README.md", "Rakefile", "Makefile", "vendor", "handouts/lab5/", "handouts/lab6/", "handouts/lab7/", "handouts/lab8/", "handouts/lab9/"]
 
 # Enable or disable the site search
 search_enabled: true

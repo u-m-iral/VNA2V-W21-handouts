@@ -15,22 +15,23 @@ parent: Lab 4
 {:toc}
 
 # Submission
-
-To submit your solutions create a folder called `lab4` and push one or more files to your repository with your answers.
-
 ### Individual
 
-Please push the deliverables into your personal repository, for math-related questions only typeset PDF files are allowed (e.g., using Latex, Word, Markdown).
+Create a folder called `lab4` that includes your answers (for math-related questions LaTeX is preferred but handwritten is accepted too). Zip the folder and upload on Canvas.
+
+**Each student needs to submit their own `lab4` folder to Canvas.**
 
 ### Team
 
-### Deadline
+Each group should create a new folder called `TEAM_<N>`, replacing `<N>` with your team number. For example team 2 will name their folder `TEAM_2`. Please put the source code of the entire `controller_pkg` package in the folder `TEAM_2`. Zip the folder and submit to Canvas.
 
-**Deadline:** the VNA2V staff will clone your repository on **September 30th** at midnight ET.
+**Each team will only need to submit one `TEAM_<N>.zip` to Canvas.**
 
+**Deadline:** To submit your solution, please upload the corresponding files under `Assignment > Lab 4` by **Thursday, Feb 18 11:59 EST**.
 # 👤 Individual
 
 ## 📨 Deliverable 1 - Single-segment trajectory optimization (20 pts)
+
 Consider the following minimum velocity ($r=1$) single-segment trajectory optimization problem:
 
 \begin{eqnarray}
@@ -144,7 +145,7 @@ _2._ Can you extend the previous question to the case in which the cost function
 
 ## 📨 Deliverable 3 - Drone Racing (65 pts)
 
-For this lab we will be racing our simulated our simulated quadcopters in a drone racing course we prepared in our Unity simulator! 
+For this lab we will be racing our simulated quadcopters in a drone racing course we prepared in our Unity simulator! 
 - Implement all the missing parts in the code (labeled as Part 0, Part 1.1, Part 1.2, and Part 1.3, see below)
 - A video showing the quadrotor completing the race course. Please upload the video onto either Google drive or Dropbox, generate a publicly viewable link, and put the link in a text file called `rviz_drone_race.txt` in your repo.
 - A rosbag of your complete and fastest run. Upload the rosbag onto either Google drive or Dropbox, generate a publicly viewable link, and put the link also in `rviz_drone_race.txt`. To record the rosbag, 
@@ -165,26 +166,25 @@ git pull
 ```
 
 In `~/labs/lab4` we now have the `planner_pkg`, `trajectory_generation_pkg`, and `dependencies` folders, the first two are ROS packages that you 
-will be modifying for this lab, and `dependencies` should contain all the dependencies you need for this lab. 
-
+will be modifying for this lab, and `dependencies` should contain all the dependencies you need for this lab.
 ```bash
 cp -r ~/labs/lab4/. ~/vna2v_ws/src
 cd ~/vna2v_ws
 ```
 
-In your `src` folder, you should see the folders: `controller_pkg`, `tesse-ros-bridge`, `planner_pkg`, `trajectory_generation_pkg`, and `dependencies`. Now, compile the new code.
+In your `src` folder, you should see the folders: `catkin_simple`, `controller_pkg`, `tesse-ros-bridge`, `planner_pkg`, `trajectory_generation_pkg`, and `dependencies`. Now, compile the new code.
 
 ```bash
 catkin build
 source devel/setup.bash
 ```
 
-After doing so, please proceed [here](https://drive.google.com/file/d/1sI6t19O_FnT6ESkPBgTLT43mRGeRcVFO/view) to download the new  binary executable for the simulator we are going to use for lab 4. 
+After doing so, please proceed [here](https://drive.google.com/file/d/1zsgEOfvoiOQprgGOJofDwDgnzp_i_lQO/view?usp=sharing) to download the new  binary executable for the simulator we are going to use for lab 4. 
 Unzip the file, put the folder in `~/vna2v-builds`, and run the following commands:
 
 ```bash
-cd ~/vna2v-builds/vna2v-2020-lab4/
-chmod +x vna2v-2020-lab4.x86_64
+cd ~/vna2v-builds/vna2v-2021-lab4/
+chmod +x vna2v-2021-lab4.x86_64
 ```
 Try launch the simulator, the simulator should look like this
 ![Unity example]({{'assets/images/lab4/unity_race_course.png' | absolute_url}}){: .mx-auto .d-block .img-size-90}
@@ -199,8 +199,8 @@ As a warm up exercise, let's just fly and hover at the first gate! Follow the in
 
 Now fire up the simulator and test. In one terminal window, run
 ```bash
-cd ~/vna2v-builds/vna2v-2020-lab4/
-./vna2v-2020-lab4.x86_64
+cd ~/vna2v-builds/vna2v-2021-lab4/
+./vna2v-2021-lab4.x86_64
 ```
 In another terminal, launch `tesse_ros_bridge` to connect ROS to the simulator, 
 ```bash
@@ -237,8 +237,8 @@ the desired state at time t to your controller.
 
 Now we are ready to race! Fire up the virtual race course. 
 ```bash
-cd ~/vna2v-builds/vna2v-2020-lab4/
-./vna2v-2020-lab4.x86_64
+cd ~/vna2v-builds/vna2v-2021-lab4/
+./vna2v-2021-lab4.x86_64
 ```
 In another terminal, launch `tesse_ros_bridge` to connect ROS to the simulator, 
 ```bash
