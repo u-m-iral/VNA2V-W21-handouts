@@ -27,7 +27,7 @@ Each group should create a new folder called `TEAM_<N>`, replacing `<N>` with yo
 
 **Each team will only need to submit one `TEAM_<N>.zip` to Canvas.**
 
-**Deadline:** To submit your solution, please upload the corresponding files under `Assignment > Lab 3` by **Wed, Feb 10 11:59 EST**.
+**Deadline:** To submit your solution, please upload the corresponding files under `Assignment > Lab 3` by **Thu, Feb 11 11:59 EST**.
 ## Individual
 
 ### Deliverable 1 - Transformations in Practice (10 pts)
@@ -67,7 +67,7 @@ The figure above depicts two quadrotors _(a)_ and _(b)_. Quadrotor _(a)_ is a fu
 
 Show mathematically that quadrotor _(b)_ is not able to track a trajectory defined in position $[x,y,z]$ and yaw orientation $\Psi$.
 
-- {: .hint} Hint: write down the $F$ matrix (see lecture notes eq. (6.9)) for the two cases _(a)_ and _(b)_ and compare the rank of the two matrices
+- {: .hint} Hint: write down the $F$ matrix (see lecture notes eq. (7.9)) for the two cases _(a)_ and _(b)_ and compare the rank of the two matrices
 
 #### _B_. Control of quadrotors 
 {: .no_toc}
