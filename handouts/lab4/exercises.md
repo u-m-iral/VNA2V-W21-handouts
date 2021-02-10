@@ -23,7 +23,7 @@ Create a folder called `lab4` that includes your answers (for math-related quest
 
 ### Team
 
-Each group should create a new folder called `TEAM_<N>`, replacing `<N>` with your team number. For example team 2 will name their folder `TEAM_2`. Please put the source code of the entire `controller_pkg` package in the folder `TEAM_2`. Zip the folder and submit to Canvas.
+Each group should create a new folder called `TEAM_<N>`, replacing `<N>` with your team number. For example team 2 will name their folder `TEAM_2`. Please put the source code of the entire `planner_pkg` and `trajectory_generation_pkg`package in the folder `TEAM_2`. Zip the folder and submit to Canvas.
 
 **Each team will only need to submit one `TEAM_<N>.zip` to Canvas.**
 
