@@ -133,7 +133,7 @@
 
       </div>
       <footer class="site-footer">
-        <p class="text-small text-grey-dk-000 mb-4"><b>Last modified</b>:<br> Wednesday, February 10 at 00:10</p>
+        <p class="text-small text-grey-dk-000 mb-4"><b>Last modified</b>:<br> Wednesday, February 10 at 00:21</p>
       </footer>
     </div>
     <div class="main-content-wrap js-main-content" tabindex="0">
@@ -231,7 +231,7 @@
         
       </h3>
 
-<p>Each group should create a new folder called <code class="highlighter-rouge">TEAM_&lt;N&gt;</code>, replacing <code class="highlighter-rouge">&lt;N&gt;</code> with your team number. For example team 2 will name their folder <code class="highlighter-rouge">TEAM_2</code>. Please put the source code of the entire <code class="highlighter-rouge">planner_pkg</code> and <code class="highlighter-rouge">trajectory_generation_pkg</code>package in the folder <code class="highlighter-rouge">TEAM_2</code>. Zip the folder and submit to Canvas.</p>
+<p>Each group should create a new folder called <code class="highlighter-rouge">TEAM_&lt;N&gt;</code>, replacing <code class="highlighter-rouge">&lt;N&gt;</code> with your team number. For example team 2 will name their folder <code class="highlighter-rouge">TEAM_2</code>. Please put the source code of the entire <code class="highlighter-rouge">planner_pkg</code> and <code class="highlighter-rouge">trajectory_generation_pkg</code> package in the folder <code class="highlighter-rouge">TEAM_2</code>. Zip the folder and submit to Canvas.</p>
 
 <p><strong>Each team will only need to submit one <code class="highlighter-rouge">TEAM_&lt;N&gt;.zip</code> to Canvas.</strong></p>
 
@@ -255,11 +255,23 @@
 
 <p>Consider the following minimum velocity ($r=1$) single-segment trajectory optimization problem:</p>
 
-<p>\begin{eqnarray}
-\min_{P(t)} \quad  \int_0^1 (P^{(1)}(t))^2 dt, \label{eq:minvel} \\
-s.t.   \quad P(0) = 0, \label{eq:initpos} \\
+<!-- \begin{eqnarray}
+\min_{P(t)} \quad  \int_0^1 (P^{(1)}(t))^2 dt, \label{eq:minvel} \\\
+s.t.   \quad P(0) = 0, \label{eq:initpos} \\\
        \quad P(1) = 1, \label{eq:finalpos} 
-\end{eqnarray}</p>
+\end{eqnarray} -->
+
+<p>\begin{equation}
+\min_{P(t)} \quad  \int_0^1 (P^{(1)}(t))^2 dt, \label{eq:minvel}
+\end{equation}</p>
+
+<p>\begin{equation}
+s.t.   \quad P(0) = 0, \label{eq:initpos}
+\end{equation}</p>
+
+<p>\begin{equation}
+\quad P(1) = 1, \label{eq:finalpos} 
+\end{equation}</p>
 
 <p>with $P(t) \in \mathbb{R}[t]$, i.e., $P(t)$ is a polynomial function in $t$ with real coefficients:</p>
 

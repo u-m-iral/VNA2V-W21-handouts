@@ -23,7 +23,7 @@ Create a folder called `lab4` that includes your answers (for math-related quest
 
 ### Team
 
-Each group should create a new folder called `TEAM_<N>`, replacing `<N>` with your team number. For example team 2 will name their folder `TEAM_2`. Please put the source code of the entire `planner_pkg` and `trajectory_generation_pkg`package in the folder `TEAM_2`. Zip the folder and submit to Canvas.
+Each group should create a new folder called `TEAM_<N>`, replacing `<N>` with your team number. For example team 2 will name their folder `TEAM_2`. Please put the source code of the entire `planner_pkg` and `trajectory_generation_pkg` package in the folder `TEAM_2`. Zip the folder and submit to Canvas.
 
 **Each team will only need to submit one `TEAM_<N>.zip` to Canvas.**
 
@@ -34,11 +34,25 @@ Each group should create a new folder called `TEAM_<N>`, replacing `<N>` with yo
 
 Consider the following minimum velocity ($r=1$) single-segment trajectory optimization problem:
 
-\begin{eqnarray}
+<!-- \begin{eqnarray}
 \min_{P(t)} \quad  \int_0^1 (P^{(1)}(t))^2 dt, \label{eq:minvel} \\\
 s.t.   \quad P(0) = 0, \label{eq:initpos} \\\
        \quad P(1) = 1, \label{eq:finalpos} 
-\end{eqnarray}
+\end{eqnarray} -->
+
+
+\begin{equation}
+\min_{P(t)} \quad  \int_0^1 (P^{(1)}(t))^2 dt, \label{eq:minvel}
+\end{equation}
+
+\begin{equation}
+s.t.   \quad P(0) = 0, \label{eq:initpos}
+\end{equation}
+
+\begin{equation}
+\quad P(1) = 1, \label{eq:finalpos} 
+\end{equation}
+
 
 with $P(t) \in \mathbb{R}[t]$, i.e., $P(t)$ is a polynomial function in $t$ with real coefficients: 
 
