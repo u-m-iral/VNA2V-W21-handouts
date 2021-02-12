@@ -104,7 +104,7 @@ _3._ Now suppose we allow $P(t) = p_3t^3 + p_2 t^2 + p_1 t$:
 
 _(a)_ Let $\boldsymbol{p} = [p_1,p_2,p_3]^T$, write down $\boldsymbol{Q} \in \mathcal{S}^3, \boldsymbol{A} \in \mathbb{R}^{1\times 3}, \boldsymbol{b} \in \mathbb{R}$ for the QP (\ref{eq:QPtrajOpt}).
 
-**Solution**: $P^{(1)}(t) = p_1 + p_2 \cdot (2t) + p_3 \cdot (3t^2)$. Therefore, we have:
+<!-- **Solution**: $P^{(1)}(t) = p_1 + p_2 \cdot (2t) + p_3 \cdot (3t^2)$. Therefore, we have:
 \begin{equation}
 \boldsymbol{Q} = \int_0^1 \left[\begin{array}{c} 1 \\\ 2t \\\ 3t^2 \end{array}\right]
 \left[\begin{array}{ccc} 1 & 2t & 3t^2 \end{array}\right] dt =
@@ -114,7 +114,7 @@ _(a)_ Let $\boldsymbol{p} = [p_1,p_2,p_3]^T$, write down $\boldsymbol{Q} \in \ma
 In addition, we have:
 \begin{equation}
 \boldsymbol{A} = [1,1,1], \boldsymbol{b} = 1.
-\end{equation}
+\end{equation} -->
 
 _(b)_ Solve the QP, what optimal solution do you get? Do this example agree with the result we learned from Euler-Lagrange equation in class?
 
