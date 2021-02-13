@@ -169,9 +169,9 @@ rosbag record /current_state /desired_state
 
 ### Getting the codebase
 
-First, let us install some prerequisites. In a terminal, run:
+<!-- First, let us install some prerequisites. In a terminal, run: -->
 
-Next, let's set up our workspace: 
+Let's set up our workspace: 
 
 ```bash
 # change the folder name according to your setup
