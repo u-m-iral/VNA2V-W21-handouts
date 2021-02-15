@@ -421,10 +421,11 @@ use the most well-known differential feature tracker, also known as Lucas-Kanade
 
 - {: .hint} Hint: For the show() method, you will just need to create a copy of the input frame and then make a loop that calls <code>cv::line</code> and <code>cv::circle</code> with correct arguments before calling <code>imshow</code>.
 
-## 📨 [Optional] Deliverable 8 - Optical Flow [+20 pts]
+<!-- ## 📨 [Optional] Deliverable 8 - Optical Flow [+20 pts]
 
 LK tracker estimates the optical flow for sparse points in the image. Alternatively, dense approaches try to estimate the optical flow for the whole image. Try to calculate your [own optical flow](https://www.dropbox.com/s/37u2b5xax6puf5j/own_flow.mp4?dl=0), or the flow of a video of your choice, using [Farneback's algorithm](https://docs.opencv.org/3.3.1/dc/d6b/group__video__track.html#ga5d10ebbd59fe09c5f650289ec0ece5af).
 
 - {: .hint} Hint: Take a look at this <a href="https://docs.opencv.org/3.4/d4/dee/tutorial_optical_flow.html">tutorial</a>, specifically the section on dense optical flow. Please post on piazza if you run into any issues or get stuck anywhere.
 
-<img data-src="{{ 'assets/images/lab5/farneback-arm.gif' | absolute_url}}" class="lazyload mx-auto d-block" >
+<img data-src="{{ 'assets/images/lab5/farneback-arm.gif' | absolute_url}}" class="lazyload mx-auto d-block" > 
+-->
