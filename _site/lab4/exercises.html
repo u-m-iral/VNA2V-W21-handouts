@@ -127,13 +127,16 @@
 <li class="navigation-list-item active">
 <a href="http://localhost:4000/VNA2V-W21-handouts/lab4/" class="navigation-list-link">Lab 4</a><ul class="navigation-list-child-list "><li class="navigation-list-item  active"><a href="http://localhost:4000/VNA2V-W21-handouts/lab4/exercises" class="navigation-list-link active">Exercises</a></li></ul>
 </li>
+<li class="navigation-list-item">
+<a href="http://localhost:4000/VNA2V-W21-handouts/lab5/" class="navigation-list-link">Lab 5</a><ul class="navigation-list-child-list "><li class="navigation-list-item "><a href="http://localhost:4000/VNA2V-W21-handouts/lab5/exercises" class="navigation-list-link">Exercises</a></li></ul>
+</li>
 <li class="navigation-list-item"><a href="http://localhost:4000/VNA2V-W21-handouts/about" class="navigation-list-link">How to print</a></li>
 </ul>
 </nav>
 
       </div>
       <footer class="site-footer">
-        <p class="text-small text-grey-dk-000 mb-4"><b>Last modified</b>:<br> Wednesday, February 10 at 11:04</p>
+        <p class="text-small text-grey-dk-000 mb-4"><b>Last modified</b>:<br> Tuesday, February 16 at 23:56</p>
       </footer>
     </div>
     <div class="main-content-wrap js-main-content" tabindex="0">
@@ -323,17 +326,17 @@ You can solve it by hand, or you can solve it using numerical QP solvers (e.g., 
 
 <p><em>(a)</em> Let $\boldsymbol{p} = [p_1,p_2,p_3]^T$, write down $\boldsymbol{Q} \in \mathcal{S}^3, \boldsymbol{A} \in \mathbb{R}^{1\times 3}, \boldsymbol{b} \in \mathbb{R}$ for the QP (\ref{eq:QPtrajOpt}).</p>
 
-<p><strong>Solution</strong>: $P^{(1)}(t) = p_1 + p_2 \cdot (2t) + p_3 \cdot (3t^2)$. Therefore, we have:
+<!-- **Solution**: $P^{(1)}(t) = p_1 + p_2 \cdot (2t) + p_3 \cdot (3t^2)$. Therefore, we have:
 \begin{equation}
-\boldsymbol{Q} = \int_0^1 \left[\begin{array}{c} 1 \\ 2t \\ 3t^2 \end{array}\right]
-\left[\begin{array}{ccc} 1 &amp; 2t &amp; 3t^2 \end{array}\right] dt =
-\int_0^1 \left[\begin{array}{ccc} 1 &amp; 2t &amp; 3t^2 \\ 2t &amp; 4t^2 &amp; 6t^3 \\ 3t^2 &amp; 6t^3 &amp; 9t^4 \end{array}\right] dt = 
-\left[\begin{array}{ccc} 1 &amp; 1 &amp; 1 \\ 1 &amp; \frac{4}{3} &amp; \frac{3}{2} \\ 1 &amp; \frac{3}{2} &amp; \frac{9}{5} \end{array}\right].
+\boldsymbol{Q} = \int_0^1 \left[\begin{array}{c} 1 \\\ 2t \\\ 3t^2 \end{array}\right]
+\left[\begin{array}{ccc} 1 & 2t & 3t^2 \end{array}\right] dt =
+\int_0^1 \left[\begin{array}{ccc} 1 & 2t & 3t^2 \\\ 2t & 4t^2 & 6t^3 \\\ 3t^2 & 6t^3 & 9t^4 \end{array}\right] dt = 
+\left[\begin{array}{ccc} 1 & 1 & 1 \\\ 1 & \frac{4}{3} & \frac{3}{2} \\\ 1 & \frac{3}{2} & \frac{9}{5} \end{array}\right].
 \end{equation}
 In addition, we have:
 \begin{equation}
 \boldsymbol{A} = [1,1,1], \boldsymbol{b} = 1.
-\end{equation}</p>
+\end{equation} -->
 
 <p><em>(b)</em> Solve the QP, what optimal solution do you get? Do this example agree with the result we learned from Euler-Lagrange equation in class?</p>
 
@@ -415,9 +418,9 @@ Using the QP method above, find the optimal solution and optimal cost of problem
         
       </h3>
 
-<p>First, let us install some prerequisites. In a terminal, run:</p>
+<!-- First, let us install some prerequisites. In a terminal, run: -->
 
-<p>Next, let’s set up our workspace:</p>
+<p>Let’s set up our workspace:</p>
 
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># change the folder name according to your setup</span>
 <span class="nb">cd</span> ~/labs

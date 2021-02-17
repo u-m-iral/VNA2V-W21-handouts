@@ -1,0 +1,809 @@
+
+
+<!DOCTYPE html>
+
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+
+  
+    <title>Exercises - VNA2V-W21</title>
+
+    
+  
+
+  <link rel="shortcut icon" href="http://localhost:4000/VNA2V-W21-handouts/favicon.ico" type="image/x-icon">
+
+  <link rel="stylesheet" href="http://localhost:4000/VNA2V-W21-handouts/assets/css/just-the-docs.css">
+  <script src="https://use.fontawesome.com/d81b2d50d8.js"></script>
+  
+  
+
+  
+    <script type="text/javascript" src="http://localhost:4000/VNA2V-W21-handouts/assets/js/vendor/lunr.min.js"></script>
+  
+  <script type="text/javascript" src="http://localhost:4000/VNA2V-W21-handouts/assets/js/just-the-docs.js"></script>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>Exercises | VNA2V-W21</title>
+<meta name="generator" content="Jekyll v3.8.6" />
+<meta property="og:title" content="Exercises" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="AEROSP 740 - Visual Navigation for Autonomous Aerial Vehicles (W21)" />
+<meta property="og:description" content="AEROSP 740 - Visual Navigation for Autonomous Aerial Vehicles (W21)" />
+<link rel="canonical" href="http://localhost:4000/VNA2V-W21-handouts/lab5/exercises" />
+<meta property="og:url" content="http://localhost:4000/VNA2V-W21-handouts/lab5/exercises" />
+<meta property="og:site_name" content="VNA2V-W21" />
+<script type="application/ld+json">
+{"@type":"WebPage","url":"http://localhost:4000/VNA2V-W21-handouts/lab5/exercises","headline":"Exercises","description":"AEROSP 740 - Visual Navigation for Autonomous Aerial Vehicles (W21)","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+  
+<script>
+  window.MathJax = {
+    options: {
+      skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+    },
+    loader: {
+      load: ['input/tex', '[tex]/ams', '[tex]/configMacros']
+    },
+    tex: {
+      packages: {'[+]': ['boldsymbol', 'ams', 'configMacros']},
+      inlineMath: [['$','$'], ['\\(','\\)']],
+      displayMath: [["$$", "$$"], ["\\[","\\]"]],
+      processEscapes: true,
+      tags: "ams",
+      macros: {
+        SE: ['\\mathrm{SE}(#1)', 1],
+        SO: ['\\mathrm{SO}(#1)', 1],
+        argmin: '\\mathop{\\operatorname{argmin}}',
+        argmax: '\\mathop{\\operatorname{argmax}}',
+        trace: '\\operatorname{trace}',
+        tran: '^{\\mathsf{T}}',
+      },
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+
+
+<script type="text/javascript" src="http://localhost:4000/VNA2V-W21-handouts/assets/js/vendor/lazysizes.min.js" async=""></script>
+
+</head>
+
+<body>
+
+  <div class="page-wrap">
+    <div class="side-bar">
+      <div class="site-header">
+        <a href="http://localhost:4000/VNA2V-W21-handouts" class="site-title lh-tight">VNA2V-W21</a>
+        <button class="menu-button fs-3 js-main-nav-trigger" data-text-toggle="Hide" type="button">Menu</button>
+      </div>
+
+      <div class="navigation main-nav js-main-nav">
+        <nav role="navigation" aria-label="Main navigation">
+  <ul class="navigation-list">
+<li class="navigation-list-item"><a href="http://localhost:4000/VNA2V-W21-handouts/" class="navigation-list-link">Home</a></li>
+<li class="navigation-list-item">
+<a href="http://localhost:4000/VNA2V-W21-handouts/lab1/" class="navigation-list-link">Lab 1</a><ul class="navigation-list-child-list ">
+<li class="navigation-list-item "><a href="http://localhost:4000/VNA2V-W21-handouts/lab1/ubuntu" class="navigation-list-link">Install Ubuntu 18.04</a></li>
+<li class="navigation-list-item "><a href="http://localhost:4000/VNA2V-W21-handouts/lab1/shell" class="navigation-list-link">Shell basics</a></li>
+<li class="navigation-list-item "><a href="http://localhost:4000/VNA2V-W21-handouts/lab1/git" class="navigation-list-link">Git</a></li>
+<li class="navigation-list-item "><a href="http://localhost:4000/VNA2V-W21-handouts/lab1/cpp" class="navigation-list-link">C++</a></li>
+<li class="navigation-list-item "><a href="http://localhost:4000/VNA2V-W21-handouts/lab1/exercises" class="navigation-list-link">Exercises</a></li>
+</ul>
+</li>
+<li class="navigation-list-item">
+<a href="http://localhost:4000/VNA2V-W21-handouts/lab2/" class="navigation-list-link">Lab 2</a><ul class="navigation-list-child-list ">
+<li class="navigation-list-item "><a href="http://localhost:4000/VNA2V-W21-handouts/lab2/ros" class="navigation-list-link">Installing ROS</a></li>
+<li class="navigation-list-item "><a href="http://localhost:4000/VNA2V-W21-handouts/lab2/ros101" class="navigation-list-link">Introduction to ROS</a></li>
+<li class="navigation-list-item "><a href="http://localhost:4000/VNA2V-W21-handouts/lab2/exercises" class="navigation-list-link">Exercises</a></li>
+</ul>
+</li>
+<li class="navigation-list-item">
+<a href="http://localhost:4000/VNA2V-W21-handouts/lab3/" class="navigation-list-link">Lab 3</a><ul class="navigation-list-child-list "><li class="navigation-list-item "><a href="http://localhost:4000/VNA2V-W21-handouts/lab3/exercises" class="navigation-list-link">Exercises</a></li></ul>
+</li>
+<li class="navigation-list-item">
+<a href="http://localhost:4000/VNA2V-W21-handouts/lab4/" class="navigation-list-link">Lab 4</a><ul class="navigation-list-child-list "><li class="navigation-list-item "><a href="http://localhost:4000/VNA2V-W21-handouts/lab4/exercises" class="navigation-list-link">Exercises</a></li></ul>
+</li>
+<li class="navigation-list-item active">
+<a href="http://localhost:4000/VNA2V-W21-handouts/lab5/" class="navigation-list-link">Lab 5</a><ul class="navigation-list-child-list "><li class="navigation-list-item  active"><a href="http://localhost:4000/VNA2V-W21-handouts/lab5/exercises" class="navigation-list-link active">Exercises</a></li></ul>
+</li>
+<li class="navigation-list-item"><a href="http://localhost:4000/VNA2V-W21-handouts/about" class="navigation-list-link">How to print</a></li>
+</ul>
+</nav>
+
+      </div>
+      <footer class="site-footer">
+        <p class="text-small text-grey-dk-000 mb-4"><b>Last modified</b>:<br> Tuesday, February 16 at 23:56</p>
+      </footer>
+    </div>
+    <div class="main-content-wrap js-main-content" tabindex="0">
+      <div class="main-content">
+        <div class="page-header js-page-header">
+          
+          <div class="search">
+            <div class="search-input-wrap">
+              <input type="text" class="js-search-input search-input" tabindex="0" placeholder="Search VNA2V-W21" aria-label="Search VNA2V-W21" autocomplete="off">
+              <svg width="14" height="14" viewbox="0 0 28 28" xmlns="http://www.w3.org/2000/svg" class="search-icon"><title>Search</title>
+<g fill-rule="nonzero"><path d="M17.332 20.735c-5.537 0-10-4.6-10-10.247 0-5.646 4.463-10.247 10-10.247 5.536 0 10 4.601 10 10.247s-4.464 10.247-10 10.247zm0-4c3.3 0 6-2.783 6-6.247 0-3.463-2.7-6.247-6-6.247s-6 2.784-6 6.247c0 3.464 2.7 6.247 6 6.247z"></path><path d="M11.672 13.791L.192 25.271 3.02 28.1 14.5 16.62z"></path></g></svg>
+            </div>
+            <div class="js-search-results search-results-wrap"></div>
+          </div>
+          
+          
+        </div>
+        <div class="page">
+          
+            
+              <nav class="breadcrumb-nav">
+                <ol class="breadcrumb-nav-list">
+                  
+                    <li class="breadcrumb-nav-list-item"><a href="http://localhost:4000/VNA2V-W21-handouts/lab5/">Lab 5</a></li>
+                  
+                  <li class="breadcrumb-nav-list-item"><span>Exercises</span></li>
+                </ol>
+              </nav>
+            
+          
+          <div id="main-content" class="page-content" role="main">
+            
+              <h1 class="no_toc text-delta fs-9" id="exercises">
+        
+        
+          <a href="#exercises" class="anchor-heading"><svg class="d-inline-block v-align-middle" viewbox="0 0 16 16" version="1.1" width="18" height="18" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> Exercises
+        
+        
+      </h1>
+
+<ol id="markdown-toc">
+  <li>
+<a href="#submission" id="markdown-toc-submission">Submission</a>    <ol>
+      <li><a href="#individual" id="markdown-toc-individual">Individual</a></li>
+      <li><a href="#team" id="markdown-toc-team">Team</a></li>
+    </ol>
+  </li>
+  <li>
+<a href="#-individual" id="markdown-toc--individual">👤 Individual</a>    <ol>
+      <li><a href="#-deliverable-1---practice-with-perspective-projection-10-pts" id="markdown-toc--deliverable-1---practice-with-perspective-projection-10-pts">📨 Deliverable 1 - Practice with Perspective Projection [10 pts]</a></li>
+      <li><a href="#-deliverable-2---vanishing-points-10-pts" id="markdown-toc--deliverable-2---vanishing-points-10-pts">📨 Deliverable 2 - Vanishing Points [10 pts]</a></li>
+    </ol>
+  </li>
+  <li><a href="#-team" id="markdown-toc--team">👥 Team</a></li>
+  <li><a href="#update-the-lab-codebase" id="markdown-toc-update-the-lab-codebase">Update the lab codebase</a></li>
+  <li>
+<a href="#feature-tracking-and-matching" id="markdown-toc-feature-tracking-and-matching">Feature Tracking and Matching</a>    <ol>
+      <li>
+<a href="#descriptor-based-feature-matching" id="markdown-toc-descriptor-based-feature-matching">Descriptor-based Feature Matching</a>        <ol>
+          <li><a href="#feature-detection-sift" id="markdown-toc-feature-detection-sift">Feature Detection (SIFT)</a></li>
+        </ol>
+      </li>
+      <li><a href="#-deliverable-3---feature-descriptors-sift-20-pts" id="markdown-toc--deliverable-3---feature-descriptors-sift-20-pts">📨 Deliverable 3 - Feature Descriptors (SIFT) [20 pts]</a></li>
+      <li><a href="#-deliverable-4---descriptor-based-feature-matching-10-pts" id="markdown-toc--deliverable-4---descriptor-based-feature-matching-10-pts">📨 Deliverable 4 - Descriptor-based Feature Matching [10 pts]</a></li>
+      <li><a href="#-deliverable-5---keypoint-matching-quality-10-pts" id="markdown-toc--deliverable-5---keypoint-matching-quality-10-pts">📨 Deliverable 5 - Keypoint Matching Quality [10 pts]</a></li>
+      <li>
+<a href="#-deliverable-6---comparing-feature-matching-algorithms-on-real-data-20-pts" id="markdown-toc--deliverable-6---comparing-feature-matching-algorithms-on-real-data-20-pts">📨 Deliverable 6 - Comparing Feature Matching Algorithms on Real Data [20 pts]</a>        <ol>
+          <li><a href="#6a-pair-of-frames" id="markdown-toc-6a-pair-of-frames">6.a. Pair of frames</a></li>
+          <li><a href="#6b-real-datasets" id="markdown-toc-6b-real-datasets">6.b. Real Datasets</a></li>
+        </ol>
+      </li>
+      <li><a href="#-deliverable-7---feature-tracking-lucas-kanade-tracker-20-pts" id="markdown-toc--deliverable-7---feature-tracking-lucas-kanade-tracker-20-pts">📨 Deliverable 7 - Feature Tracking: Lucas Kanade Tracker [20 pts]</a></li>
+    </ol>
+  </li>
+</ol>
+    
+      <h1 id="submission">
+        
+        
+          <a href="#submission" class="anchor-heading"><svg class="d-inline-block v-align-middle" viewbox="0 0 16 16" version="1.1" width="18" height="18" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> Submission
+        
+        
+      </h1>
+    
+      <h3 id="individual">
+        
+        
+          <a href="#individual" class="anchor-heading"><svg class="d-inline-block v-align-middle" viewbox="0 0 16 16" version="1.1" width="18" height="18" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> Individual
+        
+        
+      </h3>
+
+<p>Create a folder called <code class="highlighter-rouge">lab5</code> that includes your answers (for math-related questions LaTeX is preferred but handwritten is accepted too). Zip the folder and upload on Canvas.</p>
+
+<p><strong>Each student needs to submit their own <code class="highlighter-rouge">lab5</code> folder to Canvas.</strong></p>
+    
+      <h3 id="team">
+        
+        
+          <a href="#team" class="anchor-heading"><svg class="d-inline-block v-align-middle" viewbox="0 0 16 16" version="1.1" width="18" height="18" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> Team
+        
+        
+      </h3>
+
+<p>Each group should create a new folder called <code class="highlighter-rouge">TEAM_&lt;N&gt;</code>, replacing <code class="highlighter-rouge">&lt;N&gt;</code> with your team number. For example team 2 will name their folder <code class="highlighter-rouge">TEAM_2</code>. Please put the source code of the entire <code class="highlighter-rouge">feature_tracking</code> folder in the folder <code class="highlighter-rouge">TEAM_2</code>. For the tables and discussion questions, please include a PDF in the <code class="highlighter-rouge">TEAM_2</code> folder. Zip the folder and submit to Canvas.</p>
+
+<p><strong>Each team will only need to submit one <code class="highlighter-rouge">TEAM_&lt;N&gt;.zip</code> to Canvas.</strong></p>
+
+<p><strong>Deadline:</strong> To submit your solution, please upload the corresponding files under <code class="highlighter-rouge">Assignment &gt; Lab 5</code> by <strong>Thursday, Feb 25 11:59 EST</strong>.</p>
+    
+      <h1 id="-individual">
+        
+        
+          <a href="#-individual" class="anchor-heading"><svg class="d-inline-block v-align-middle" viewbox="0 0 16 16" version="1.1" width="18" height="18" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> 👤 Individual
+        
+        
+      </h1>
+    
+      <h2 id="-deliverable-1---practice-with-perspective-projection-10-pts">
+        
+        
+          <a href="#-deliverable-1---practice-with-perspective-projection-10-pts" class="anchor-heading"><svg class="d-inline-block v-align-middle" viewbox="0 0 16 16" version="1.1" width="18" height="18" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> 📨 Deliverable 1 - Practice with Perspective Projection [10 pts]
+        
+        
+      </h2>
+
+<p>Consider a sphere with radius $r$ centered at $[0\ 0\ d]$ with respect to the
+camera coordinate frame (centered at the optical center and with axis oriented
+as discussed in class). Assume $d &gt; r + 1$ and assume that the camera has
+principal point at $(0,0)$, focal length equal to 1, pixel sizes $s_x = s_y = 1$
+and zero skew $s_\theta = 0$ (see lecture notes for notation)
+the following exercises:</p>
+
+<ol>
+  <li>
+<strong>Derive</strong> the equation describing the projection of the sphere onto the image plane.
+    <ul>
+      <li class="hint">Hint: Think about what shape you expect the projection on the image plane to be, and then derive a characterisitic equation for that shape
+in the image plane coordinates $u,v$ along with $r$ and $d$.</li>
+    </ul>
+  </li>
+  <li>
+<strong>Discuss</strong> what the projection becomes when the center of the sphere is at an arbitrary location, not necessarily along the optical axis. What is the shape of the projection?</li>
+</ol>
+    
+      <h2 id="-deliverable-2---vanishing-points-10-pts">
+        
+        
+          <a href="#-deliverable-2---vanishing-points-10-pts" class="anchor-heading"><svg class="d-inline-block v-align-middle" viewbox="0 0 16 16" version="1.1" width="18" height="18" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> 📨 Deliverable 2 - Vanishing Points [10 pts]
+        
+        
+      </h2>
+
+<p>Consider two 3D lines that are parallel to each other. As we have seen in the
+lectures, lines that are parallel in 3D may project to intersecting lines on the
+image plane. The pixel at which two 3D parallel lines intersect in the image
+plane is called a vanishing point. Assume a camera with principal point at
+(0,0), focal length equal to 1, pixel sizes $s_x = s_y = 1$ and zero skew
+$s_\theta = 0$ (see lecture notes for notation). 
+Complete the following exercises:</p>
+
+<ol>
+  <li>
+<strong>Derive</strong> the generic expression of the vanishing point corresponding to two parallel 3D lines.</li>
+  <li>
+<strong>Find (and prove mathematically)</strong> a condition under which 3D parallel lines remain parallel in the image plane.</li>
+</ol>
+
+<ul>
+  <li class="hint">Hint: For both 1. and 2. you may use two different approaches:</li>
+  <li class="hint">
+<strong>Algebraic approach</strong>: a 3D line can be written as a set of points $p(\lambda) = p_0 +
+\lambda u$ where $p_0 \in \mathbb{R}^3$ is a point on the line, $u \in
+\mathbb{R}^3$ is a unit vector along the direction of the line, and $\lambda \in
+\mathbb{R}$.</li>
+  <li class="hint">
+<strong>Geometric approach</strong>: the projection of a 3D line can be understood as the intersection beetween two planes.</li>
+</ul>
+    
+      <h1 id="-team">
+        
+        
+          <a href="#-team" class="anchor-heading"><svg class="d-inline-block v-align-middle" viewbox="0 0 16 16" version="1.1" width="18" height="18" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> 👥 Team
+        
+        
+      </h1>
+    
+      <h1 id="update-the-lab-codebase">
+        
+        
+          <a href="#update-the-lab-codebase" class="anchor-heading"><svg class="d-inline-block v-align-middle" viewbox="0 0 16 16" version="1.1" width="18" height="18" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> Update the lab codebase
+        
+        
+      </h1>
+
+<p>Assuming you have already cloned our <code class="highlighter-rouge">labs</code> repository, you simply need to pull the latest changes!</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">cd</span> ~/labs
+git pull origin master
+</code></pre></div></div>
+
+<p>Copy the contents of the <code class="highlighter-rouge">lab5</code> directory into the <code class="highlighter-rouge">src</code> folder of your catkin workspace:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">cp</span> <span class="nt">-r</span> ~/labs/lab5 ~/vna2v_ws/src
+<span class="nb">cd</span> ~/vna2v_ws/src
+</code></pre></div></div>
+
+<p>Make sure to keep the folders for lab3 and lab4 in your catkin workspace, too! Some of their dependencies (specifically <code class="highlighter-rouge">glog_catkin</code> and <code class="highlighter-rouge">catkin_simple</code>) are also required by <code class="highlighter-rouge">lab5</code>. Finally, build the code:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">cd</span> ~/vna2v_ws
+catkin build <span class="nt">-j</span><span class="si">$(</span><span class="nb">nproc</span><span class="si">)</span> lab_5
+</code></pre></div></div>
+
+<p><strong>NOTE:</strong> Building the <code class="highlighter-rouge">opencv3_catkin</code> package may take some time. As a point
+of comparison, running with <code class="highlighter-rouge">catkin build -j8</code> on my machine, it took 5.5
+minutes. If you run into an error with ‘gflags’ when trying to build <code class="highlighter-rouge">opencv3_catkin</code>, run <code class="highlighter-rouge">catkin clean</code> to clean your workspace, then build <code class="highlighter-rouge">opencv3_catkin</code> <em>before</em> building the rest of the code, i.e.:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>catkin build <span class="nt">-j</span><span class="si">$(</span><span class="nb">nproc</span><span class="si">)</span> opencv3_catkin
+catkin build <span class="nt">-j</span><span class="si">$(</span><span class="nb">nproc</span><span class="si">)</span> lab_5
+</code></pre></div></div>
+
+<!-- <div class="alert alert-warning"> <div class="alert-content">
+    
+      <h2
+  class="alert-title">
+        
+        
+           ATTENTION. 
+        
+        
+      </h2> <div class="alert-body"> <p><b>NOTE:</b> There was a bug in <code>lab5/feature_tracking/launch/two_frames_tracking.launch</code> where "/ >" should have been replaced with " />". Please pull the updated code or make the change yourself.</p></div> </div> </div> -->
+    
+      <h1 id="feature-tracking-and-matching">
+        
+        
+          <a href="#feature-tracking-and-matching" class="anchor-heading"><svg class="d-inline-block v-align-middle" viewbox="0 0 16 16" version="1.1" width="18" height="18" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> Feature Tracking and Matching
+        
+        
+      </h1>
+
+<p>Feature tracking between images is a fundamental module in many computer vision
+applications, as it allows us both to triangulate points in the scene and, at
+the same time, estimate the position and orientation of the camera from frame to
+frame (you will learn how to do so in subsequent lectures).</p>
+    
+      <h2 id="descriptor-based-feature-matching">
+        
+        
+          <a href="#descriptor-based-feature-matching" class="anchor-heading"><svg class="d-inline-block v-align-middle" viewbox="0 0 16 16" version="1.1" width="18" height="18" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> Descriptor-based Feature Matching
+        
+        
+      </h2>
+    
+      <h3 id="feature-detection-sift">
+        
+        
+          <a href="#feature-detection-sift" class="anchor-heading"><svg class="d-inline-block v-align-middle" viewbox="0 0 16 16" version="1.1" width="18" height="18" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> Feature Detection (SIFT)
+        
+        
+      </h3>
+
+<p>Feature detection consists in extracting keypoints (pixel locations) in an
+image. In order to track features reliably from frame to frame, we need to
+specify what is a good feature to detect.</p>
+
+<p>The ideal features in an image are the ones that have the following properties:</p>
+
+<ul>
+  <li>Repeatability: the same feature can be found in several images despite geometric (i.e. rotations, scale changes, etc) and photometric transformations (i.e. changes in brightness).</li>
+  <li>Saliency: each feature has a distinctive description. Otherwise, matching between features is difficult if all features look the same.</li>
+  <li>Compactness and efficiency: fewer features than image pixels.</li>
+  <li>Locality: a feature occupies a relatively small area of the image, making it
+robust to clutter and occlusion.</li>
+</ul>
+
+<p>As you have seen in the lecture, one very successful feature detector is SIFT
+(Scale Invariant Feature Transform), which is not only invariant to image
+rotations, but also to scale changes of the image.</p>
+
+<p>Let us now use SIFT to detect keypoints in an image to see what is the actual output.</p>
+
+<p>We want you to get familiar with state-of-the-art feature detectors, so we will avoid having you re-implement the detectors themselves and focus instead on their comparison. Refer to the tutorials in OpenCV for the different algorithms we will be using for more details. For example, SIFT is detailed <a href="https://docs.opencv.org/3.4.3/da/df5/tutorial_py_sift_intro.html" target="_blank" rel="noopener noreferrer">here</a> and its OpenCV API is defined <a href="https://docs.opencv.org/3.4.11/d7/d60/classcv_1_1SIFT.html" target="_blank" rel="noopener noreferrer">here</a>. You will need to search through the OpenCV documentation for details on the other descriptors and methods mentioned in this handout.</p>
+
+<p><strong>NOTE</strong>: Check your OpenCV version.</p>
+    
+      <h2 id="-deliverable-3---feature-descriptors-sift-20-pts">
+        
+        
+          <a href="#-deliverable-3---feature-descriptors-sift-20-pts" class="anchor-heading"><svg class="d-inline-block v-align-middle" viewbox="0 0 16 16" version="1.1" width="18" height="18" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> 📨 Deliverable 3 - Feature Descriptors (SIFT) [20 pts]
+        
+        
+      </h2>
+
+<p>We provide you with skeleton code for the base class FeatureTracker that
+provides an abstraction layer for all feature trackers. Furthermore, we give you
+two empty structures for the SIFT and SURF methods that derive from the class
+FeatureTracker.</p>
+
+<p>Inside the <code class="highlighter-rouge">lab5</code> folder, we provide you with two images ‘box.png’ and
+‘box_in_scene.png’ (inside the <code class="highlighter-rouge">images</code> folder).</p>
+
+<p>We will first ask you to extract keypoints from both images using SIFT. For
+that, we refer you to the skeleton code in the <code class="highlighter-rouge">src</code> folder named
+<code class="highlighter-rouge">track_features.cpp</code>. Follow the instructions written in the comments; specifically,
+you will need to complete:</p>
+<ul>
+  <li>The stub <code>SiftFeatureTracker::detectKeypoints()</code> and <code>SiftFeatureTracker::describeKeypoints()</code> in <code>lab5/feature_tracking/src/sift_feature_tracker.cpp</code>
+</li>
+  <li>The first part of <code>FeatureTracker::trackFeatures()</code> in <code>lab5/feature_tracking/src/feature_tracker.cpp</code>
+</li>
+</ul>
+
+<p>Once you have implemented SIFT, you can test it by running:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>roslaunch lab_5 two_frames_tracking.launch descriptor:<span class="o">=</span>SIFT <span class="c"># note you can change the descriptor later</span>
+</code></pre></div></div>
+
+<p>Your code should be able to plot a figure like the one below (keypoints you
+detected should not necessarily coincide with the ones in the figure):</p>
+
+<p><img src="http://localhost:4000/VNA2V-W21-handouts/assets/images/lab5/keypoints.png" alt="Detected keypoints" class="mx-auto d-block"></p>
+
+<p>Now that we have detected keypoints in each image, we need to find a way to
+uniquely identify these to subsequently match features from frame to frame.
+Feature descriptors in the literature are multiple, and while we will not review
+all of them, they all rely on a similar principle: using the pixel intensities
+around the detected keypoint to describe the feature.</p>
+
+<p>Descriptors are multidimensional and are typically represented by an array.</p>
+
+<p>Follow the skeleton code in <code class="highlighter-rouge">src</code> to compute the descriptors for all the
+extracted keypoints.</p>
+
+<ul>
+  <li class="hint">Hint: In OpenCV, SIFT and the other descriptors we will look at are children
+of the “Feature2D” class. We provide you with a SIFT <code>detector</code> object,
+so look at the <a href="https://docs.opencv.org/3.4/d0/d13/classcv_1_1Feature2D.html" target="_blank" rel="noopener noreferrer">
+Feature2D “Public Member Functions”</a> documentation to determine which command you need to detect keypoints and get their descriptors.</li>
+</ul>
+    
+      <h2 id="-deliverable-4---descriptor-based-feature-matching-10-pts">
+        
+        
+          <a href="#-deliverable-4---descriptor-based-feature-matching-10-pts" class="anchor-heading"><svg class="d-inline-block v-align-middle" viewbox="0 0 16 16" version="1.1" width="18" height="18" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> 📨 Deliverable 4 - Descriptor-based Feature Matching [10 pts]
+        
+        
+      </h2>
+
+<p>With the pairs of keypoint detections and their respective descriptors, we are
+ready to start matching keypoints between two images. It is possible to match
+keypoints just by using a brute force approach. Nevertheless, since descriptors
+can have high-dimensionality, it is advised to use faster techniques.</p>
+
+<p>In this exercise, we will ask you to use the FLANN (Fast Approximate Nearest
+Neighbor Search Library), which provides instead a fast implementation for
+finding the nearest neighbor. This will be useful for the rest of the problem
+set, when we will use the code in video sequences.</p>
+
+<ol>
+  <li>What is the dimension of the SIFT descriptors you computed?</li>
+  <li>Compute and plot the matches that you found from the <em>box.png</em> image to the <em>box_in_scene.png</em>.</li>
+  <li>You might notice that naively matching features results in a significant
+amount of false positives (outliers). There are different techniques to minimize
+this issue. The one proposed by the authors of SIFT was to calculate the best
+two matches for a given descriptor and calculate the ratio between their
+distances: <code class="highlighter-rouge">Match1.distance &lt; 0.8 * Match2.distance</code> This ensures that we do not
+consider descriptors that have been ambiguously matched to multiple descriptors
+in the target image. Here we used the threshold value that the SIFT authors
+proposed (0.8).</li>
+  <li>Compute and plot the matches that you found from the <em>box.png</em> image to the
+<em>box_in_scene.png</em> after applying the filter that we just described. You should
+notice a significant reduction of outliers.</li>
+</ol>
+
+<p>Specifically, you will need to complete:</p>
+<ul>
+  <li>The stub <code>SiftFeatureTracker::matchDescriptors()</code> in <code>feature_tracking/src/sift_feature_tracker.cpp</code>
+</li>
+  <li>
+    <p>The second part of <code>FeatureTracker::trackFeatures()</code> in <code>feature_tracking/src/feature_tracker.cpp</code></p>
+  </li>
+  <li class="hint">Hint: Note that the <code>matches</code> object is a pointer type, so to use it
+you will usually have to type <code>*matches</code>. Once you’ve used the FLANN matcher
+to get the matches, if you want to iterate over all of them you could use a loop like:<br>
+<code>for (auto&amp; match : *matches) {<br>
+// check match.size(), match[0].distance, match[1].distance, etc.<br>
+}</code> <br>
+Likewise, <code>good_matches</code> is a pointer so to add to it you will need <code>good_matches-&gt;push_back(...)</code>.</li>
+</ul>
+    
+      <h2 id="-deliverable-5---keypoint-matching-quality-10-pts">
+        
+        
+          <a href="#-deliverable-5---keypoint-matching-quality-10-pts" class="anchor-heading"><svg class="d-inline-block v-align-middle" viewbox="0 0 16 16" version="1.1" width="18" height="18" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> 📨 Deliverable 5 - Keypoint Matching Quality [10 pts]
+        
+        
+      </h2>
+
+<p>Excellent! Now, that we have the matches between keypoints in both images, we
+can apply many cool algorithms that you will see in subsequent lectures.</p>
+
+<p>For now, let us just use a blackbox function which, given the keypoints
+correspondences from image to image, is capable of deciding whether some matches
+are considered outliers.</p>
+
+<ol>
+  <li>Using the function we gave you, compute and plot the inlier and outlier
+matches, such as in the following figure:
+<img src="http://localhost:4000/VNA2V-W21-handouts/assets/images/lab5/kp_matches.png" alt="Keypoint matches" class="mx-auto d-block">
+    <ul>
+      <li class="hint">Hint: Note that <code>FeatureTracker::inlierMaskComputation</code> computes an inlier mask of type <code>std::vector&lt;uchar&gt;</code>,
+but for <code>cv::drawMatches</code> you will need a <code>std::vector&lt;char&gt;</code>. You can go from one to the other by using:<br>
+<code>std::vector&lt;char&gt; char_inlier_mask{inlier_mask.begin(), inlier_mask.end()};</code>
+</li>
+      <li class="hint">Hint: You will need to call the <code>cv::drawMatches</code> function twice, first to plot the everything in red (using <code>cv::Scalar(0,0,255)</code> as the color), and then again to plot inliers in green (using the inlier mask and <code>cv::Scalar(0,255,0)</code>). The second time, you will need to use the <code>DrawMatchesFlags::DRAW_OVER_OUTIMG</code> flag to draw on top of the first output. To combine flags for the <code>cv::drawMatches</code> function, use the bitwise-or operator: <code>DrawMatchesFlags::NOT_DRAW_SINGLE_POINTS | DrawMatchesFlags::DRAW_OVER_OUTIMG</code>
+</li>
+    </ul>
+  </li>
+  <li>Now, we can calculate useful statistics to compare feature tracking
+algorithms. First, let’s compute statistics for SIFT. Submit a table similar
+to the following for SIFT (you might not get the same results, but they
+should be fairly similar):</li>
+</ol>
+
+<div class="table-wrapper"><table>
+  <tr>
+    <th style="border-bottom: 0px; text-align: center;"><b>Statistics</b></th>
+    <th style="text-align: center;" colspan="2"><b>Approach</b></th>
+  </tr>
+  <tr>
+    <td></td>
+    <td style="text-align: center;">SIFT</td>
+    <td style="text-align: center;">...</td>
+  </tr>
+  <tr>
+    <td style="text-align: center;"># of Keypoints in Img 1</td>
+    <td style="text-align: center;">603</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td style="text-align: center;"># of Keypoints in Img 2</td>
+    <td style="text-align: center;">969</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td style="text-align: center;"># of Matches</td>
+    <td style="text-align: center;">603</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td style="text-align: center;"># of Good Matches</td>
+    <td style="text-align: center;">93</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td style="text-align: center;"># of Inliers</td>
+    <td style="text-align: center;">78</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td style="text-align: center;">Inlier Ratio</td>
+    <td style="text-align: center;">83.9%</td>
+    <td></td>
+  </tr>
+</table></div>
+    
+      <h2 id="-deliverable-6---comparing-feature-matching-algorithms-on-real-data-20-pts">
+        
+        
+          <a href="#-deliverable-6---comparing-feature-matching-algorithms-on-real-data-20-pts" class="anchor-heading"><svg class="d-inline-block v-align-middle" viewbox="0 0 16 16" version="1.1" width="18" height="18" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> 📨 Deliverable 6 - Comparing Feature Matching Algorithms on Real Data [20 pts]
+        
+        
+      </h2>
+
+<p>The most common algorithms for feature matching use different detection, description, and matching techniques. We’ll now try different techniques and see how they compare against one another:</p>
+    
+      <h3 id="6a-pair-of-frames">
+        
+        
+          <a href="#6a-pair-of-frames" class="anchor-heading"><svg class="d-inline-block v-align-middle" viewbox="0 0 16 16" version="1.1" width="18" height="18" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> 6.a. Pair of frames
+        
+        
+      </h3>
+<p>Fill the previous table with results for other feature tracking algorithms. We ask that you complete the table using the following additional algorithms:</p>
+
+<ol>
+  <li>
+<a href="https://docs.opencv.org/3.4.2/df/dd2/tutorial_py_surf_intro.html" target="_blank" rel="noopener noreferrer">SURF</a> (a faster version of SIFT)</li>
+  <li>
+<a href="https://docs.opencv.org/3.4.2/d1/d89/tutorial_py_orb.html" target="_blank" rel="noopener noreferrer">ORB</a> (we will use it for SLAM later!)</li>
+  <li>
+<a href="https://docs.opencv.org/3.4.2/df/d0c/tutorial_py_fast.html" target="_blank" rel="noopener noreferrer">FAST</a>
+(detector) +
+<a href="https://docs.opencv.org/3.4.2/dc/d7d/tutorial_py_brief.html" target="_blank" rel="noopener noreferrer">BRIEF</a>
+(descriptor)</li>
+</ol>
+
+<ul>
+  <li class="hint">Hint: The SURF functions can be implemented <i>exactly</i> the same as SIFT, while ORB and FAST can also be implemented exactly the same way except that the FLANN matcher must be initialized with a new parameter like this: <code>FlannBasedMatcher matcher(new flann::LshIndexParams(20, 10, 2));</code>. This is not necessarily the best solution for ORB and FAST however, so we encourage you to look into other methods (e.g. the <a href="https://opencv-python-tutroals.readthedocs.io/en/latest/py_tutorials/py_feature2d/py_matcher/py_matcher.html#goal" target="_blank" rel="noopener noreferrer">Brute-Force matcher</a> instead of the FLANN matcher) if you have time.</li>
+</ul>
+
+<p>We have provided method stubs in the corresponding header files for you to implement in the CPP files. Please refer to the OpenCV documentation, tutorials, and C++ API when filling them in. You are encouraged to modify the default parameters used by the features extractors and matchers. A complete answer to this deliverable should include a brief discussion of what you tried and what worked the best.</p>
+
+<div class="alert alert-warning"> <div class="alert-content">
+    
+      <h2 class="alert-title">
+        
+        
+           ATTENTION. 
+        
+        
+      </h2> <div class="alert-body"> <p><b>NOTE:</b> If you have the issue "Unknown interpolation method in function 'resize'" for your <b>ORB feature tracker</b>, explicitly set the number of levels in the ORB detector to 1 <a href="https://docs.opencv.org/3.4/db/d95/classcv_1_1ORB.html#adc371099dc902a9674bd98936e79739c" target="_blank" rel="noopener noreferrer">see OpenCV API here</a>)</p>
+</div> </div> </div>
+
+<p>By now, you should have four algorithms, with their pros and cons, capable of
+tracking features between frames.</p>
+
+<ul>
+  <li class="hint">Hint: It is normal for some descriptors to perform worse than others, especially on this pair of images – in fact, some may do very poorly, so don’t worry if you observe this.</li>
+</ul>
+    
+      <h3 id="6b-real-datasets">
+        
+        
+          <a href="#6b-real-datasets" class="anchor-heading"><svg class="d-inline-block v-align-middle" viewbox="0 0 16 16" version="1.1" width="18" height="18" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> 6.b. Real Datasets
+        
+        
+      </h3>
+
+<p>Let us now use an actual video sequence to track features from frame to frame and push these algorithms to their limit!</p>
+
+<p>We have provided you with a set of datasets in rosbag format <a href="https://drive.google.com/drive/folders/1y-fPmAfEsDebJ_1_xTewwTYf2i8GfqFs?usp=sharing" target="_blank" rel="noopener noreferrer">here</a>. Please download the following datasets, which are the two “easiest” ones:</p>
+
+<ul>
+  <li><code class="highlighter-rouge">30fps_424x240_2018-10-01-18-35-06.bag</code></li>
+  <li><code class="highlighter-rouge">vna2v-lab5-smooth-trajectory.bag</code></li>
+</ul>
+
+<p>Testing other datasets may help you to identify the relative strengths and weaknesses of the descriptors, but this is not required.</p>
+
+<p>We also provide you with a roslaunch file that executes two ROS nodes:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>roslaunch lab_5 video_tracking.launch path_to_dataset:<span class="o">=</span>/home/<span class="nv">$USER</span>/Downloads/&lt;NAME_OF_DOWNLOADED_FILE&gt;.bag
+</code></pre></div></div>
+
+<ul>
+  <li>One node plays the rosbag for the dataset</li>
+  <li>The other node subscribes to the image stream and is meant to compute the statistics to fill the table below</li>
+</ul>
+
+<p>You will need to first specify in the launch file the path to your downloaded dataset. Once you’re done, you should get something like this:</p>
+
+<ul>
+  <li class="hint">Hint: You may need to change your plotting code in <code>FeatureTracker::trackFeatures</code> to call <code>cv::waitKey(10)</code> instead of <code>cv::waitKey(0)</code> after imshow in order to get the video to play continuously instead of frame-by-frame on every keypress.</li>
+</ul>
+
+<p><img data-src="http://localhost:4000/VNA2V-W21-handouts/assets/images/lab5/sift.gif" class="lazyload mx-auto d-block"></p>
+
+<p>Finally, we ask you to summarize your results in one table for each dataset and asnwer some questions:</p>
+
+<ul>
+  <li>Compute the <strong>average</strong> (over the images in each dataset) of the statistics on the table below for the different datasets and approaches. You are free to use whatever parameters you find result in the largest number of inliers.</li>
+</ul>
+<div class="table-wrapper"><table>
+  <tr>
+    <th style="border-bottom: 0px; text-align: center;"><b>Statistics</b></th>
+    <th style="text-align: center;" colspan="4"><b>Approach for Dataset X</b></th>
+  </tr>
+  <tr>
+    <td></td>
+    <td style="text-align: center;">SIFT</td>
+    <td style="text-align: center;">SURF</td>
+    <td style="text-align: center;">ORB</td>
+    <td style="text-align: center;">FAST+BRIEF</td>
+  </tr>
+  <tr>
+    <td style="text-align: center;"># of Keypoints in Img 1</td>
+    <td style="text-align: center;">...</td>
+    <td style="text-align: center;">...</td>
+    <td style="text-align: center;">...</td>
+    <td style="text-align: center;">...</td>
+  </tr>
+  <tr>
+    <td style="text-align: center;"># of Keypoints in Img 2</td>
+    <td style="text-align: center;">...</td>
+    <td style="text-align: center;">...</td>
+    <td style="text-align: center;">...</td>
+    <td style="text-align: center;">...</td>
+  </tr>
+  <tr>
+    <td style="text-align: center;"># of Matches</td>
+    <td style="text-align: center;">...</td>
+    <td style="text-align: center;">...</td>
+    <td style="text-align: center;">...</td>
+    <td style="text-align: center;">...</td>
+  </tr>
+  <tr>
+    <td style="text-align: center;"># of Good Matches</td>
+    <td style="text-align: center;">...</td>
+    <td style="text-align: center;">...</td>
+    <td style="text-align: center;">...</td>
+    <td style="text-align: center;">...</td>
+  </tr>
+  <tr>
+    <td style="text-align: center;"># of Inliers</td>
+    <td style="text-align: center;">...</td>
+    <td style="text-align: center;">...</td>
+    <td style="text-align: center;">...</td>
+    <td style="text-align: center;">...</td>
+  </tr>
+  <tr>
+    <td style="text-align: center;">Inlier Ratio</td>
+    <td style="text-align: center;">...%</td>
+    <td style="text-align: center;">...%</td>
+    <td style="text-align: center;">...%</td>
+    <td style="text-align: center;">...%</td>
+  </tr>
+</table></div>
+<ul>
+  <li>
+    <p>What conclusions can you draw about the capabilities of the different approaches? Please make reference to what you have tested and observed.</p>
+  </li>
+  <li class="hint">Hint: <b>We don’t expect long answers, there aren’t specific answers we are looking for, and you don’t need to answer every suggested question below!</b> We are just looking for a few sentences that point out the main differences you noticed and that are supported by your table/plots/observations.<br>Some example questions to consider:</li>
+  <li class="hint">Which descriptors result in more/fewer keypoints?</li>
+  <li class="hint">How do they the descriptors differ in ratios of good matches and inliers?</li>
+  <li class="hint">Are some feature extractors or matchers <a href="https://stackoverflow.com/a/22387757" target="_blank" rel="noopener noreferrer">faster</a> than others?</li>
+  <li class="hint">What applications are they each best suited for? (e.g. when does speed vs quality matter)</li>
+</ul>
+    
+      <h2 id="-deliverable-7---feature-tracking-lucas-kanade-tracker-20-pts">
+        
+        
+          <a href="#-deliverable-7---feature-tracking-lucas-kanade-tracker-20-pts" class="anchor-heading"><svg class="d-inline-block v-align-middle" viewbox="0 0 16 16" version="1.1" width="18" height="18" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> 📨 Deliverable 7 - Feature Tracking: Lucas Kanade Tracker [20 pts]
+        
+        
+      </h2>
+
+<p>So far we have worked with descriptor-based matching approaches. As you have
+seen, these approaches match features by simply comparing their descriptors.
+Alternatively, feature tracking methods use the fact that, when recording a
+video sequence, a feature will not move much from frame to frame. We will now
+use the most well-known differential feature tracker, also known as Lucas-Kanade
+(LK) Tracker.</p>
+
+<ol>
+  <li>Using <a href="https://docs.opencv.org/3.3.1/d7/d8b/tutorial_py_lucas_kanade.html" target="_blank" rel="noopener noreferrer">OpenCV’s documentation</a> and the <a href="https://docs.opencv.org/3.3.1/dc/d6b/group__video__track.html#ga473e4b886d0bcc6b65831eb88ed93323" target="_blank" rel="noopener noreferrer">C++ API for the LK tracker</a>, track features for the video sequences we provided you by using the <a href="https://docs.opencv.org/3.4.2/dc/d0d/tutorial_py_features_harris.html" target="_blank" rel="noopener noreferrer">Harris corner detector</a> (like <a href="https://www.dropbox.com/s/zodssejrdl9vqdb/jpl_cave.mp4?dl%3D0" target="_blank" rel="noopener noreferrer">here</a>). Show the feature tracks at a given frame extracted when using the Harris corners, such as this:
+<img src="http://localhost:4000/VNA2V-W21-handouts/assets/images/lab5/lk_tracker.png" alt="LK Tracker Output" class="mx-auto d-block">
+</li>
+  <li>Add an extra entry to the table used in <strong>Deliverable 6.</strong> using the Harris + LK tracker that you implemented.</li>
+  <li>What assumption about the features does the LK tracker rely on?</li>
+  <li>Comment on the different results you observe between the table in this section and the one you computed in the other sections.</li>
+</ol>
+
+<ul>
+  <li class="hint">
+    <p>Hint: You will need to convert the image to grayscale with <code>cv::cvtColor</code> and will want to look into the documentation for <code>cv::goodFeaturesToTrack</code> and <code>cv::calcOpticalFlowPyrLK</code>. The rest of the trackFeatures() function should be mostly familiar feature matching and inlier mask computation similar to the previous sections. Also note that the <code class="highlighter-rouge">status</code> vector from calcOpticalFlowPyrLK indicates the matches.</p>
+  </li>
+  <li class="hint">
+    <p>Hint: For the show() method, you will just need to create a copy of the input frame and then make a loop that calls <code>cv::line</code> and <code>cv::circle</code> with correct arguments before calling <code>imshow</code>.</p>
+  </li>
+</ul>
+
+<!-- ## 📨 [Optional] Deliverable 8 - Optical Flow [+20 pts]
+
+LK tracker estimates the optical flow for sparse points in the image. Alternatively, dense approaches try to estimate the optical flow for the whole image. Try to calculate your [own optical flow](https://www.dropbox.com/s/37u2b5xax6puf5j/own_flow.mp4?dl=0), or the flow of a video of your choice, using [Farneback's algorithm](https://docs.opencv.org/3.3.1/dc/d6b/group__video__track.html#ga5d10ebbd59fe09c5f650289ec0ece5af).
+
+- {: .hint} Hint: Take a look at this <a href="https://docs.opencv.org/3.4/d4/dee/tutorial_optical_flow.html">tutorial</a>, specifically the section on dense optical flow. Please post on piazza if you run into any issues or get stuck anywhere.
+
+<img data-src="http://localhost:4000/VNA2V-W21-handouts/assets/images/lab5/farneback-arm.gif" class="lazyload mx-auto d-block" > 
+-->
+            
+
+          
+
+          
+            <hr>
+            <footer role="contentinfo">
+              <p class="text-small text-grey-dk-000 mb-0">Enabled with the generous support of the MIT SPARK Lab. Copyright © MIT SPARK Lab and Vasileios Tzoumas of the University of Michigan. Using <a href="https://github.com/pmarsceill/just-the-docs/tree/master" target="_blank" rel="noopener noreferrer">Just the docs</a> theme.</p>
+            </footer>
+          
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div></body>
+</html>

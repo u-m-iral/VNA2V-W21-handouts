@@ -14,24 +14,21 @@ parent: Lab 5
 1. TOC
 {:toc}
 
+
 # Submission
-
-To submit your solutions create a folder called `lab5` and push one or more file
-to your repository with your answers.
-
 ### Individual
 
-Please push the deliverables into your personal repository, for math-related questions only typeset PDF files are allowed (e.g., using Latex, Word, Markdown).
+Create a folder called `lab5` that includes your answers (for math-related questions LaTeX is preferred but handwritten is accepted too). Zip the folder and upload on Canvas.
+
+**Each student needs to submit their own `lab5` folder to Canvas.**
 
 ### Team
 
-Please push the source code for the entire package to the folder `lab5` of the
-team repository. For the tables and discussion questions, please push a PDF to
-the `lab5` folder of your team repository.
+Each group should create a new folder called `TEAM_<N>`, replacing `<N>` with your team number. For example team 2 will name their folder `TEAM_2`. Please put the source code of the entire `feature_tracking` folder in the folder `TEAM_2`. For the tables and discussion questions, please include a PDF in the `TEAM_2` folder. Zip the folder and submit to Canvas.
 
-### Deadline
+**Each team will only need to submit one `TEAM_<N>.zip` to Canvas.**
 
-**Deadline:** the VNA2V staff will clone your repository on **October 7th** at 11:59 PM EDT.
+**Deadline:** To submit your solution, please upload the corresponding files under `Assignment > Lab 5` by **Thursday, Feb 25 11:59 EST**.
 
 # 👤 Individual
 
@@ -73,21 +70,21 @@ Complete the following exercises:
 
 # Update the lab codebase
 
-Assuming you have already cloned our `Labs` repository, you simply need to pull the latest changes!
+Assuming you have already cloned our `labs` repository, you simply need to pull the latest changes!
 
 ```bash
-cd ~/Labs
+cd ~/labs
 git pull origin master
 ```
 
 Copy the contents of the `lab5` directory into the `src` folder of your catkin workspace:
 
 ```bash
-cp -r ~/Labs/lab5 ~/vna2v_ws/src
+cp -r ~/labs/lab5 ~/vna2v_ws/src
 cd ~/vna2v_ws/src
 ```
 
-Make sure to keep the `lab3` and `lab4` folders in your catkin workspace, too! Some of their dependencies (specifically `glog_catkin` and `catkin_simple`) are also required by `lab5`. Finally, build the code:
+Make sure to keep the folders for lab3 and lab4 in your catkin workspace, too! Some of their dependencies (specifically `glog_catkin` and `catkin_simple`) are also required by `lab5`. Finally, build the code:
 
 ```bash
 cd ~/vna2v_ws
@@ -102,8 +99,8 @@ catkin build -j$(nproc) opencv3_catkin
 catkin build -j$(nproc) lab_5
 ```
 
-<div class="alert alert-warning"> <div class="alert-content"> <h2
-  class="alert-title"> ATTENTION. </h2> <div class="alert-body"> <p><b>NOTE:</b> There was a bug in <code>lab5/feature_tracking/launch/two_frames_tracking.launch</code> where "/ >" should have been replaced with " />". Please pull the updated code or make the change yourself.</p></div> </div> </div>
+<!-- <div class="alert alert-warning"> <div class="alert-content"> <h2
+  class="alert-title"> ATTENTION. </h2> <div class="alert-body"> <p><b>NOTE:</b> There was a bug in <code>lab5/feature_tracking/launch/two_frames_tracking.launch</code> where "/ >" should have been replaced with " />". Please pull the updated code or make the change yourself.</p></div> </div> </div> -->
 
 # Feature Tracking and Matching
 
@@ -314,7 +311,7 @@ tracking features between frames.
 
 Let us now use an actual video sequence to track features from frame to frame and push these algorithms to their limit!
 
-We have provided you with a set of datasets in rosbag format [here](https://github.mit.edu/VNA2V-W21/lab-data/tree/master/lab5). Please download the following datasets, which are the two "easiest" ones:
+We have provided you with a set of datasets in rosbag format [here](https://drive.google.com/drive/folders/1y-fPmAfEsDebJ_1_xTewwTYf2i8GfqFs?usp=sharing). Please download the following datasets, which are the two "easiest" ones:
 
 - `30fps_424x240_2018-10-01-18-35-06.bag`
 - `vna2v-lab5-smooth-trajectory.bag`
