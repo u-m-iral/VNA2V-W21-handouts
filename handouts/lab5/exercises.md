@@ -28,7 +28,7 @@ Each group should create a new folder called `TEAM_<N>`, replacing `<N>` with yo
 
 **Each team will only need to submit one `TEAM_<N>.zip` to Canvas.**
 
-**Deadline:** To submit your solution, please upload the corresponding files under `Assignment > Lab 5` by **Thursday, Feb 25 11:59 EST**.
+**Deadline:** To submit your solution, please upload the corresponding files under `Assignment > Lab 5` by **Monday, Mar 1, 11:59 EST**.
 
 # 👤 Individual
 
