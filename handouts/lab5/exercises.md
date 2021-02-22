@@ -52,8 +52,8 @@ Consider two 3D lines that are parallel to each other. As we have seen in the
 lectures, lines that are parallel in 3D may project to intersecting lines on the
 image plane. The pixel at which two 3D parallel lines intersect in the image
 plane is called a vanishing point. Assume a camera with principal point at
-(0,0), focal length equal to 1, pixel sizes $s_x = s_y = 1$ and zero skew
-$s_\theta = 0$ (see lecture notes for notation). 
+(0,0), focal length equal to 1, pixel sizes 1 $(s_x = s_y = 1)$ and zero skew
+$(s_\theta = 0)$ (see lecture notes for notation). 
 Complete the following exercises:
 
 1. **Derive** the generic expression of the vanishing point corresponding to two parallel 3D lines.
