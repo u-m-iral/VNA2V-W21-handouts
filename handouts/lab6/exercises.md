@@ -23,18 +23,20 @@ we will provide.
 
 ### Individual
 
-Please push the deliverables into your personal repository, for math-related
-questions LaTeX (or other typesetting software) is required.
+Create a folder called `lab6` that includes your answers (for math-related questions LaTeX is preferred but handwritten is accepted too). Zip the folder and upload on Canvas.
+
+**Each student needs to submit their own `lab6` folder to Canvas.**
 
 ### Team
 
-Please push the source code of the entire `lab6` package in the folder `lab6`
-of the team repository. Include also in your `lab6` folder a PDF containing
-non-code deliverables (plots, comments).
+Each group should create a new folder called `TEAM_<N>`, replacing `<N>` with your team number. For example team 2 will name their folder `TEAM_2`. Please put the source code of the entire `lab6` folder in the folder `TEAM_2`. For the non-code deliverables (plots, comments), please include a PDF in the `TEAM_2` folder. Zip the folder and submit to Canvas.
+
+**Each team will only need to submit one `TEAM_<N>.zip` to Canvas.**
+
 
 ### Deadline
 
-**Deadline:** the VNA2V staff will clone your repository on **October 15** at midnight ET.
+**Deadline:** To submit your solution, please upload the corresponding files under `Assignment > Lab 6` by **Tuesday, Mar 9, 11:59 EST**.
 
 # 👤 Individual
 
@@ -103,10 +105,7 @@ Additionally, for motion estimation:
 - **Prerequisites**: Lab 6 will use the feature matching algorithms developed in Lab 5 (in particular, we use SIFT matching), so
 make sure you have a working version of Lab 5 already in the VNA2V workspace.
 
-- **Prepare the code base**: Use `git pull` to update the git repo used to distribute
-lab codes (https://github.mit.edu/VNA2V-W21/labs), and you should see a new folder named 
-`lab6`. Copy the entire `lab6` folder to the `src` folder of 
-your vna2v workspace (e.g., `~/vna2v_ws/src`). Now we are ready to install OpenGV by doing:
+- **Prepare the code base**: Use `git pull` to update the gitlab repo used to distribute lab codes, and you should see a new folder named `lab6`. Copy the entire `lab6` folder to the `src` folder of your vna2v workspace (e.g., `~/vna2v_ws/src`). Now we are ready to install OpenGV by doing:
 ```shell
 cd ~/vna2v_ws/src (path to src of vna2v workspace)
 wstool init
