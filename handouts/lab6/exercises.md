@@ -120,9 +120,9 @@ catkin build lab_6
 to build the `lab_6` package (which should build OpenGV first and then build `lab_6` itself).
 
 - **Download the datasets**: We will use the following dataset for this lab:
-  1. `office.bag` and you can download it [here](https://drive.google.com/file/d/1S9pqqIx43_NcL9RBmbr5JfMS17QfkDkW/view).
+  1. `office.bag` and you can download it [here](https://drive.google.com/file/d/15eJ-pNjwWB728gMHoAhaCGwiQtWwDlAT/view?usp=sharing).
 
-After downloading the dataset, we suggest you to put them in the `~/data/vna2v` folder. 
+After downloading the dataset, we suggest you to put them in the `~/data/vna2v` folder.
 
 The rosbag files include the following topics of the drone:
   - Ground-truth pose estimate of the drone's body frame: `/tesse/odom`
@@ -183,8 +183,7 @@ from one viewpoint to another.
 To do so, we will be using three different algorithms and comparing their
 performance.
 
-We will first start with the 5-point algorithm of Nister. Then we will test the 8-point method we have seen in class. Finally, we will test the 2-point method you developed in Deliverable 2. For all techniques, we use the feature matching code we developed in Lab 5 (use the provided solution code
-for lab 5 if you prefer - download it [here](https://github.mit.edu/VNA2V-W21/labs)). In particular, we use SIFT for feature matching in the remaining of this problem set.
+We will first start with the 5-point algorithm of Nister. Then we will test the 8-point method we have seen in class. Finally, we will test the 2-point method you developed in Deliverable 2. For all techniques, we use the feature matching code we developed in Lab 5. In particular, we use SIFT for feature matching in the remaining of this problem set.
 
 We provide you with a skeleton code in `lab6` folder where we have set-up ROS
 callbacks to receive the necessary information.
@@ -277,6 +276,14 @@ In practice, we cannot concatenate multiple estimates from 2-view geometry since
 
 In the next deliverable we will see that 3D-3D correspondences allow us to reconstruct the correct scale for the translation.**
 
+
+<div class="alert alert-warning"> <div class="alert-content"> <h2
+  class="alert-title"> ATTENTION. </h2> <div class="alert-body"> <p><b>NOTE:</b> You need to have <b>xterm</b> installed on your Linux system in order to properly start the launch file. You can install it using the following command in a terminal window.
+<code>
+sudo apt install xterm
+</code>
+</p></div> </div> </div>
+
 ## 📨 Deliverable 5 - 3D-3D Correspondences [20 pts]
 
 The rosbag we provide you also contains depth values registered with the RGB
@@ -318,7 +325,7 @@ For the given dataset, we require you to run **all algorithms** on it and compar
 Therefore, as a summary for Team Deliverables:
 1. Plots of translation and rotation error for each of the methods (5pt, 8pt, 2pt, Arun 3 pt) using the given rosbag (using RANSAC is required, while without RANSAC is optional).
 2. **OPTIONAL (10 bonus pts)**: repeat the tests using a rosbag you collect during drone racing (your Lab 4 solution). The rosbag must contain stereo RGB images, depth information, and odometry, which are not published by tesse_ros_bridge by default. So, in order to collect a suitable rosbag, you must follow these steps:
-    1. Download the [updated simulator](https://drive.google.com/file/d/13pm9g9npDeSwqBTdn7vQD9b9rBFs1ujx/view?usp=sharing) and run it with these command line arguments: `-screen-width 720 -screen-height 480`
+    1. Download the [updated simulator](https://drive.google.com/file/d/1loAS87Rw9-fVB-DK2q-E2ve4SCNz0uWQ/view?usp=sharing) and run it with these command line arguments: `-screen-width 720 -screen-height 480`
     2. Launch the tesse ros bridge with these arguments: `roslaunch tesse_ros_bridge tesse_quadrotor_bridge.launch publish_stereo_rgb:=true publish_depth:=true publish_odom:=true`
     3. Collect the rosbag of your trajectory as before (e.g. by launching the appropriate nodes and running `rosbag record -a` in another window)
     4. If you experience any errors while following the above steps, please check Piazza and make a new post if your question is not already answered.

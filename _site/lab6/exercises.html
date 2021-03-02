@@ -1,0 +1,707 @@
+
+
+<!DOCTYPE html>
+
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+
+  
+    <title>Exercises - VNA2V-W21</title>
+
+    
+  
+
+  <link rel="shortcut icon" href="http://localhost:4000/VNA2V-W21-handouts/favicon.ico" type="image/x-icon">
+
+  <link rel="stylesheet" href="http://localhost:4000/VNA2V-W21-handouts/assets/css/just-the-docs.css">
+  <script src="https://use.fontawesome.com/d81b2d50d8.js"></script>
+  
+  
+
+  
+    <script type="text/javascript" src="http://localhost:4000/VNA2V-W21-handouts/assets/js/vendor/lunr.min.js"></script>
+  
+  <script type="text/javascript" src="http://localhost:4000/VNA2V-W21-handouts/assets/js/just-the-docs.js"></script>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>Exercises | VNA2V-W21</title>
+<meta name="generator" content="Jekyll v3.8.6" />
+<meta property="og:title" content="Exercises" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="AEROSP 740 - Visual Navigation for Autonomous Aerial Vehicles (W21)" />
+<meta property="og:description" content="AEROSP 740 - Visual Navigation for Autonomous Aerial Vehicles (W21)" />
+<link rel="canonical" href="http://localhost:4000/VNA2V-W21-handouts/lab6/exercises" />
+<meta property="og:url" content="http://localhost:4000/VNA2V-W21-handouts/lab6/exercises" />
+<meta property="og:site_name" content="VNA2V-W21" />
+<script type="application/ld+json">
+{"@type":"WebPage","url":"http://localhost:4000/VNA2V-W21-handouts/lab6/exercises","headline":"Exercises","description":"AEROSP 740 - Visual Navigation for Autonomous Aerial Vehicles (W21)","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+  
+<script>
+  window.MathJax = {
+    options: {
+      skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+    },
+    loader: {
+      load: ['input/tex', '[tex]/ams', '[tex]/configMacros']
+    },
+    tex: {
+      packages: {'[+]': ['boldsymbol', 'ams', 'configMacros']},
+      inlineMath: [['$','$'], ['\\(','\\)']],
+      displayMath: [["$$", "$$"], ["\\[","\\]"]],
+      processEscapes: true,
+      tags: "ams",
+      macros: {
+        SE: ['\\mathrm{SE}(#1)', 1],
+        SO: ['\\mathrm{SO}(#1)', 1],
+        argmin: '\\mathop{\\operatorname{argmin}}',
+        argmax: '\\mathop{\\operatorname{argmax}}',
+        trace: '\\operatorname{trace}',
+        tran: '^{\\mathsf{T}}',
+      },
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+
+
+<script type="text/javascript" src="http://localhost:4000/VNA2V-W21-handouts/assets/js/vendor/lazysizes.min.js" async=""></script>
+
+</head>
+
+<body>
+
+  <div class="page-wrap">
+    <div class="side-bar">
+      <div class="site-header">
+        <a href="http://localhost:4000/VNA2V-W21-handouts" class="site-title lh-tight">VNA2V-W21</a>
+        <button class="menu-button fs-3 js-main-nav-trigger" data-text-toggle="Hide" type="button">Menu</button>
+      </div>
+
+      <div class="navigation main-nav js-main-nav">
+        <nav role="navigation" aria-label="Main navigation">
+  <ul class="navigation-list">
+<li class="navigation-list-item"><a href="http://localhost:4000/VNA2V-W21-handouts/" class="navigation-list-link">Home</a></li>
+<li class="navigation-list-item">
+<a href="http://localhost:4000/VNA2V-W21-handouts/lab1/" class="navigation-list-link">Lab 1</a><ul class="navigation-list-child-list ">
+<li class="navigation-list-item "><a href="http://localhost:4000/VNA2V-W21-handouts/lab1/ubuntu" class="navigation-list-link">Install Ubuntu 18.04</a></li>
+<li class="navigation-list-item "><a href="http://localhost:4000/VNA2V-W21-handouts/lab1/shell" class="navigation-list-link">Shell basics</a></li>
+<li class="navigation-list-item "><a href="http://localhost:4000/VNA2V-W21-handouts/lab1/git" class="navigation-list-link">Git</a></li>
+<li class="navigation-list-item "><a href="http://localhost:4000/VNA2V-W21-handouts/lab1/cpp" class="navigation-list-link">C++</a></li>
+<li class="navigation-list-item "><a href="http://localhost:4000/VNA2V-W21-handouts/lab1/exercises" class="navigation-list-link">Exercises</a></li>
+</ul>
+</li>
+<li class="navigation-list-item">
+<a href="http://localhost:4000/VNA2V-W21-handouts/lab2/" class="navigation-list-link">Lab 2</a><ul class="navigation-list-child-list ">
+<li class="navigation-list-item "><a href="http://localhost:4000/VNA2V-W21-handouts/lab2/ros" class="navigation-list-link">Installing ROS</a></li>
+<li class="navigation-list-item "><a href="http://localhost:4000/VNA2V-W21-handouts/lab2/ros101" class="navigation-list-link">Introduction to ROS</a></li>
+<li class="navigation-list-item "><a href="http://localhost:4000/VNA2V-W21-handouts/lab2/exercises" class="navigation-list-link">Exercises</a></li>
+</ul>
+</li>
+<li class="navigation-list-item">
+<a href="http://localhost:4000/VNA2V-W21-handouts/lab3/" class="navigation-list-link">Lab 3</a><ul class="navigation-list-child-list "><li class="navigation-list-item "><a href="http://localhost:4000/VNA2V-W21-handouts/lab3/exercises" class="navigation-list-link">Exercises</a></li></ul>
+</li>
+<li class="navigation-list-item">
+<a href="http://localhost:4000/VNA2V-W21-handouts/lab4/" class="navigation-list-link">Lab 4</a><ul class="navigation-list-child-list "><li class="navigation-list-item "><a href="http://localhost:4000/VNA2V-W21-handouts/lab4/exercises" class="navigation-list-link">Exercises</a></li></ul>
+</li>
+<li class="navigation-list-item">
+<a href="http://localhost:4000/VNA2V-W21-handouts/lab5/" class="navigation-list-link">Lab 5</a><ul class="navigation-list-child-list "><li class="navigation-list-item "><a href="http://localhost:4000/VNA2V-W21-handouts/lab5/exercises" class="navigation-list-link">Exercises</a></li></ul>
+</li>
+<li class="navigation-list-item active">
+<a href="http://localhost:4000/VNA2V-W21-handouts/lab6/" class="navigation-list-link">Lab 6</a><ul class="navigation-list-child-list "><li class="navigation-list-item  active"><a href="http://localhost:4000/VNA2V-W21-handouts/lab6/exercises" class="navigation-list-link active">Exercises</a></li></ul>
+</li>
+<li class="navigation-list-item"><a href="http://localhost:4000/VNA2V-W21-handouts/about" class="navigation-list-link">How to print</a></li>
+</ul>
+</nav>
+
+      </div>
+      <footer class="site-footer">
+        <p class="text-small text-grey-dk-000 mb-4"><b>Last modified</b>:<br> Tuesday, March 2 at 00:59</p>
+      </footer>
+    </div>
+    <div class="main-content-wrap js-main-content" tabindex="0">
+      <div class="main-content">
+        <div class="page-header js-page-header">
+          
+          <div class="search">
+            <div class="search-input-wrap">
+              <input type="text" class="js-search-input search-input" tabindex="0" placeholder="Search VNA2V-W21" aria-label="Search VNA2V-W21" autocomplete="off">
+              <svg width="14" height="14" viewbox="0 0 28 28" xmlns="http://www.w3.org/2000/svg" class="search-icon"><title>Search</title>
+<g fill-rule="nonzero"><path d="M17.332 20.735c-5.537 0-10-4.6-10-10.247 0-5.646 4.463-10.247 10-10.247 5.536 0 10 4.601 10 10.247s-4.464 10.247-10 10.247zm0-4c3.3 0 6-2.783 6-6.247 0-3.463-2.7-6.247-6-6.247s-6 2.784-6 6.247c0 3.464 2.7 6.247 6 6.247z"></path><path d="M11.672 13.791L.192 25.271 3.02 28.1 14.5 16.62z"></path></g></svg>
+            </div>
+            <div class="js-search-results search-results-wrap"></div>
+          </div>
+          
+          
+        </div>
+        <div class="page">
+          
+            
+              <nav class="breadcrumb-nav">
+                <ol class="breadcrumb-nav-list">
+                  
+                    <li class="breadcrumb-nav-list-item"><a href="http://localhost:4000/VNA2V-W21-handouts/lab6/">Lab 6</a></li>
+                  
+                  <li class="breadcrumb-nav-list-item"><span>Exercises</span></li>
+                </ol>
+              </nav>
+            
+          
+          <div id="main-content" class="page-content" role="main">
+            
+              <h1 class="no_toc text-delta fs-9" id="exercises">
+        
+        
+          <a href="#exercises" class="anchor-heading"><svg class="d-inline-block v-align-middle" viewbox="0 0 16 16" version="1.1" width="18" height="18" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> Exercises
+        
+        
+      </h1>
+
+<ol id="markdown-toc">
+  <li>
+<a href="#submission" id="markdown-toc-submission">Submission</a>    <ol>
+      <li><a href="#individual" id="markdown-toc-individual">Individual</a></li>
+      <li><a href="#team" id="markdown-toc-team">Team</a></li>
+      <li><a href="#deadline" id="markdown-toc-deadline">Deadline</a></li>
+    </ol>
+  </li>
+  <li>
+<a href="#-individual" id="markdown-toc--individual">👤 Individual</a>    <ol>
+      <li>
+<a href="#-deliverable-1---nisters-5-point-algorithm-20-pts" id="markdown-toc--deliverable-1---nisters-5-point-algorithm-20-pts">📨 Deliverable 1 - Nister’s 5-point Algorithm [20 pts]</a>        <ol>
+          <li><a href="#read-the-paper-and-answer-the-questions-below" id="markdown-toc-read-the-paper-and-answer-the-questions-below">Read the paper and answer the questions below</a></li>
+        </ol>
+      </li>
+      <li><a href="#-deliverable-2---designing-a-minimal-solver-15-pts" id="markdown-toc--deliverable-2---designing-a-minimal-solver-15-pts">📨 Deliverable 2 - Designing a Minimal Solver [15 pts]</a></li>
+    </ol>
+  </li>
+  <li>
+<a href="#-team" id="markdown-toc--team">👥 Team</a>    <ol>
+      <li><a href="#getting-started-code-base-and-datasets" id="markdown-toc-getting-started-code-base-and-datasets">Getting started: code base and datasets</a></li>
+      <li><a href="#lets-perform-motion-estimation" id="markdown-toc-lets-perform-motion-estimation">Let’s perform motion estimation!</a></li>
+      <li><a href="#-deliverable-3---initial-setup-5-pts" id="markdown-toc--deliverable-3---initial-setup-5-pts">📨 Deliverable 3 - Initial Setup [5 pts]</a></li>
+      <li>
+<a href="#-deliverable-4---2d-2d-correspondences-45-pts" id="markdown-toc--deliverable-4---2d-2d-correspondences-45-pts">📨 Deliverable 4 - 2D-2D Correspondences [45 pts]</a>        <ol>
+          <li><a href="#1-cameracallback-this-is-the-main-function-for-this-lab" id="markdown-toc-1-cameracallback-this-is-the-main-function-for-this-lab">1. <code class="highlighter-rouge">cameraCallback</code>: this is the main function for this lab.</a></li>
+          <li><a href="#2-evaluaterpe-evaluating-the-relative-pose-estimates" id="markdown-toc-2-evaluaterpe-evaluating-the-relative-pose-estimates">2. <code class="highlighter-rouge">evaluateRPE</code>: evaluating the relative pose estimates</a></li>
+          <li><a href="#3-publish-your-relative-pose-estimate" id="markdown-toc-3-publish-your-relative-pose-estimate">3. Publish your relative pose estimate</a></li>
+        </ol>
+      </li>
+      <li>
+<a href="#-deliverable-5---3d-3d-correspondences-20-pts" id="markdown-toc--deliverable-5---3d-3d-correspondences-20-pts">📨 Deliverable 5 - 3D-3D Correspondences [20 pts]</a>        <ol>
+          <li><a href="#1-cameracallback-implement-aruns-algorithm" id="markdown-toc-1-cameracallback-implement-aruns-algorithm">1. <code class="highlighter-rouge">cameraCallback</code>: Implement Arun’s algorithm</a></li>
+        </ol>
+      </li>
+      <li><a href="#performance-expectations" id="markdown-toc-performance-expectations">Performance Expectations</a></li>
+      <li><a href="#summary-of-team-deliverables" id="markdown-toc-summary-of-team-deliverables">Summary of Team Deliverables</a></li>
+    </ol>
+  </li>
+</ol>
+    
+      <h1 id="submission">
+        
+        
+          <a href="#submission" class="anchor-heading"><svg class="d-inline-block v-align-middle" viewbox="0 0 16 16" version="1.1" width="18" height="18" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> Submission
+        
+        
+      </h1>
+
+<p>In this Lab, there are 5 deliverables throughout the handout. Deliverables 1 and
+2 will require pen and paper and are considered individual tasks, while
+Deliverable 3-5 are a team task which requires coding in the lab6 directory that
+we will provide.</p>
+    
+      <h3 id="individual">
+        
+        
+          <a href="#individual" class="anchor-heading"><svg class="d-inline-block v-align-middle" viewbox="0 0 16 16" version="1.1" width="18" height="18" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> Individual
+        
+        
+      </h3>
+
+<p>Create a folder called <code class="highlighter-rouge">lab6</code> that includes your answers (for math-related questions LaTeX is preferred but handwritten is accepted too). Zip the folder and upload on Canvas.</p>
+
+<p><strong>Each student needs to submit their own <code class="highlighter-rouge">lab6</code> folder to Canvas.</strong></p>
+    
+      <h3 id="team">
+        
+        
+          <a href="#team" class="anchor-heading"><svg class="d-inline-block v-align-middle" viewbox="0 0 16 16" version="1.1" width="18" height="18" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> Team
+        
+        
+      </h3>
+
+<p>Each group should create a new folder called <code class="highlighter-rouge">TEAM_&lt;N&gt;</code>, replacing <code class="highlighter-rouge">&lt;N&gt;</code> with your team number. For example team 2 will name their folder <code class="highlighter-rouge">TEAM_2</code>. Please put the source code of the entire <code class="highlighter-rouge">lab6</code> folder in the folder <code class="highlighter-rouge">TEAM_2</code>. For the non-code deliverables (plots, comments), please include a PDF in the <code class="highlighter-rouge">TEAM_2</code> folder. Zip the folder and submit to Canvas.</p>
+
+<p><strong>Each team will only need to submit one <code class="highlighter-rouge">TEAM_&lt;N&gt;.zip</code> to Canvas.</strong></p>
+    
+      <h3 id="deadline">
+        
+        
+          <a href="#deadline" class="anchor-heading"><svg class="d-inline-block v-align-middle" viewbox="0 0 16 16" version="1.1" width="18" height="18" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> Deadline
+        
+        
+      </h3>
+
+<p><strong>Deadline:</strong> To submit your solution, please upload the corresponding files under <code class="highlighter-rouge">Assignment &gt; Lab 6</code> by <strong>Tuesday, Mar 9, 11:59 EST</strong>.</p>
+    
+      <h1 id="-individual">
+        
+        
+          <a href="#-individual" class="anchor-heading"><svg class="d-inline-block v-align-middle" viewbox="0 0 16 16" version="1.1" width="18" height="18" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> 👤 Individual
+        
+        
+      </h1>
+    
+      <h2 id="-deliverable-1---nisters-5-point-algorithm-20-pts">
+        
+        
+          <a href="#-deliverable-1---nisters-5-point-algorithm-20-pts" class="anchor-heading"><svg class="d-inline-block v-align-middle" viewbox="0 0 16 16" version="1.1" width="18" height="18" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> 📨 Deliverable 1 - Nister’s 5-point Algorithm [20 pts]
+        
+        
+      </h2>
+    
+      <h3 id="read-the-paper-and-answer-the-questions-below">
+        
+        
+          <a href="#read-the-paper-and-answer-the-questions-below" class="anchor-heading"><svg class="d-inline-block v-align-middle" viewbox="0 0 16 16" version="1.1" width="18" height="18" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> Read the paper and answer the questions below
+        
+        
+      </h3>
+
+<p>Read the following paper.</p>
+
+<p>[1] Nistér, David. “An efficient solution to the five-point relative pose
+problem.” 2003 IEEE Computer Society Conference on Computer Vision and Pattern
+Recognition, 2003. Vol. 2. 2003. <a href="http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.86.8769&amp;rep=rep1&amp;type=pdf" target="_blank" rel="noopener noreferrer">link here</a>.</p>
+
+<p>Questions:</p>
+<ol>
+  <li>Outline the main computational steps required to get the relative pose
+estimate (up to scale) in Nister’s 5-point algorithm.</li>
+  <li>Does the 5-point algorithm exhibit any degeneracy? (degeneracy = special
+arrangements of the 3D points or the camera poses under which the algorithm
+fails)</li>
+  <li>When used within RANSAC, what is the expected number of iterations the
+5-point algorithm requires to find an outlier-free set?
+    <ul>
+      <li class="hint">Hint: take same assumptions of the lecture notes</li>
+    </ul>
+  </li>
+</ol>
+    
+      <h2 id="-deliverable-2---designing-a-minimal-solver-15-pts">
+        
+        
+          <a href="#-deliverable-2---designing-a-minimal-solver-15-pts" class="anchor-heading"><svg class="d-inline-block v-align-middle" viewbox="0 0 16 16" version="1.1" width="18" height="18" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> 📨 Deliverable 2 - Designing a Minimal Solver [15 pts]
+        
+        
+      </h2>
+
+<p><strong>Can you do better than Nister?</strong> Nister’s method is a minimal solver since it
+uses 5 point correspondences to compute the 5 degrees of freedom that define the
+relative pose (up to scale) between the two cameras (recall: each point induces
+a scalar equation). In the presence of external information (e.g., data from other
+sensors), we may be able use less point correspondences to compute the relative
+pose.</p>
+
+<p>Consider a drone flying in an unknown environment, and equipped with a camera and an Inertial Measurement Unit (IMU). We want to use the feature correspondences extracted in the images captured at two consecutive time instants $t_1$ and $t_2$ to estimate the  elative pose (up to scale) between the pose at time $t_1$ and the pose at time $t_2$.
+Besides the camera, we can use the IMU (and in particular the gyroscopes in the IMU) to estimate the relative rotation between the pose of the camera at time $t_1$ and $t_2$.</p>
+
+<p>You are required to solve the following problems:</p>
+<ol>
+  <li>Assume the relative camera rotation between time and is known from the IMU.
+Design a minimal solver that computes the remaining degrees of freedom of the
+relative pose.
+    <ul>
+      <li class="hint">Hint: we only want to compute the pose up to scale</li>
+    </ul>
+  </li>
+  <li>
+<strong>OPTIONAL (5 bonus pts)</strong>: Describe the pseudo-code of a RANSAC algorithm using the minimal solver
+developed in point a) to compute the relative pose in presence of outliers
+(wrong correspondences).</li>
+</ol>
+    
+      <h1 id="-team">
+        
+        
+          <a href="#-team" class="anchor-heading"><svg class="d-inline-block v-align-middle" viewbox="0 0 16 16" version="1.1" width="18" height="18" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> 👥 Team
+        
+        
+      </h1>
+
+<p>In this section, we will estimate the motion of a (simulated) flying drone in real time
+and compare the performances of different algorithms.</p>
+
+<p>For the algorithms,
+we will be using the implementations provided in the 
+<a href="https://laurentkneip.github.io/opengv/page_how_to_use.html" target="_blank" rel="noopener noreferrer">OpenGV</a> library
+(note: Open<strong>G</strong>V).</p>
+
+<p>For the datasets, we will use pre-recorded <code class="highlighter-rouge">rosbag</code> files of our simulated drone flying in an indoor environment.</p>
+
+<p>Additionally, for motion estimation:</p>
+<ul>
+  <li>We will only focus on two-view (vs multi-camera) pose estimation. In
+OpenGV, we refer to two-view problems as “Central” (vs “Non-Central”)
+relative pose problems.</li>
+  <li>We will focus only on the calibrated case, where the intrinsics matrix K is given, and
+we assume that the images are rectified (distortion removed) using the
+parameters that you estimated previously.</li>
+</ul>
+    
+      <h2 id="getting-started-code-base-and-datasets">
+        
+        
+          <a href="#getting-started-code-base-and-datasets" class="anchor-heading"><svg class="d-inline-block v-align-middle" viewbox="0 0 16 16" version="1.1" width="18" height="18" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> Getting started: code base and datasets
+        
+        
+      </h2>
+<ul>
+  <li>
+    <p><strong>Prerequisites</strong>: Lab 6 will use the feature matching algorithms developed in Lab 5 (in particular, we use SIFT matching), so
+make sure you have a working version of Lab 5 already in the VNA2V workspace.</p>
+  </li>
+  <li>
+<strong>Prepare the code base</strong>: Use <code class="highlighter-rouge">git pull</code> to update the gitlab repo used to distribute lab codes, and you should see a new folder named <code class="highlighter-rouge">lab6</code>. Copy the entire <code class="highlighter-rouge">lab6</code> folder to the <code class="highlighter-rouge">src</code> folder of your vna2v workspace (e.g., <code class="highlighter-rouge">~/vna2v_ws/src</code>). Now we are ready to install OpenGV by doing:
+    <div class="language-shell highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><span class="nb">cd</span> ~/vna2v_ws/src <span class="o">(</span>path to src of vna2v workspace<span class="o">)</span>
+wstool init
+wstool merge lab6/install/lab_6.rosinstall <span class="nt">-y</span>
+wstool update <span class="nt">-j8</span>
+</code></pre></div>    </div>
+    <p>The above scripts will download OpenGV into your workspace (you will see a folder <code class="highlighter-rouge">opengv</code> under <code class="highlighter-rouge">src</code>).
+Now run:</p>
+    <div class="language-shell highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>catkin build lab_6
+</code></pre></div>    </div>
+    <p>to build the <code class="highlighter-rouge">lab_6</code> package (which should build OpenGV first and then build <code class="highlighter-rouge">lab_6</code> itself).</p>
+  </li>
+  <li>
+<strong>Download the datasets</strong>: We will use the following dataset for this lab:
+    <ol>
+      <li>
+<code class="highlighter-rouge">office.bag</code> and you can download it <a href="https://drive.google.com/file/d/15eJ-pNjwWB728gMHoAhaCGwiQtWwDlAT/view?usp=sharing" target="_blank" rel="noopener noreferrer">here</a>.</li>
+    </ol>
+  </li>
+</ul>
+
+<p>After downloading the dataset, we suggest you to put them in the <code class="highlighter-rouge">~/data/vna2v</code> folder.</p>
+
+<p>The rosbag files include the following topics of the drone:</p>
+<ul>
+  <li>Ground-truth pose estimate of the drone’s body frame: <code class="highlighter-rouge">/tesse/odom</code>
+</li>
+  <li>RGB image from the left-front camera of the drone: <code class="highlighter-rouge">/tesse/left_cam/rgb/image_raw</code>
+</li>
+  <li>Depth image: <code class="highlighter-rouge">/tesse/depth_cam/mono/image_raw</code>
+</li>
+</ul>
+
+<p>You can play these 
+datasets by running (after using <code class="highlighter-rouge">roscore</code> to start ROS master first):</p>
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rosbag play ~/data/vna2v/office.bag
+</code></pre></div></div>
+<p>while in parallel open RVIZ by:</p>
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rviz <span class="nt">-d</span> ~/vna2v_ws/src/lab6/rviz/office.rviz
+</code></pre></div></div>
+<p>You should see on the left the RGB Image and the Depth image.</p>
+    
+      <h2 id="lets-perform-motion-estimation">
+        
+        
+          <a href="#lets-perform-motion-estimation" class="anchor-heading"><svg class="d-inline-block v-align-middle" viewbox="0 0 16 16" version="1.1" width="18" height="18" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> Let’s perform motion estimation!
+        
+        
+      </h2>
+
+<p>We will use two methods to estimate the motion of the drone:</p>
+<ul>
+  <li>Motion estimation from 2D-2D correspondences (Deliverable 4)</li>
+  <li>Motion estimation from 3D-3D correspondences (Deliverable 5)</li>
+</ul>
+
+<p>In Deliverable 4, we will perform motion estimation <strong>only</strong> using 2D RGB images taken
+from the drone’s camera, while in Deliverable 5, we will additionally use the depth 
+measurements to get the sense of 3D.</p>
+
+<p><strong>NOTE:</strong></p>
+<ul>
+  <li>All your main implementations of the motion estimation algorithms should be in
+the <code class="highlighter-rouge">pose_estimation.cpp</code> file. In the file, we have also provided many comments to help
+your implementation, so please go through the comments in details.</li>
+  <li>For this lab, we
+provide a number of useful utility functions in <code class="highlighter-rouge">lab6_utils.h</code>. You do not need to
+use these functions to complete the assignment, but they might help save you
+some time and frustration.</li>
+</ul>
+    
+      <h2 id="-deliverable-3---initial-setup-5-pts">
+        
+        
+          <a href="#-deliverable-3---initial-setup-5-pts" class="anchor-heading"><svg class="d-inline-block v-align-middle" viewbox="0 0 16 16" version="1.1" width="18" height="18" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> 📨 Deliverable 3 - Initial Setup [5 pts]
+        
+        
+      </h2>
+
+<p>Before we go to motion estimation, an important task is to calibrate the camera of the drone,
+i.e., to obtain the camera intrinsics and distortion coefficients. Normally you would 
+need to calibrate the camera yourself offline to obtain the parameters.</p>
+
+<p>However, in this lab the camera that the drone is equipped with has been
+calibrated already, and calibration information is provided to you!
+(If you are curious about how to calibrate a camera, feel free to check this <a href="http://wiki.ros.org/camera_calibration" target="_blank" rel="noopener noreferrer">ROS package</a>)</p>
+
+<p>As part of the starter code, we provide a function <code class="highlighter-rouge">calibrateKeypoints</code> to calibrate and undistort the keypoints.
+Make sure you use this function to calibrate the keypoints before passing them to RANSAC.</p>
+    
+      <h2 id="-deliverable-4---2d-2d-correspondences-45-pts">
+        
+        
+          <a href="#-deliverable-4---2d-2d-correspondences-45-pts" class="anchor-heading"><svg class="d-inline-block v-align-middle" viewbox="0 0 16 16" version="1.1" width="18" height="18" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> 📨 Deliverable 4 - 2D-2D Correspondences [45 pts]
+        
+        
+      </h2>
+
+<p>Given a set of keypoint correspondences in a pair of images (2D - 2D image
+correspondences), as computed in the previous lab 5, we can use 2-view
+(geometric verification) algorithms to estimate the relative pose (up to scale)
+from one viewpoint to another.</p>
+
+<p>To do so, we will be using three different algorithms and comparing their
+performance.</p>
+
+<p>We will first start with the 5-point algorithm of Nister. Then we will test the 8-point method we have seen in class. Finally, we will test the 2-point method you developed in Deliverable 2. For all techniques, we use the feature matching code we developed in Lab 5. In particular, we use SIFT for feature matching in the remaining of this problem set.</p>
+
+<p>We provide you with a skeleton code in <code class="highlighter-rouge">lab6</code> folder where we have set-up ROS
+callbacks to receive the necessary information.</p>
+
+<p>We ask you to complete the code inside the following functions:</p>
+    
+      <h3 id="1-cameracallback-this-is-the-main-function-for-this-lab">
+        
+        
+          <a href="#1-cameracallback-this-is-the-main-function-for-this-lab" class="anchor-heading"><svg class="d-inline-block v-align-middle" viewbox="0 0 16 16" version="1.1" width="18" height="18" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> 1. <code class="highlighter-rouge">cameraCallback</code>: this is the main function for this lab.
+        
+        
+      </h3>
+
+<p>Inside, you will have to use three different algorithms to estimate the relative pose
+from frame to frame:</p>
+<ul>
+  <li>OpenGV’s the 5-point algorithm with RANSAC <a href="https://laurentkneip.github.io/opengv/classopengv_1_1sac__problems_1_1relative__pose_1_1CentralRelativePoseSacProblem.html" target="_blank" rel="noopener noreferrer">(see OpenGV
+ API)</a>
+</li>
+  <li>OpenGV’s <a href="https://laurentkneip.github.io/opengv/classopengv_1_1sac__problems_1_1relative__pose_1_1CentralRelativePoseSacProblem.html" target="_blank" rel="noopener noreferrer">8-point algorithm by Longuet-Higgins with
+RANSAC</a>
+</li>
+  <li>OpenGV’s <a href="https://laurentkneip.github.io/opengv/classopengv_1_1sac__problems_1_1relative__pose_1_1TranslationOnlySacProblem.html" target="_blank" rel="noopener noreferrer">2-point algorithm with RANSAC</a>. This algorithm requires you to provide the
+relative rotation between pairs of frames. This is usually done by integrating
+the IMU’s gyroscope measurements. Nevertheless, for this lab, we will ask you to
+compute the relative rotation using the ground-truth pose of the drone between
+both frames.</li>
+</ul>
+
+<p>For each part, follow the comments written in the source code for further
+details.</p>
+
+<p><strong>We strongly recommend you to take a look at how to use OpenGV functions <a href="https://laurentkneip.github.io/opengv/page_how_to_use.html" target="_blank" rel="noopener noreferrer">here</a>.</strong></p>
+
+<p><strong>OPTIONAL (5 bonus pts)</strong>: if you are curious about how important is to reject outliers via RANSAC, try to use the 5-point method <a href="https://laurentkneip.github.io/opengv/namespaceopengv_1_1relative__pose.html#af269f7393720263895fb9b746e4cec4a" target="_blank" rel="noopener noreferrer">without RANSAC (see OpenGV
+ API)</a>,
+ and add the results to the performance evaluation below.</p>
+    
+      <h3 id="2-evaluaterpe-evaluating-the-relative-pose-estimates">
+        
+        
+          <a href="#2-evaluaterpe-evaluating-the-relative-pose-estimates" class="anchor-heading"><svg class="d-inline-block v-align-middle" viewbox="0 0 16 16" version="1.1" width="18" height="18" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> 2. <code class="highlighter-rouge">evaluateRPE</code>: evaluating the relative pose estimates
+        
+        
+      </h3>
+
+<p>After implementing the relative pose estimation methods, you are required to evaluate their accuracy and plot their errors over time. Since you also have the ground-truth pose of the drone, it is
+possible to compute the Relative Pose Error (RPE) between your estimated relative pose
+from frame to frame and the actual ground-truth movement. Follow the equations
+below and compute the translation and rotation relative errors on the rosbag we provided.</p>
+
+<!-- Also, take into account that the
+ground-truth pose is the one for the body frame of the drone (typically located
+at the center of the IMU), but you are actually estimating the pose of the
+camera. Usually, this transformation is calculated beforehand, using a package
+such as Kalibr. -->
+
+<p><strong><em>The relative pose error is a metric for investigating the local consistency of a trajectory</em></strong></p>
+
+<p>RPE compares the relative poses along the estimated and the reference trajectory. Given the ground truth pose $T^W_{ref,t}$ at time $t$ (with respect to the world frame $W$), we can compute the ground truth relative pose between time $t-1$ and $t$  as:</p>
+
+<p>\[ T_{ref,t}^{ref,t-1} = \left(T^W_{ref,t-1}\right)^{-1}  T^W_{ref,t} \in \SE{3} \]</p>
+
+<p>Similarly, the 2-view geometry algorithms we test in this lab will provide an estimate for the relative pose between the frame at time $t-1$ and $t$:</p>
+
+<p>\[ T^{est,t-1}_{est,t} \in \SE{3} \]</p>
+
+<p>Therefore, we can compute the mismatch between the ground truth and the estimated relative poses using one of the distances we discussed during lecture.</p>
+
+<p><strong><em>When using 2D-2D correspondences, the translation is only computed up to scale (and is conventionally returned as a vector with unit norm). so we recommend scaling the corresponding ground truth translation to have unit norm before computing the errors we describe below.</em></strong></p>
+
+<p><strong>Relative translation error:</strong> This is simply the Euclidean distance between the ground truth and the estimated relative translation:</p>
+
+<p>\[ RPE_{t-1,t}^{tran} = \left\Vert \mathrm{trans}\left(T_{ref,t}^{ref,t-1}\right) - \mathrm{trans}\left(T^{est,t-1}_{est,t}\right) \right\Vert_2  \]</p>
+
+<p>where $\mathrm{trans}(\cdot)$ denotes the translation part of a pose.</p>
+
+<p><strong>Relative rotation error:</strong> This is the chordal distance between the ground truth and the estimated relative rotation:</p>
+
+<p>\[ RPE_{i,j}^{rot} = \left\Vert \mathrm{rot}\left(T_{ref,t}^{ref,t-1}\right) - \mathrm{rot}\left(T_{est,t}^{est,t-1}\right) \right\Vert_{F}  \]</p>
+
+<p>where $\mathrm{rot}(\cdot)$ denotes the rotation part of a pose.</p>
+
+<p>You will need to implement these error metrics, compute them for <strong>consecutive frames in the rosbag</strong>, and plot them as discussed above.</p>
+
+<p>As a deliverable, <strong>provide 2 plots showing the rotation error and the translation error
+over time</strong> for each of the tested techniques (2 plots with 3 lines for the
+algorithms using RANSAC). You can write the data to a file and do the plotting with Python if you prefer (upload as well the python script if necessary).</p>
+    
+      <h3 id="3-publish-your-relative-pose-estimate">
+        
+        
+          <a href="#3-publish-your-relative-pose-estimate" class="anchor-heading"><svg class="d-inline-block v-align-middle" viewbox="0 0 16 16" version="1.1" width="18" height="18" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> 3. Publish your relative pose estimate
+        
+        
+      </h3>
+
+<p>In order to visualize your relative pose estimate between time $t-1$ and $t$, we postmultiply your estimated relative pose between time $t-1$ and $t$ by the ground truth pose at time $t-1$. This will give you a pose estimate at time $t$ that you can visualize in Rviz.  <strong>To do so, we use the ground-truth pose of the previous frame (obtained from ROS messages), “plus” the relative pose between current frame and previous frame (obtained from your algorithms, and then scale the translation using ground-truth),
+to compute the estimated (absolute) pose of the current frame, and then publish it.</strong></p>
+
+<p>To run your code, use:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>roslaunch lab_6 video_tracking.launch
+</code></pre></div></div>
+<p>but be sure to modify the dataset path and parameters to run the correct method! For example,
+the <code class="highlighter-rouge">pose_estimator</code> parameter determines which algorithm to be used for the motion estimation.</p>
+
+<p><strong>Note that we are cheating in this visualization since we use the ground truth from the previous time stamp.
+In practice, we cannot concatenate multiple estimates from 2-view geometry since they are up to scale (so for visualization, we use groundtruth to recover the scale).</strong></p>
+
+<p>In the next deliverable we will see that 3D-3D correspondences allow us to reconstruct the correct scale for the translation.**</p>
+
+<div class="alert alert-warning"> <div class="alert-content">
+    
+      <h2 class="alert-title">
+        
+        
+           ATTENTION. 
+        
+        
+      </h2> <div class="alert-body"> <p><b>NOTE:</b> You need to have <b>xterm</b> installed on your Linux system in order to properly start the launch file. You can install it using the following command in a terminal window.
+<code>
+sudo apt install xterm
+</code>
+</p>
+</div> </div> </div>
+    
+      <h2 id="-deliverable-5---3d-3d-correspondences-20-pts">
+        
+        
+          <a href="#-deliverable-5---3d-3d-correspondences-20-pts" class="anchor-heading"><svg class="d-inline-block v-align-middle" viewbox="0 0 16 16" version="1.1" width="18" height="18" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> 📨 Deliverable 5 - 3D-3D Correspondences [20 pts]
+        
+        
+      </h2>
+
+<p>The rosbag we provide you also contains depth values registered with the RGB
+camera, this means that each pixel location in the RGB camera has an associated
+depth value in the Depth image.</p>
+
+<p>In this part, we have provided code to scale to bearing vectors to 3D point clouds,
+and what you need to do is to 
+use Arun’s algorithm (with RANSAC) to compute the drone’s relative
+pose from frame to frame.</p>
+    
+      <h3 id="1-cameracallback-implement-aruns-algorithm">
+        
+        
+          <a href="#1-cameracallback-implement-aruns-algorithm" class="anchor-heading"><svg class="d-inline-block v-align-middle" viewbox="0 0 16 16" version="1.1" width="18" height="18" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> 1. <code class="highlighter-rouge">cameraCallback</code>: Implement Arun’s algorithm
+        
+        
+      </h3>
+
+<p>Implement <a href="http://laurentkneip.github.io/opengv/namespaceopengv_1_1point__cloud.html#a047c3c5a395a740e7f3f2b8573289211" target="_blank" rel="noopener noreferrer">Arun’s algorithm</a>
+in this function. Use the evaluateRPE function you used previously to <strong>plot the
+rotation error and the translation error over time</strong> as well. Mind that, in this
+case, there is no scale ambiguity, therefore we cannot really compare the translation error of this
+approach against the previous ones. Implement Arun’s algorithm <em>with</em> RANSAC using OpenGV.</p>
+
+<p>To run your code, use:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>roslaunch lab_6 video_tracking.launch
+</code></pre></div></div>
+<p>with the <code class="highlighter-rouge">pose_estimator</code> parameter set to <code class="highlighter-rouge">3</code> so that Arun’s method is used.</p>
+
+<p><strong>Note that while we can now reconstruct the trajectory by concatenating the relative poses, such a trajectory estimate will quickly diverge due to error accumulation. In future lectures, we will study Visual-Odometry and Loop closure detection as two ways to mitigate the error accumulation.</strong></p>
+    
+      <h2 id="performance-expectations">
+        
+        
+          <a href="#performance-expectations" class="anchor-heading"><svg class="d-inline-block v-align-middle" viewbox="0 0 16 16" version="1.1" width="18" height="18" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> Performance Expectations
+        
+        
+      </h2>
+<p>What levels of rotation and translation errors should one expect from using these different algorithms? To set the correct expection, we think the following
+errors are satisfactory:</p>
+<ul>
+  <li>Using 5-point or 8-pt with RANSAC, for most of the frames, you can get rotation error below 1 degree and translation error below 0.5 (note that the translation error is between 0 and 2 since
+both ground-truth translation and estimated translation have unit norm), with 5-pt algorithm slightly outperforming 8-pt algorithm.</li>
+  <li>Using 2-point with RANSAC, for most of the frames, you can get the translation error below 0.1 (note that the translation error is between 0 and 2).</li>
+  <li>Using 3-point with RANSAC (3D-3D), for most of the frames, you can get rotation error below 0.1 degree, and translation error below 0.1 (if you normalize the translations), and even smaller if you don’t normalize the translations since the frame rate is very high.</li>
+</ul>
+    
+      <h2 id="summary-of-team-deliverables">
+        
+        
+          <a href="#summary-of-team-deliverables" class="anchor-heading"><svg class="d-inline-block v-align-middle" viewbox="0 0 16 16" version="1.1" width="18" height="18" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> Summary of Team Deliverables
+        
+        
+      </h2>
+<p>For the given dataset, we require you to run <strong>all algorithms</strong> on it and compare their performances.
+Therefore, as a summary for Team Deliverables:</p>
+<ol>
+  <li>Plots of translation and rotation error for each of the methods (5pt, 8pt, 2pt, Arun 3 pt) using the given rosbag (using RANSAC is required, while without RANSAC is optional).</li>
+  <li>
+<strong>OPTIONAL (10 bonus pts)</strong>: repeat the tests using a rosbag you collect during drone racing (your Lab 4 solution). The rosbag must contain stereo RGB images, depth information, and odometry, which are not published by tesse_ros_bridge by default. So, in order to collect a suitable rosbag, you must follow these steps:
+    <ol>
+      <li>Download the <a href="https://drive.google.com/file/d/1loAS87Rw9-fVB-DK2q-E2ve4SCNz0uWQ/view?usp=sharing" target="_blank" rel="noopener noreferrer">updated simulator</a> and run it with these command line arguments: <code class="highlighter-rouge">-screen-width 720 -screen-height 480</code>
+</li>
+      <li>Launch the tesse ros bridge with these arguments: <code class="highlighter-rouge">roslaunch tesse_ros_bridge tesse_quadrotor_bridge.launch publish_stereo_rgb:=true publish_depth:=true publish_odom:=true</code>
+</li>
+      <li>Collect the rosbag of your trajectory as before (e.g. by launching the appropriate nodes and running <code class="highlighter-rouge">rosbag record -a</code> in another window)</li>
+      <li>If you experience any errors while following the above steps, please check Piazza and make a new post if your question is not already answered.</li>
+      <li class="hint">
+<strong>Important:</strong> If you run into an error that you are unable to fix yourself after checking Piazza, you can still receive full bonus points through submitting a <strong>complete and detailed</strong> bug report on Piazza which clearly explains the commands you used and any error messages or unexpected behaviour that occurred, as well as describing attempts you’ve made to understand/fix the bug. Please copy and paste this report into your team writeup to ensure you get the bonus.</li>
+    </ol>
+  </li>
+</ol>
+            
+
+          
+
+          
+            <hr>
+            <footer role="contentinfo">
+              <p class="text-small text-grey-dk-000 mb-0">Enabled with the generous support of the MIT SPARK Lab. Copyright © MIT SPARK Lab and Vasileios Tzoumas of the University of Michigan. Using <a href="https://github.com/pmarsceill/just-the-docs/tree/master" target="_blank" rel="noopener noreferrer">Just the docs</a> theme.</p>
+            </footer>
+          
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div></body>
+</html>
