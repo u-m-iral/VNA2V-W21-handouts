@@ -183,7 +183,7 @@ from one viewpoint to another.
 To do so, we will be using three different algorithms and comparing their
 performance.
 
-We will first start with the 5-point algorithm of Nister. Then we will test the 8-point method we have seen in class. Finally, we will test the 2-point method you developed in Deliverable 2. For all techniques, we use the feature matching code we developed in Lab 5. In particular, we use SIFT for feature matching in the remaining of this problem set.
+We will first start with the 5-point algorithm of Nister. Then we will test the 8-point method we have seen in class. Finally, we will test the 2-point method you developed in Deliverable 2. For all techniques, we use the feature matching code we developed in Lab 5 (use the provided solution code for lab 5 if you prefer - download it [here](https://gitlab.umich.edu/VNA2V-W21/labs/-/tree/master/Lab_5_solution)). In particular, we use SIFT for feature matching in the remaining of this problem set.
 
 We provide you with a skeleton code in `lab6` folder where we have set-up ROS
 callbacks to receive the necessary information.
