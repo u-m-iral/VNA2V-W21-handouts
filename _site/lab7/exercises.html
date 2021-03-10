@@ -1,0 +1,748 @@
+
+
+<!DOCTYPE html>
+
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+
+  
+    <title>Exercises - VNA2V-W21</title>
+
+    
+  
+
+  <link rel="shortcut icon" href="http://localhost:4000/VNA2V-W21-handouts/favicon.ico" type="image/x-icon">
+
+  <link rel="stylesheet" href="http://localhost:4000/VNA2V-W21-handouts/assets/css/just-the-docs.css">
+  <script src="https://use.fontawesome.com/d81b2d50d8.js"></script>
+  
+  
+
+  
+    <script type="text/javascript" src="http://localhost:4000/VNA2V-W21-handouts/assets/js/vendor/lunr.min.js"></script>
+  
+  <script type="text/javascript" src="http://localhost:4000/VNA2V-W21-handouts/assets/js/just-the-docs.js"></script>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>Exercises | VNA2V-W21</title>
+<meta name="generator" content="Jekyll v3.8.6" />
+<meta property="og:title" content="Exercises" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="AEROSP 740 - Visual Navigation for Autonomous Aerial Vehicles (W21)" />
+<meta property="og:description" content="AEROSP 740 - Visual Navigation for Autonomous Aerial Vehicles (W21)" />
+<link rel="canonical" href="http://localhost:4000/VNA2V-W21-handouts/lab7/exercises" />
+<meta property="og:url" content="http://localhost:4000/VNA2V-W21-handouts/lab7/exercises" />
+<meta property="og:site_name" content="VNA2V-W21" />
+<script type="application/ld+json">
+{"@type":"WebPage","url":"http://localhost:4000/VNA2V-W21-handouts/lab7/exercises","headline":"Exercises","description":"AEROSP 740 - Visual Navigation for Autonomous Aerial Vehicles (W21)","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+  
+<script>
+  window.MathJax = {
+    options: {
+      skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+    },
+    loader: {
+      load: ['input/tex', '[tex]/ams', '[tex]/configMacros']
+    },
+    tex: {
+      packages: {'[+]': ['boldsymbol', 'ams', 'configMacros']},
+      inlineMath: [['$','$'], ['\\(','\\)']],
+      displayMath: [["$$", "$$"], ["\\[","\\]"]],
+      processEscapes: true,
+      tags: "ams",
+      macros: {
+        SE: ['\\mathrm{SE}(#1)', 1],
+        SO: ['\\mathrm{SO}(#1)', 1],
+        argmin: '\\mathop{\\operatorname{argmin}}',
+        argmax: '\\mathop{\\operatorname{argmax}}',
+        trace: '\\operatorname{trace}',
+        tran: '^{\\mathsf{T}}',
+      },
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+
+
+<script type="text/javascript" src="http://localhost:4000/VNA2V-W21-handouts/assets/js/vendor/lazysizes.min.js" async=""></script>
+
+</head>
+
+<body>
+
+  <div class="page-wrap">
+    <div class="side-bar">
+      <div class="site-header">
+        <a href="http://localhost:4000/VNA2V-W21-handouts" class="site-title lh-tight">VNA2V-W21</a>
+        <button class="menu-button fs-3 js-main-nav-trigger" data-text-toggle="Hide" type="button">Menu</button>
+      </div>
+
+      <div class="navigation main-nav js-main-nav">
+        <nav role="navigation" aria-label="Main navigation">
+  <ul class="navigation-list">
+<li class="navigation-list-item"><a href="http://localhost:4000/VNA2V-W21-handouts/" class="navigation-list-link">Home</a></li>
+<li class="navigation-list-item">
+<a href="http://localhost:4000/VNA2V-W21-handouts/lab1/" class="navigation-list-link">Lab 1</a><ul class="navigation-list-child-list ">
+<li class="navigation-list-item "><a href="http://localhost:4000/VNA2V-W21-handouts/lab1/ubuntu" class="navigation-list-link">Install Ubuntu 18.04</a></li>
+<li class="navigation-list-item "><a href="http://localhost:4000/VNA2V-W21-handouts/lab1/shell" class="navigation-list-link">Shell basics</a></li>
+<li class="navigation-list-item "><a href="http://localhost:4000/VNA2V-W21-handouts/lab1/git" class="navigation-list-link">Git</a></li>
+<li class="navigation-list-item "><a href="http://localhost:4000/VNA2V-W21-handouts/lab1/cpp" class="navigation-list-link">C++</a></li>
+<li class="navigation-list-item "><a href="http://localhost:4000/VNA2V-W21-handouts/lab1/exercises" class="navigation-list-link">Exercises</a></li>
+</ul>
+</li>
+<li class="navigation-list-item">
+<a href="http://localhost:4000/VNA2V-W21-handouts/lab2/" class="navigation-list-link">Lab 2</a><ul class="navigation-list-child-list ">
+<li class="navigation-list-item "><a href="http://localhost:4000/VNA2V-W21-handouts/lab2/ros" class="navigation-list-link">Installing ROS</a></li>
+<li class="navigation-list-item "><a href="http://localhost:4000/VNA2V-W21-handouts/lab2/ros101" class="navigation-list-link">Introduction to ROS</a></li>
+<li class="navigation-list-item "><a href="http://localhost:4000/VNA2V-W21-handouts/lab2/exercises" class="navigation-list-link">Exercises</a></li>
+</ul>
+</li>
+<li class="navigation-list-item">
+<a href="http://localhost:4000/VNA2V-W21-handouts/lab3/" class="navigation-list-link">Lab 3</a><ul class="navigation-list-child-list "><li class="navigation-list-item "><a href="http://localhost:4000/VNA2V-W21-handouts/lab3/exercises" class="navigation-list-link">Exercises</a></li></ul>
+</li>
+<li class="navigation-list-item">
+<a href="http://localhost:4000/VNA2V-W21-handouts/lab4/" class="navigation-list-link">Lab 4</a><ul class="navigation-list-child-list "><li class="navigation-list-item "><a href="http://localhost:4000/VNA2V-W21-handouts/lab4/exercises" class="navigation-list-link">Exercises</a></li></ul>
+</li>
+<li class="navigation-list-item">
+<a href="http://localhost:4000/VNA2V-W21-handouts/lab5/" class="navigation-list-link">Lab 5</a><ul class="navigation-list-child-list "><li class="navigation-list-item "><a href="http://localhost:4000/VNA2V-W21-handouts/lab5/exercises" class="navigation-list-link">Exercises</a></li></ul>
+</li>
+<li class="navigation-list-item">
+<a href="http://localhost:4000/VNA2V-W21-handouts/lab6/" class="navigation-list-link">Lab 6</a><ul class="navigation-list-child-list "><li class="navigation-list-item "><a href="http://localhost:4000/VNA2V-W21-handouts/lab6/exercises" class="navigation-list-link">Exercises</a></li></ul>
+</li>
+<li class="navigation-list-item active">
+<a href="http://localhost:4000/VNA2V-W21-handouts/lab7/" class="navigation-list-link">Lab 7</a><ul class="navigation-list-child-list "><li class="navigation-list-item  active"><a href="http://localhost:4000/VNA2V-W21-handouts/lab7/exercises" class="navigation-list-link active">Exercises</a></li></ul>
+</li>
+<li class="navigation-list-item"><a href="http://localhost:4000/VNA2V-W21-handouts/about" class="navigation-list-link">How to print</a></li>
+</ul>
+</nav>
+
+      </div>
+      <footer class="site-footer">
+        <p class="text-small text-grey-dk-000 mb-4"><b>Last modified</b>:<br> Tuesday, March 9 at 20:05</p>
+      </footer>
+    </div>
+    <div class="main-content-wrap js-main-content" tabindex="0">
+      <div class="main-content">
+        <div class="page-header js-page-header">
+          
+          <div class="search">
+            <div class="search-input-wrap">
+              <input type="text" class="js-search-input search-input" tabindex="0" placeholder="Search VNA2V-W21" aria-label="Search VNA2V-W21" autocomplete="off">
+              <svg width="14" height="14" viewbox="0 0 28 28" xmlns="http://www.w3.org/2000/svg" class="search-icon"><title>Search</title>
+<g fill-rule="nonzero"><path d="M17.332 20.735c-5.537 0-10-4.6-10-10.247 0-5.646 4.463-10.247 10-10.247 5.536 0 10 4.601 10 10.247s-4.464 10.247-10 10.247zm0-4c3.3 0 6-2.783 6-6.247 0-3.463-2.7-6.247-6-6.247s-6 2.784-6 6.247c0 3.464 2.7 6.247 6 6.247z"></path><path d="M11.672 13.791L.192 25.271 3.02 28.1 14.5 16.62z"></path></g></svg>
+            </div>
+            <div class="js-search-results search-results-wrap"></div>
+          </div>
+          
+          
+        </div>
+        <div class="page">
+          
+            
+              <nav class="breadcrumb-nav">
+                <ol class="breadcrumb-nav-list">
+                  
+                    <li class="breadcrumb-nav-list-item"><a href="http://localhost:4000/VNA2V-W21-handouts/lab7/">Lab 7</a></li>
+                  
+                  <li class="breadcrumb-nav-list-item"><span>Exercises</span></li>
+                </ol>
+              </nav>
+            
+          
+          <div id="main-content" class="page-content" role="main">
+            
+              <h1 class="no_toc text-delta fs-9" id="exercises">
+        
+        
+          <a href="#exercises" class="anchor-heading"><svg class="d-inline-block v-align-middle" viewbox="0 0 16 16" version="1.1" width="18" height="18" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> Exercises
+        
+        
+      </h1>
+
+<ol id="markdown-toc">
+  <li>
+<a href="#submission" id="markdown-toc-submission">Submission</a>    <ol>
+      <li><a href="#individual" id="markdown-toc-individual">Individual</a></li>
+      <li><a href="#team" id="markdown-toc-team">Team</a></li>
+      <li><a href="#deadline" id="markdown-toc-deadline">Deadline</a></li>
+    </ol>
+  </li>
+  <li>
+<a href="#-individual" id="markdown-toc--individual">👤 Individual</a>    <ol>
+      <li><a href="#-deliverable-1---accounting-for-measurement-covariances-in-nonlinear-least-squares-10-pts" id="markdown-toc--deliverable-1---accounting-for-measurement-covariances-in-nonlinear-least-squares-10-pts">📨 Deliverable 1 - Accounting for Measurement Covariances in Nonlinear Least Squares [10 pts]</a></li>
+      <li><a href="#-deliverable-2---practice-with-lie-groups-35-pts" id="markdown-toc--deliverable-2---practice-with-lie-groups-35-pts">📨 Deliverable 2 - Practice with Lie Groups (35 pts)</a></li>
+    </ol>
+  </li>
+  <li>
+<a href="#-team" id="markdown-toc--team">👥 Team</a>    <ol>
+      <li><a href="#gtsam-preliminaries" id="markdown-toc-gtsam-preliminaries">GTSAM Preliminaries</a></li>
+      <li><a href="#setting-up" id="markdown-toc-setting-up">Setting up</a></li>
+      <li><a href="#-deliverable-1---gtsam-introduction-10-pts" id="markdown-toc--deliverable-1---gtsam-introduction-10-pts">📨 Deliverable 1 - GTSAM Introduction [10 pts]</a></li>
+      <li><a href="#-deliverable-2---gtsam-3d-pose-estimation-10-pts" id="markdown-toc--deliverable-2---gtsam-3d-pose-estimation-10-pts">📨 Deliverable 2 - GTSAM 3D Pose Estimation [10 pts]</a></li>
+      <li><a href="#-deliverable-3---making-a-motion-capture-factor-in-gtsam-15-pts" id="markdown-toc--deliverable-3---making-a-motion-capture-factor-in-gtsam-15-pts">📨 Deliverable 3 - Making a Motion Capture Factor in GTSAM [15 pts]</a></li>
+      <li><a href="#-deliverable-4---gtsam-to-solve-computer-vision-problems-20-pts" id="markdown-toc--deliverable-4---gtsam-to-solve-computer-vision-problems-20-pts">📨 Deliverable 4 - GTSAM to solve Computer Vision problems [20 pts]</a></li>
+      <li><a href="#-optional-deliverable-5---gtsam-to-solve-so3-mle-with-langevin-noise-15-pts" id="markdown-toc--optional-deliverable-5---gtsam-to-solve-so3-mle-with-langevin-noise-15-pts">📨 [Optional] Deliverable 5 - GTSAM to solve SO(3) MLE with Langevin Noise [+15 pts]</a></li>
+      <li><a href="#summary-of-team-deliverables" id="markdown-toc-summary-of-team-deliverables">Summary of Team Deliverables</a></li>
+    </ol>
+  </li>
+</ol>
+    
+      <h1 id="submission">
+        
+        
+          <a href="#submission" class="anchor-heading"><svg class="d-inline-block v-align-middle" viewbox="0 0 16 16" version="1.1" width="18" height="18" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> Submission
+        
+        
+      </h1>
+    
+      <h3 id="individual">
+        
+        
+          <a href="#individual" class="anchor-heading"><svg class="d-inline-block v-align-middle" viewbox="0 0 16 16" version="1.1" width="18" height="18" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> Individual
+        
+        
+      </h3>
+
+<p>Create a folder called <code class="highlighter-rouge">lab7</code> that includes your answers (for math-related questions LaTeX is preferred but handwritten is accepted too). Zip the folder and upload on Canvas.</p>
+
+<p><strong>Each student needs to submit their own <code class="highlighter-rouge">lab7</code> folder to Canvas.</strong></p>
+    
+      <h3 id="team">
+        
+        
+          <a href="#team" class="anchor-heading"><svg class="d-inline-block v-align-middle" viewbox="0 0 16 16" version="1.1" width="18" height="18" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> Team
+        
+        
+      </h3>
+
+<p>Each group should create a new folder called <code class="highlighter-rouge">TEAM_&lt;N&gt;</code>, replacing <code class="highlighter-rouge">&lt;N&gt;</code> with your team number. For example team 2 will name their folder <code class="highlighter-rouge">TEAM_2</code>. Please put the source code of the entire <code class="highlighter-rouge">lab7</code> folder in the folder <code class="highlighter-rouge">TEAM_2</code>. For the non-code deliverables (plots, comments), please include a PDF in the <code class="highlighter-rouge">TEAM_2</code> folder. Zip the folder and submit to Canvas.</p>
+
+<p><strong>Each team will only need to submit one <code class="highlighter-rouge">TEAM_&lt;N&gt;.zip</code> to Canvas.</strong></p>
+    
+      <h3 id="deadline">
+        
+        
+          <a href="#deadline" class="anchor-heading"><svg class="d-inline-block v-align-middle" viewbox="0 0 16 16" version="1.1" width="18" height="18" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> Deadline
+        
+        
+      </h3>
+
+<p><strong>Deadline:</strong> To submit your solution, please upload the corresponding files under <code class="highlighter-rouge">Assignments &gt; Lab 7</code> by <strong>Tuesday, Mar 16, 11:59 EST</strong>.</p>
+    
+      <h1 id="-individual">
+        
+        
+          <a href="#-individual" class="anchor-heading"><svg class="d-inline-block v-align-middle" viewbox="0 0 16 16" version="1.1" width="18" height="18" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> 👤 Individual
+        
+        
+      </h1>
+    
+      <h2 id="-deliverable-1---accounting-for-measurement-covariances-in-nonlinear-least-squares-10-pts">
+        
+        
+          <a href="#-deliverable-1---accounting-for-measurement-covariances-in-nonlinear-least-squares-10-pts" class="anchor-heading"><svg class="d-inline-block v-align-middle" viewbox="0 0 16 16" version="1.1" width="18" height="18" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> 📨 Deliverable 1 - Accounting for Measurement Covariances in Nonlinear Least Squares [10 pts]
+        
+        
+      </h2>
+
+<p>Consider the following cost function $f(x) = r(x)^T W r(x)$ where $r:
+\mathbb{R}^n \rightarrow \mathbb{R}^m$ and $W$ is an $m \times m$
+positive-definite matrix.</p>
+
+<ol>
+  <li>Express this optimization problem as a standard (non-weighted) nonlinear
+least squares problem when $W$ is diagonal.</li>
+  <li>Answer 1. when $W$ is not necessarily diagonal.</li>
+  <li>Derive the normal equations for $\min r(x)^T W r(x)$ in an iteration of Gauss-Newton.</li>
+</ol>
+    
+      <h2 id="-deliverable-2---practice-with-lie-groups-35-pts">
+        
+        
+          <a href="#-deliverable-2---practice-with-lie-groups-35-pts" class="anchor-heading"><svg class="d-inline-block v-align-middle" viewbox="0 0 16 16" version="1.1" width="18" height="18" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> 📨 Deliverable 2 - Practice with Lie Groups (35 pts)
+        
+        
+      </h2>
+
+<p>Consider the case in which we are given $n$ poses $T_i \in \SE{3}$, $i=1,\ldots,n$ and we are looking for the <em>average</em> pose that minimizes the average (squared) chordal distance:</p>
+
+<p>\[ T^\star = \argmin_{T\in\SE{3}} \frac{1}{n} \sum_{i=1}^n \|T-T_i \|^2_F \]</p>
+
+<ol>
+  <li>Can you compute a closed-form expression for $T^\star$?
+    <ul>
+      <li class="hint">Hint: Review Lecture 16 notes for inspirations on Matrix / Algebraic manipulations.</li>
+    </ul>
+  </li>
+  <li>How does the previous answer change when we adopt a weighted chordal distance
+\[ 
+  T^\star = \argmin_{T\in\SE{3}} \frac{1}{n} \sum_{i=1}^n \| T-T_i \|^2_{\Omega_i} \tag{1}
+\]
+Where, for a matrix $M$, we defined $\|M\|^2_{\Omega} = \trace(M\Omega M\tran)$ and the weight matrix is defined as:
+\[ 
+  \Omega_i = \begin{bmatrix} \omega_i I_3 &amp; 0_3 \\ 0_3\tran &amp; \varrho_i \end{bmatrix}
+\]
+$I$ here denotes the $3 \times 3$ identity matrix.</li>
+  <li>How do $\omega_i$ and $\varrho_i$ affect the average pose? For instance, what happens if for a single $i$ the coefficients $\omega_i$ and $\varrho_i$ are very large?</li>
+  <li>Prove that the minimization of the weighted chordal distance (1) is a maximum likelihood estimator given measurements where $R$ is Langevin and $t$ is Gaussian. In other words prove that, the solution $T^*$ of (1) satisfies
+\[
+  T^\star = \argmax_{T\in\SE{3}} P(T_i \mid T)
+\]
+Where $T_i \in \SE{3}, i = 1,\ldots,n$ are $n$ i.i.d. samples where $T_i = (R_i, t_i)$
+\[P(R_i \mid R) = \mathrm{Langevin}(R, \omega_i) \]
+\[P(t_i \mid t) = \mathrm{Gaussian}(t, \frac{1}{\rho_i} I) \]
+$I$ here denotes the $3 \times 3$ identity matrix.</li>
+  <li>Now, let’s try to find the above maximum likelihood estimate through local search. Express this problem as a least squares problem assuming the concentration parameters are $\omega_i = 1$. Derive the Gauss-Newton and Levenberg-Marquardt steps for this problem.</li>
+  <li>[Optional] Write out the explicit expression for the Jacobians. (+ 5 pts)</li>
+</ol>
+    
+      <h1 id="-team">
+        
+        
+          <a href="#-team" class="anchor-heading"><svg class="d-inline-block v-align-middle" viewbox="0 0 16 16" version="1.1" width="18" height="18" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> 👥 Team
+        
+        
+      </h1>
+    
+      <h2 id="gtsam-preliminaries">
+        
+        
+          <a href="#gtsam-preliminaries" class="anchor-heading"><svg class="d-inline-block v-align-middle" viewbox="0 0 16 16" version="1.1" width="18" height="18" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> GTSAM Preliminaries
+        
+        
+      </h2>
+
+<p>While we do a very practical introduction to GTSAM (Georgia Tech Smoothing And
+Mapping) below, this does not replace the primer written by Frank Dellaert:
+<a href="https://smartech.gatech.edu/handle/1853/45226" target="_blank" rel="noopener noreferrer">https://smartech.gatech.edu/handle/1853/45226</a></p>
+
+<p>We will give you pointers to the relevant sections in this document to avoid
+having a long handout, but if in doubt either refer to this guide or to the
+<a href="https://github.com/borglab/gtsam" target="_blank" rel="noopener noreferrer">GTSAM code</a> itself.</p>
+
+<p>GTSAM was developed to solve estimation problems. In particular, problems that
+can be formulated in terms of probability densities over a set of
+<strong>variables</strong> ($X$) for which we only have (noisy) <strong>measurements</strong> ($Z$)).
+Since we only care about the most likely values for X given the measurements Z, we use
+the Maximum A-Posteriori (MAP) estimator, which, as you have seen in class,
+tries to solve the following problem:</p>
+
+<p>\[\argmax_X p(z_1,\ldots,z_n \mid X)p(X)\]</p>
+
+<p>Assuming that we have nonlinear measurements with additive Gaussian noise, we
+can formulate this problem as a nonlinear Least Squares problem (after taking
+the negative log likelihood of the previous expression and simplifying):</p>
+
+<p>\[X_{MAP} = \argmin_X \sum_i ||h_i(X_i) - z_i||_{\Sigma_i}^2 \tag{2} \]</p>
+
+<p>Where we sum multiple residuals (error between the measurements $z_i$ and what
+would be the expected measurement $h_i(X_i)$ given a subset of variable
+assignments $X_i$</p>
+
+<p>GTSAM makes use of a probabilistic graphical model known as a Factor Graph, which is a model to 
+visualize and reason over problems similar to the one in eq. (2). While we have a more formal 
+introduction to factor graphs next week, for now you can think about factor graphs as a way to 
+describe a least squares problem.</p>
+
+<p>In particular, each summand in eq (2) is a “factor”, and the overall objective forms a factor graph. 
+Therefore, if we want to instantiate problem (2) in GTSAM, we will need the following objects:</p>
+
+<p>First, a primer on GTSAM code. GTSAM has a set of important data structures that
+are constantly used:</p>
+
+<ol>
+  <li>
+<strong><em>NonlinearFactorGraph</em></strong>: this object allows for building the problem by
+adding a set of factors. Most important functions that
+this class offers are:
+    <ul>
+      <li>
+<strong>add</strong>: adds a factor to the
+ factor graph. A factor graph is built by adding multiple factors between
+ variables or for single variables. A factor is just a function of the
+ variables and the measurements which gives the mismatch (error) between
+ both.
+ <strong>Note:</strong> You might sometimes see GTSAM using instead of add, the function
+ emplace_shared (both are valid but have different calls, if you are not familiar
+ with templates in C++ use add).</li>
+      <li>
+<strong>print</strong>: to print the factors that make the underlying factor graph.</li>
+    </ul>
+  </li>
+  <li>
+<strong>Symbol</strong> and <strong>Key</strong>: Symbols and Keys are used to index variables in the
+factor graph (though internally every variable has a key); a Key is just a
+typedef for an integer of size uint64_t.</li>
+  <li>
+<strong>Values:</strong> This is the actual numeric values for the variables that you are
+using in the optimization problem. Since we will be using iterative solvers,
+an initial estimate must be provided, which is given as a set of initial
+values. The result of the optimization problem will also be a set of values
+for your variables.</li>
+  <li>Geometric entities:
+    <ul>
+      <li>
+<strong>Rot3:</strong> A rotation matrix.</li>
+      <li>
+<strong>Point2</strong> and <strong>Point3</strong>: 2D or 3D positions.</li>
+      <li>
+<strong>Pose3:</strong> A generic transformation matrix with a Rot3 rotation and a
+ Point3 translation.</li>
+    </ul>
+  </li>
+  <li>Solvers: GTSAM implements different optimization algorithms amongst which the
+most relevant for us are:
+    <ul>
+      <li><strong>GaussNewtonOptimizer</strong></li>
+      <li><strong>LevenbergMarquardtOptimizer</strong></li>
+    </ul>
+  </li>
+</ol>
+
+<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// Simple example gtsam snippet </span>
+
+<span class="c1">// Create an empty nonlinear factor graph </span>
+<span class="n">gtsam</span><span class="o">::</span><span class="n">NonlinearFactorGraph</span> <span class="n">nfg</span><span class="p">;</span> 
+
+<span class="c1">// Create values </span>
+<span class="n">Values</span> <span class="n">values</span><span class="p">;</span> 
+
+<span class="c1">// Create a factor (in this case, a between factor: which provides an SE3 measurement between 2 nodes)</span>
+<span class="c1">//// Between factor connecting nodes with key 0 and key 1 where measurement of relative pose between two nodes </span>
+<span class="c1">//// is transformation with rotation 1, 0, 0, 0 (qx, qy, qz, qw) and translation 1, 0, 0 (x, y, z)</span>
+<span class="n">gtsam</span><span class="o">::</span><span class="n">BetweenFactor</span><span class="o">&lt;</span><span class="n">gtsam</span><span class="o">::</span><span class="n">Pose3</span><span class="o">&gt;</span> <span class="n">between_factor</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">gtsam</span><span class="o">::</span><span class="n">Pose3</span><span class="p">(</span><span class="n">gtsam</span><span class="o">::</span><span class="n">Rot3</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="n">gtsam</span><span class="o">::</span><span class="n">Point3</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)));</span>
+
+<span class="c1">// Add factor to factor graph </span>
+<span class="n">nfg</span><span class="p">.</span><span class="n">add</span><span class="p">(</span><span class="n">between_factor</span><span class="p">);</span>
+
+<span class="c1">// Add initial estimates </span>
+<span class="c1">//// We have 2 poses as nodes in the factor graph. </span>
+<span class="c1">//// Adding identity pose as initial guess</span>
+<span class="n">values</span><span class="p">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">gtsam</span><span class="o">::</span><span class="n">Pose3</span><span class="p">());</span> <span class="c1">// Initial estimate for node with key 0</span>
+<span class="n">values</span><span class="p">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">gtsam</span><span class="o">::</span><span class="n">Pose3</span><span class="p">());</span> <span class="c1">// Initial estimate for node with key 1</span>
+
+<span class="c1">//// Optimize with Gauss-Newton:</span>
+<span class="n">gtsam</span><span class="o">::</span><span class="n">GaussNewtonParams</span> <span class="n">parameters</span><span class="p">;</span>
+<span class="c1">// Modify the max number of iterations to see the overall improvement.</span>
+<span class="n">parameters</span><span class="p">.</span><span class="n">setMaxIterations</span><span class="p">(</span><span class="mi">6</span><span class="p">);</span>
+<span class="n">parameters</span><span class="p">.</span><span class="n">setAbsoluteErrorTol</span><span class="p">(</span><span class="mf">1e-06</span><span class="p">);</span>
+<span class="c1">// Print per iteration.</span>
+<span class="n">parameters</span><span class="p">.</span><span class="n">setVerbosity</span><span class="p">(</span><span class="s">"ERROR"</span><span class="p">);</span>
+<span class="c1">// Create the optimizer GaussNewtonOptimizer given the parameters</span>
+<span class="c1">// above , the initial values and the graph.</span>
+<span class="n">gtsam</span><span class="o">::</span><span class="n">GaussNewtonOptimizer</span> <span class="nf">optimizer</span><span class="p">(</span><span class="n">nfg</span><span class="p">,</span> <span class="n">values</span><span class="p">,</span> <span class="n">parameters</span><span class="p">);</span>
+<span class="c1">// Finally, Optimize!</span>
+<span class="n">values</span> <span class="o">=</span> <span class="n">optimizer</span><span class="p">.</span><span class="n">optimize</span><span class="p">();</span>
+<span class="c1">// To print estimates after optimization </span>
+<span class="n">values</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="s">"</span><span class="se">\n</span><span class="s"> optimized. </span><span class="se">\n</span><span class="s">"</span><span class="p">);</span>
+
+<span class="c1">//// Similarly, to optimize with Levenberg-Marquardt:</span>
+<span class="n">gtsam</span><span class="o">::</span><span class="n">LevenbergMarquardtParams</span> <span class="n">parameters</span><span class="p">;</span>
+<span class="n">gtsam</span><span class="o">::</span><span class="n">LevenbergMarquardtOptimizer</span> <span class="nf">optimizer</span><span class="p">(</span><span class="n">nfg</span><span class="p">,</span> <span class="n">values</span><span class="p">,</span> <span class="n">parameters</span><span class="p">);</span>
+<span class="n">values</span> <span class="o">=</span> <span class="n">optimizer</span><span class="p">.</span><span class="n">optimize</span><span class="p">();</span>
+</code></pre></div></div>
+    
+      <h2 id="setting-up">
+        
+        
+          <a href="#setting-up" class="anchor-heading"><svg class="d-inline-block v-align-middle" viewbox="0 0 16 16" version="1.1" width="18" height="18" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> Setting up
+        
+        
+      </h2>
+
+<ol>
+  <li>Install packages that you might need:
+    <div class="highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>sudo apt-get install libtbb-dev
+</code></pre></div>    </div>
+  </li>
+  <li>Add new packages to your catkin workspace using wstool:
+    <div class="highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>cd {VNA2V_HOME}/vna2v_ws/src/
+cp -r {VNA2V_HOME}/Labs/lab7 ./
+wstool merge --merge-replace {VNA2V_HOME}/vna2v_ws/src/lab7/install/lab_7.rosinstall -y
+wstool update
+</code></pre></div>    </div>
+  </li>
+</ol>
+
+<blockquote>
+  <p><strong>Note</strong> you might get duplicated packages with previous labs in your workspace. Please manually remove the duplicates.</p>
+</blockquote>
+
+<blockquote>
+  <p><strong>Note</strong> this might take 15min, GTSAM is quite large.</p>
+</blockquote>
+
+<ol>
+  <li>Build lab_7:
+    <div class="highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>catkin build gtsam_catkin
+catkin build lab_7
+</code></pre></div>    </div>
+  </li>
+</ol>
+
+<blockquote>
+  <p><strong>Note</strong> Build gtsam <code class="highlighter-rouge">catkin build gtsam_catkin</code> before building <code class="highlighter-rouge">lab_7</code></p>
+</blockquote>
+
+<p>Remember to source your workspace:</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>source {VNA2V_HOME}/vna2v_ws/devel/setup.bash
+</code></pre></div></div>
+    
+      <h2 id="-deliverable-1---gtsam-introduction-10-pts">
+        
+        
+          <a href="#-deliverable-1---gtsam-introduction-10-pts" class="anchor-heading"><svg class="d-inline-block v-align-middle" viewbox="0 0 16 16" version="1.1" width="18" height="18" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> 📨 Deliverable 1 - GTSAM Introduction [10 pts]
+        
+        
+      </h2>
+
+<p>The best introduction to GTSAM coding style is by far the hands-on introduction
+written by Frank Dellaert (creator of GTSAM). We will follow it as a first step
+to get familiar with the calls and variables that GTSAM uses.</p>
+
+<p>In this section, we will be following the <a href="https://smartech.gatech.edu/bitstream/handle/1853/45226/Factor%20Graphs%20and%20GTSAM%20A%20Hands-on%20Introduction%20GT-RIM-CP%26R-2012-002.pdf?sequence=1&amp;isAllowed=y" target="_blank" rel="noopener noreferrer">hands-on guide</a> up to and 
+including section 3. You should not be spending too much time here 
+writing the code as all the answer should be straight out of the 
+guide. You should, however, use this exercise as an opportunity 
+to familiarize yourself to the API of GTSAM, along with the basics, 
+such as how a pose is defined, and what a factor is.</p>
+
+<p>Open up <code class="highlighter-rouge">deliverable_1.cpp</code> and follow the hands-on guid to add 
+odometry factors (between factors) in <code class="highlighter-rouge">1a.</code> Then add “GPS” like factors in <code class="highlighter-rouge">1b.</code> (Even though we completed the definition of the UnaryFactor here for you, pay attention to how it was defined!). And finally, create the (deliberately)
+inaccurate initial estimate in <code class="highlighter-rouge">1c.</code></p>
+
+<p>In this lab, we will be using different executables, one for each deliverable, and we are not using more than one node at a time, therefore we will just use rosrun.
+To run rosrun, you need first to launch roscore in a terminal.</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>roscore
+</code></pre></div></div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rosrun lab_7 deliverable_1
+</code></pre></div></div>
+<p>to run the code. Provide the values before and after optimization and save to a file called <code class="highlighter-rouge">deliverable_1.txt</code> 
+in your submission folder.</p>
+    
+      <h2 id="-deliverable-2---gtsam-3d-pose-estimation-10-pts">
+        
+        
+          <a href="#-deliverable-2---gtsam-3d-pose-estimation-10-pts" class="anchor-heading"><svg class="d-inline-block v-align-middle" viewbox="0 0 16 16" version="1.1" width="18" height="18" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> 📨 Deliverable 2 - GTSAM 3D Pose Estimation [10 pts]
+        
+        
+      </h2>
+
+<ol>
+  <li>
+    <p>Let’s switch over to 3D. To do this, you will need to use the <code class="highlighter-rouge">Pose3</code> class instead of a
+<code class="highlighter-rouge">Pose2</code>. The provided function <code class="highlighter-rouge">generateOdometryMeasurements</code> create a large number of 
+odometry measurements (50-500). We want to use these odometry measurements to find the pose estimates 
+of the poses in the pose graph. In <code class="highlighter-rouge">deliverable_2_3.cpp</code>, fill in <code class="highlighter-rouge">2a.</code> and <code class="highlighter-rouge">2b.</code> 
+to add the odometry measurements as Between Factors in SE3 and also constrain the initial pose 
+with a <a href="https://gtsam.org/doxygen/a04047.html" target="_blank" rel="noopener noreferrer">Prior Factor</a></p>
+  </li>
+  <li>We provide you with a configuration file for Rviz, you can use it by running <code class="highlighter-rouge">rviz -d /path/to/lab_7.rviz</code>.
+ You will see the following:
+    <ul>
+      <li>Ground-Truth trajectory.</li>
+      <li>Noisy trajectory (used to create the odometry measurements)</li>
+      <li>Initial estimate of the actual trajectory.</li>
+      <li>Optimized trajectory after estimation.</li>
+    </ul>
+  </li>
+  <li>Using the parameter <code class="highlighter-rouge">setMaxIterations</code> for the <code class="highlighter-rouge">GaussNewtonOptimizer</code>, show
+the optimized trajectory after 1, 3 and 6 iterations. Take screen shots of the rviz visualization 
+and add to your submissions folder.</li>
+</ol>
+    
+      <h2 id="-deliverable-3---making-a-motion-capture-factor-in-gtsam-15-pts">
+        
+        
+          <a href="#-deliverable-3---making-a-motion-capture-factor-in-gtsam-15-pts" class="anchor-heading"><svg class="d-inline-block v-align-middle" viewbox="0 0 16 16" version="1.1" width="18" height="18" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> 📨 Deliverable 3 - Making a Motion Capture Factor in GTSAM [15 pts]
+        
+        
+      </h2>
+
+<p>Let us now fuse the information coming from a Motion Capture system 
+(you can think of this as an indoor 3D GPS system). To do this,
+we provide you with the function <code class="highlighter-rouge">generateMoCapMeasurements </code>which simulates
+noisy measurements of the position of the robot for some poses. To use this new
+sensor information, you need to implement a new factor.</p>
+
+<ol>
+  <li>In <code class="highlighter-rouge">deliverable_2_3.h</code> fill in <code class="highlighter-rouge">3a</code>. 
+Derive and complete the new <code class="highlighter-rouge">MoCapPosition3Factor</code> which takes a <code class="highlighter-rouge">Point3</code>
+position of the drone/robot as measurement and calculates the error with
+respect to our estimate of the pose of the robot (<code class="highlighter-rouge">Pose3</code>). Get inspiration
+from the Robot Localization example in the hands-on introduction of GTSAM, 
+since this functions similarly to the UnaryFactor except we are now feeding 
+in 3D positions instead of 2D positions.</li>
+  <li>In <code class="highlighter-rouge">deliberable_2_3.cpp</code> fill in <code class="highlighter-rouge">3b.</code> to add the motion caption measurements. 
+Remember to set <code class="highlighter-rouge">static constexpr bool use_mocap = true;</code> on line 273.</li>
+  <li>Similarly to before, show
+using the <code class="highlighter-rouge">setMaxIterations</code> for the <code class="highlighter-rouge">GaussNewtonOptimizer</code> the optimized
+trajectory after 1, 3 and 6 iterations. Take screen shots and submit.</li>
+</ol>
+
+<p>Few things to node when defining a new factor:</p>
+<ol>
+  <li>Jacobians: usually represented by a matrix named H.</li>
+  <li>Error functions: in GTSAM every factor has to define what the error is given
+the variable and the measurement. In practice, you must always define the
+function <code class="highlighter-rouge">evaluateError</code>. Such a function has to have as parameters not only
+the current value for a variable (to be able to calculate the error against
+the measurement) but <strong>also</strong> the Jacobian of this error function with
+respect to the variable. Have a look at section <em>3.2 Defining Custom Factors</em>
+in <a href="https://smartech.gatech.edu/handle/1853/45226" target="_blank" rel="noopener noreferrer">here</a> for reference on
+the actual API used by GTSAM to code your own factor.</li>
+</ol>
+    
+      <h2 id="-deliverable-4---gtsam-to-solve-computer-vision-problems-20-pts">
+        
+        
+          <a href="#-deliverable-4---gtsam-to-solve-computer-vision-problems-20-pts" class="anchor-heading"><svg class="d-inline-block v-align-middle" viewbox="0 0 16 16" version="1.1" width="18" height="18" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> 📨 Deliverable 4 - GTSAM to solve Computer Vision problems [20 pts]
+        
+        
+      </h2>
+
+<p>GTSAM is particularly useful when we need to solve optimization problems that we
+frequently encounter in State Estimation using Visual information.</p>
+
+<p>We have seen in previous lectures and labs how to find the relative
+transformation between two camera poses given their images using a 
+5 or 8-point method. Nevertheless, we
+have also seen that this is not the most accurate way of estimating the trajectory
+of the drone and ML estimation suggest that the best estimate can be computed 
+using Bundle Adjustment.</p>
+
+<p>We will now use the optimization in GTSAM that we just learned about in order
+to calculate both the poses of a camera and the positions of the landmarks
+observed from these cameras via bundle adjustment.</p>
+
+<p><img src="http://localhost:4000/VNA2V-W21-handouts/assets/images/lab7/bundle_adjustment.png" alt="Bundle adjustment" class="mx-auto d-block">
+(<a href="https://www.researchgate.net/publication/312606599_Photographic_three-dimensional_superimposition_with_uncertainty_analysis_Applications_in_cranio-facial_superimposition/figures?lo=1&amp;utm_source=google&amp;utm_medium=organic" target="_blank" rel="noopener noreferrer">Source</a>)</p>
+
+<p>Bundle Adjustment refers to the problem for which we have a set of 2D
+correspondences for multiple frames and we want to estimate the poses of the
+cameras that took the frames as well as the 3D landmarks corresponding to the
+keypoins. Since a given bundle of 3D rays from the camera origins to the world
+will unlikely intersect on the actual 3D point $X_j$, we try instead to find the
+set of camera poses $P_i$ and landmark positions $X_j$ that minimize the
+so-called re-projection error. This error accounts for the distance between the
+measured pixel coordinates of a keypoint $x_{ij}$ and the actual point in the
+image where the corresponding 3D landmark should reproject to according to the
+current state configuration (camera poses $P_i$ and landmark positions $X_j$).
+Minimizing the sum of all these reprojection errors yields the most likely
+configuration of camera poses and landmarks positions that resulted in the given
+keypoint measurements. (Review Example 2 from Lecture 17 typed notes. )</p>
+
+<p>Let us try to solve a Bundle Adjustment problem. We provide you with a set of
+simulated camera poses and 2D measurements of certain 3D landmarks in the world.
+In other words, we give you the 2D correspondences between keypoints in all
+images (the ones you would have extracted using SIFT for example). We also
+provide you with the calibration matrix K of the camera, which you would have
+otherwise computed previously by calibrating the camera.</p>
+
+<p>In <code class="highlighter-rouge">deliverable_4.cpp</code>, we provide you with the steps and data to solve a simple
+Bundle Adjustment problem. We ask you to</p>
+
+<ol>
+  <li>Solve the Bundle Adjustment Problem: print and report your initial and final
+optimized result. Check out the documentation on <a href="https://gtsam.org/doxygen/a04055.html" target="_blank" rel="noopener noreferrer">GenericProjectionFactor</a> 
+and <a href="https://github.com/borglab/gtsam/blob/develop/gtsam/slam/tests/testProjectionFactor.cpp" target="_blank" rel="noopener noreferrer">example usage</a>
+</li>
+  <li>Visualize in Rviz (<code class="highlighter-rouge">rviz -d deliverable_4.rviz</code>):
+    <ul>
+      <li>The 3D positions of the landmarks before/after optimization.</li>
+      <li>The frame of reference of the cameras before/after optimization.</li>
+      <li>The ground-truth of the above variables (camera poses + landmarks).</li>
+    </ul>
+  </li>
+  <li>Take a screenshot of your visualization and add to submissions folder.</li>
+</ol>
+
+<p>Note that in the instructions we say to 
+use the character ‘l’ to symbolize landmarks, and ‘x’ to symbolize poses. 
+This is to help differentiate the pose and landmark notes. 
+You can do this with <code class="highlighter-rouge">gtsam::Symbol</code>. For example,</p>
+<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">gtsam</span><span class="o">::</span><span class="n">Key</span> <span class="n">pose0_key</span> <span class="o">=</span> <span class="n">gtsam</span><span class="o">::</span><span class="n">Symbol</span><span class="p">(</span><span class="sc">'x'</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
+<span class="c1">// or </span>
+<span class="n">graph</span><span class="p">.</span><span class="n">add</span><span class="p">(</span><span class="n">PriorFactor</span><span class="o">&lt;</span><span class="n">Pose3</span><span class="o">&gt;</span><span class="p">(</span><span class="n">Symbol</span><span class="p">(</span><span class="sc">'x'</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="p">...</span>
+</code></pre></div></div>
+<p>Note that although we didn’t provide you with explicit values for noise on the prior factors, 
+feel free to choose any reasonable value.</p>
+    
+      <h2 id="-optional-deliverable-5---gtsam-to-solve-so3-mle-with-langevin-noise-15-pts">
+        
+        
+          <a href="#-optional-deliverable-5---gtsam-to-solve-so3-mle-with-langevin-noise-15-pts" class="anchor-heading"><svg class="d-inline-block v-align-middle" viewbox="0 0 16 16" version="1.1" width="18" height="18" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> 📨 [Optional] Deliverable 5 - GTSAM to solve SO(3) MLE with Langevin Noise [+15 pts]
+        
+        
+      </h2>
+
+<p>Now that you are familiar with GTSAM, and particularly with implementing your
+own factors, let us try to solve the $\SO{3}$ rotation averaging problem using GTSAM.</p>
+
+<p>We consider the case in which we are given $n$ rotation matrices
+$R_i \in \SO{3}, i=1,\ldots,n$ and we are looking for the “average”
+rotation that minimizes the average (squared) <em>chordal</em> distance:</p>
+
+<p>\[R^* = \argmin_{R \in \SO{3}} \frac{1}{n} \sum_{i=1}^{n} ||R - R_i||_F^2\]</p>
+
+<p>You already know how to compute the closed-form solution of this equation. Let us try to find the solution using GTSAM.</p>
+
+<ol>
+  <li>Looking back at your results for the individual Deliverable 2.1,
+implement a factor that encodes the error between the given measured rotation
+and the estimated rotation.</li>
+  <li>Build the problem in GTSAM by accumulating the factors you just implemented
+on a <code class="highlighter-rouge">NonlinearFactorGraph</code>.</li>
+  <li>Now, define an initial estimate for R, ideally a rough estimate of it,
+otherwise, you will not see the actual magic. Print and provide us with your
+initial estimate.</li>
+  <li>Optimize!</li>
+  <li>Print and provide the result and compare with the initial estimate.</li>
+</ol>
+    
+      <h2 id="summary-of-team-deliverables">
+        
+        
+          <a href="#summary-of-team-deliverables" class="anchor-heading"><svg class="d-inline-block v-align-middle" viewbox="0 0 16 16" version="1.1" width="18" height="18" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> Summary of Team Deliverables
+        
+        
+      </h2>
+
+<p>You should complete the provided C++ files and their corresponding headers.
+Additionally, you should submit a file (ideally a PDF) containing the following:</p>
+
+<ol>
+  <li>For Team Deliverable 1, provide initial and final values for the 3 poses in <code class="highlighter-rouge">deliverable_1.txt</code>.</li>
+  <li>For Team Deliverable 2, provide images of your RViZ visualizations (configured as described above) after 1, 3 and 6 iterations.</li>
+  <li>For Team Deliverable 3, again provide images of your RViZ visualizations (configured as in Deliverable 2) after 1, 3, and 6 iterations.</li>
+  <li>For Team Deliverable 4, provide initial and final values for landmarks and poses, as well as images of your RViZ visualizations (configured as described above).</li>
+  <li>(Optional) For Team Deliverable 5, provide initial and final values for the rotation. You will be graded mostly on your implementation of the Frobenius Norm Factor.</li>
+</ol>
+            
+
+          
+
+          
+            <hr>
+            <footer role="contentinfo">
+              <p class="text-small text-grey-dk-000 mb-0">Enabled with the generous support of the MIT SPARK Lab. Copyright © MIT SPARK Lab and Vasileios Tzoumas of the University of Michigan. Using <a href="https://github.com/pmarsceill/just-the-docs/tree/master" target="_blank" rel="noopener noreferrer">Just the docs</a> theme.</p>
+            </footer>
+          
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div></body>
+</html>
