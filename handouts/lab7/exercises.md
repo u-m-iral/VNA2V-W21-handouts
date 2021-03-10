@@ -14,27 +14,23 @@ parent: Lab 7
 1. TOC
 {:toc}
 
+
 # Submission
-
-To submit your solutions create a folder called `lab7` and push one or more file
-to your repository with your answers (it can be plain text, markdown, pdf or
-whatever other format is reasonably easy to read)
-
 ### Individual
 
-Please push the deliverables into your personal repository, for math-related
-questions LaTeX is preferred but handwritten is accepted too.
+Create a folder called `lab7` that includes your answers (for math-related questions LaTeX is preferred but handwritten is accepted too). Zip the folder and upload on Canvas.
+
+**Each student needs to submit their own `lab7` folder to Canvas.**
 
 ### Team
 
-Please push the source code for the entire package to the folder `lab7` of the
-team repository. For the tables and discussion questions, please push a PDF to
-the `lab7` folder of your team repository.
+Each group should create a new folder called `TEAM_<N>`, replacing `<N>` with your team number. For example team 2 will name their folder `TEAM_2`. Please put the source code of the entire `lab7` folder in the folder `TEAM_2`. For the non-code deliverables (plots, comments), please include a PDF in the `TEAM_2` folder. Zip the folder and submit to Canvas.
+
+**Each team will only need to submit one `TEAM_<N>.zip` to Canvas.**
 
 ### Deadline
 
-**Deadline:** the VNA2V staff will clone your repository on **October 22nd** at 11:59 PM EDT.
-
+**Deadline:** To submit your solution, please upload the corresponding files under `Assignments > Lab 7` by **Tuesday, Mar 16, 11:59 EST**.
 
 # 👤 Individual
 
@@ -337,7 +333,7 @@ image where the corresponding 3D landmark should reproject to according to the
 current state configuration (camera poses $P_i$ and landmark positions $X_j$).
 Minimizing the sum of all these reprojection errors yields the most likely
 configuration of camera poses and landmarks positions that resulted in the given
-keypoint measurements. (Review Example 2 from Lecture 16 notes. )
+keypoint measurements. (Review Example 2 from Lecture 17 typed notes. )
 
 Let us try to solve a Bundle Adjustment problem. We provide you with a set of
 simulated camera poses and 2D measurements of certain 3D landmarks in the world.
