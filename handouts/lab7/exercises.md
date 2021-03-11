@@ -257,7 +257,7 @@ in your submission folder.
    odometry measurements (50-500). We want to use these odometry measurements to find the pose estimates 
    of the poses in the pose graph. In `deliverable_2_3.cpp`, fill in `2a.` and `2b.` 
    to add the odometry measurements as Between Factors in SE3 and also constrain the initial pose 
-   with a [Prior Factor](https://gtsam.org/doxygen/)
+   with a [Prior Factor](https://gtsam.org/doxygen/a04256.html)
 
 2. We provide you with a configuration file for Rviz, you can use it by running `rviz -d /path/to/lab_7.rviz`.
     You will see the following: 
