@@ -346,7 +346,7 @@ In `deliverable_4.cpp`, we provide you with the steps and data to solve a simple
 Bundle Adjustment problem. We ask you to
 
 1. Solve the Bundle Adjustment Problem: print and report your initial and final
-   optimized result. Check out the documentation on [GenericProjectionFactor](https://gtsam.org/doxygen/a04055.html) 
+   optimized result. Check out the documentation on [GenericProjectionFactor](https://gtsam.org/doxygen/a04580.html) 
    and [example usage](https://github.com/borglab/gtsam/blob/develop/gtsam/slam/tests/testProjectionFactor.cpp)
 2. Visualize in Rviz (`rviz -d deliverable_4.rviz`):
    - The 3D positions of the landmarks before/after optimization.
