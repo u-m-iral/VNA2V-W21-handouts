@@ -41,9 +41,11 @@ Consider the following cost function $f(x) = r(x)^T W r(x)$ where $r:
 positive-definite matrix.
 
 1. Express this optimization problem as a standard (non-weighted) nonlinear
-   least squares problem when $W$ is diagonal (i.e., in the form $\min \\|z(x)\\|^2$, for some vector $z$).
-2. Answer 1. when $W$ is not necessarily diagonal (hint:  use Cholesky decomposition on $W$).
-3. Derive the equations for $\min r(x)^T W r(x)$ in an iteration of Gauss-Newton.
+   least squares problem when $W$ is diagonal (i.e., in the form $\min \\|z(x)\\|^2$, for some vector $z(x)$ that depends on $r(x)$ and $W$).
+   - {: .hint} Hint:  Consider the square-root of $W$ (i.e., the diagonal matrix with elements equal to the square root of $W$'s elements).
+2. Answer quastion (1.) when $W$ is not necessarily diagonal. 
+   - {: .hint} Hint:  Use Cholesky decomposition on $W$.
+4. Derive the equations for $\min r(x)^T W r(x)$ in an iteration of Gauss-Newton.
 
 ## 📨 Deliverable 2 - Practice with Lie Groups (35 pts)
 
