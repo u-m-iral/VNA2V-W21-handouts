@@ -19,7 +19,9 @@ Welcome to VNA2V Lab 8! This lab consists of the following parts:
 
 - Part 2 [team]: YOLOv3 for object detection and localization
 
-- Part 3 [team]: Use Bag of Words with DBoW2
+- Part 3 [team]: [Optional] Object Reconstruction
+  
+- Part 4 [team]: Use Bag of Words with DBoW2
 
 If you struggle finding a solution or encounter problems/doubts during the
 coding parts, please use​ Piazza to ask questions so your fellow classmates can

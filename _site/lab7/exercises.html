@@ -119,13 +119,16 @@
 <li class="navigation-list-item active">
 <a href="http://localhost:4000/VNA2V-W21-handouts/lab7/" class="navigation-list-link">Lab 7</a><ul class="navigation-list-child-list "><li class="navigation-list-item  active"><a href="http://localhost:4000/VNA2V-W21-handouts/lab7/exercises" class="navigation-list-link active">Exercises</a></li></ul>
 </li>
+<li class="navigation-list-item">
+<a href="http://localhost:4000/VNA2V-W21-handouts/lab8/" class="navigation-list-link">Lab 8</a><ul class="navigation-list-child-list "><li class="navigation-list-item "><a href="http://localhost:4000/VNA2V-W21-handouts/lab8/exercises" class="navigation-list-link">Exercises</a></li></ul>
+</li>
 <li class="navigation-list-item"><a href="http://localhost:4000/VNA2V-W21-handouts/about" class="navigation-list-link">How to print</a></li>
 </ul>
 </nav>
 
       </div>
       <footer class="site-footer">
-        <p class="text-small text-grey-dk-000 mb-4"><b>Last modified</b>:<br> Tuesday, March 9 at 20:05</p>
+        <p class="text-small text-grey-dk-000 mb-4"><b>Last modified</b>:<br> Thursday, March 18 at 17:09</p>
       </footer>
     </div>
     <div class="main-content-wrap js-main-content" tabindex="0">
@@ -234,7 +237,7 @@
         
       </h3>
 
-<p><strong>Deadline:</strong> To submit your solution, please upload the corresponding files under <code class="highlighter-rouge">Assignments &gt; Lab 7</code> by <strong>Tuesday, Mar 16, 11:59 EST</strong>.</p>
+<p><strong>Deadline:</strong> To submit your solution, please upload the corresponding files under <code class="highlighter-rouge">Assignments &gt; Lab 7</code> by <strong>Wednesday, Mar 17, 11:59 EST</strong>.</p>
     
       <h1 id="-individual">
         
@@ -258,9 +261,17 @@ positive-definite matrix.</p>
 
 <ol>
   <li>Express this optimization problem as a standard (non-weighted) nonlinear
-least squares problem when $W$ is diagonal.</li>
-  <li>Answer 1. when $W$ is not necessarily diagonal.</li>
-  <li>Derive the normal equations for $\min r(x)^T W r(x)$ in an iteration of Gauss-Newton.</li>
+least squares problem when $W$ is diagonal (i.e., in the form $\min \|z(x)\|^2$, for some vector $z(x)$ that depends on $r(x)$ and $W$).
+    <ul>
+      <li class="hint">Hint:  Consider the square-root of $W$ (i.e., the diagonal matrix with elements equal to the square root of $W$’s elements).</li>
+    </ul>
+  </li>
+  <li>Answer quastion (1.) when $W$ is not necessarily diagonal.
+    <ul>
+      <li class="hint">Hint:  Use Cholesky decomposition on $W$.</li>
+    </ul>
+  </li>
+  <li>Derive the equations for $\min r(x)^T W r(x)$ in an iteration of Gauss-Newton.</li>
 </ol>
     
       <h2 id="-deliverable-2---practice-with-lie-groups-35-pts">
@@ -545,7 +556,7 @@ in your submission folder.</p>
 odometry measurements (50-500). We want to use these odometry measurements to find the pose estimates 
 of the poses in the pose graph. In <code class="highlighter-rouge">deliverable_2_3.cpp</code>, fill in <code class="highlighter-rouge">2a.</code> and <code class="highlighter-rouge">2b.</code> 
 to add the odometry measurements as Between Factors in SE3 and also constrain the initial pose 
-with a <a href="https://gtsam.org/doxygen/a04047.html" target="_blank" rel="noopener noreferrer">Prior Factor</a></p>
+with a <a href="https://gtsam.org/doxygen/a04256.html" target="_blank" rel="noopener noreferrer">Prior Factor</a></p>
   </li>
   <li>We provide you with a configuration file for Rviz, you can use it by running <code class="highlighter-rouge">rviz -d /path/to/lab_7.rviz</code>.
  You will see the following:
@@ -654,7 +665,7 @@ Bundle Adjustment problem. We ask you to</p>
 
 <ol>
   <li>Solve the Bundle Adjustment Problem: print and report your initial and final
-optimized result. Check out the documentation on <a href="https://gtsam.org/doxygen/a04055.html" target="_blank" rel="noopener noreferrer">GenericProjectionFactor</a> 
+optimized result. Check out the documentation on <a href="https://gtsam.org/doxygen/a04580.html" target="_blank" rel="noopener noreferrer">GenericProjectionFactor</a> 
 and <a href="https://github.com/borglab/gtsam/blob/develop/gtsam/slam/tests/testProjectionFactor.cpp" target="_blank" rel="noopener noreferrer">example usage</a>
 </li>
   <li>Visualize in Rviz (<code class="highlighter-rouge">rviz -d deliverable_4.rviz</code>):

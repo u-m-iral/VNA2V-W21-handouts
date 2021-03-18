@@ -15,33 +15,25 @@ parent: Lab 8
 {:toc}
 
 # Submission
-
-To submit your solutions create a folder called `lab8` and push one or more file
-to your repository with your answers (it can be plain text, markdown, pdf or
-whatever other format is reasonably easy to read)
-
 ### Individual
 
-Please push the deliverables into your personal repository, for math-related
-questions LaTeX is preferred but handwritten is accepted too.
+Create a folder called `lab8` that includes your answers (for math-related questions LaTeX is preferred but handwritten is accepted too). Zip the folder and upload on Canvas.
+
+**Each student needs to submit their own `lab8` folder to Canvas.**
 
 ### Team
 
-Please push the source code for the entire package to the folder `lab8` of the
-team repository. For the tables and discussion questions, please push a PDF to
-the `lab8` folder of your team repository.
+Each group should create a new folder called `TEAM_<N>`, replacing `<N>` with your team number. For example team 2 will name their folder `TEAM_2`. Please put the source code of the entire `lab8` folder in the folder `TEAM_2`. For the non-code deliverables (plots, comments), please include a PDF in the `TEAM_2` folder. Zip the folder and submit to Canvas.
 
-**Reminder:** Please make sure that all of your final results and figures appear
-in your PDF submission. We do not have time to build and run everyone's code to check every
-individual result.
+**Each team will only need to submit one `TEAM_<N>.zip` to Canvas.**
 
 ### Deadline
 
-**Deadline:** the VNA2V staff will clone your repository on **November 4th** at 11:59 PM EDT.
+**Deadline:** To submit your solution, please upload the corresponding files under `Assignments > Lab 8` by **Thursday, Mar 25th, 11:59 EDT**.
 
 # 👤 Individual
 
-## 📨 Deliverable 1 - Bags of Visual Words [25 pts]
+## 📨 Deliverable 1 - Bags of Visual Words [20 pts]
 
 Please answer the following questions; the complete writeup should be between 1/2 to 1 page.
 
@@ -72,7 +64,7 @@ First, ensure that you have OpenCV 3 installed in your system by running:
 ```
 pkg-config --modversion opencv
 ```
-You should see output that looks like `3.2.0` or similar (`3.X.Y`). Otherwise, the quickest
+You should see output that looks like `3.4.0` or similar (`3.X.Y`) since we have used opencv in previous labs. Otherwise, the quickest
 way to install all relevant dependencies is to run
 ```
 sudo apt install ros-melodic-desktop
@@ -98,7 +90,7 @@ Make sure you read the Readme in the repo, in particular the [Nodes
 section](https://github.com/leggedrobotics/darknet_ros#nodes) which introduces
 the parameters used by YOLO and the ROS topics where the output is published.
 
-Now, download the following rosbags:
+Now, download the following rosbags (Each of them can be around 1-3 GB):
 
 1. [RGB-D TUM dataset](https://vision.in.tum.de/data/datasets/rgbd-dataset/download), download from the links below:
     1. [Sequence freiburg3_teddy](https://vision.in.tum.de/rgbd/dataset/freiburg3/rgbd_dataset_freiburg3_teddy.bag).
@@ -132,7 +124,7 @@ rosbag play PATH/TO/ROSBAG/DOWNLOADED
 
 Great! Now you should be seeing YOLO detecting objects in the scene!
 
-## 📨 Deliverable 2 - Object Localization [45 pts]
+## 📨 Deliverable 2 - Object Localization [25 pts]
 
 Our goal for this exercise is to localize the teddy bear that is at the center
 of the scene in the _freiburg3_teddy_ dataset. To do so, we will use YOLO
@@ -167,21 +159,26 @@ For that, we will need to perform the following steps:
 7. Plot the 3D position of the teddy bear in Rviz.
 8. Plot also the trajectory of the camera. You can re-use previous code from lab_7
 
-Since there are many ways to solve this problem, and since we have reached a
-point where you should be comfortable designing your own ROS callbacks and
-general code architecture, we leave this problem open to your own implementation
-style. Nonetheless, we do provide some minimal starter code and hints (see `deliverable_2.cpp`, along
-with `helper_functions.hpp`). Please feel free to post in Piazza or reach out
-via email or office hours if you need some advice on architecting a solution.
+We have provided a template in `deliverable_2.cpp` and `yolo_localization.cpp`
+and a corresponding header file `yolo_localization.h` to help you structure your
+code. Some helper functions and hints are also provided to you in `helper_functions.hpp`.
+You can choose not to use the provided `yolo_localization.cpp` template and design your
+own architecture and you'll get up to 5 bonus points for doing so (refer to the "Design
+Your Own Architecture" section).
 
-When evaluating this deliverable we will not focus on the end result (although
-it will count), but on your implementation, as well as your assumptions and
-considerations. Therefore, we ask you to write a small summary of the
-assumptions, design choices and considerations that you have taken in order to
-solve this problem. There is no right or wrong answer as many approaches would
-reach a similar result, but we will look at the principles you apply when
-solving this problem. Consider this deliverable as a preparation for what we
-will look for in the final project. Aim for around 250 words, or half a page.
+### [Optional] Design Your Own Architecture [+5 pts]
+
+Since there are many ways to solve this problem, and since we have reached a point
+where you should be comfortable designing your own ROS callbacks and general code
+architecture, we encourage you to implement your solution in your own style and
+make reasonable assumptions and considerations. If you choose to design your own
+solution architecture and not use the provided template code, we will assign
+**up to 5 bonus points** depending on your design (whether your design will lead to
+a better performance, the principles you apply, and the readability and efficiency
+of your architecture). To get the bonus points, we ask you to write a small summary
+of the assumptions, design choices and considerations that you have taken in order to
+solve this problem. Aim for around 250 words, or half a page, and include it in your
+deliverables.
 
 ### Performance Expectations
 
@@ -194,7 +191,7 @@ of your estimate and draw a PoseWithCovariance if you would like the size to rep
 
 <img data-src="{{ 'assets/images/lab8/deliverable_2.png' | absolute_url}}" class="lazyload mx-auto d-block" >
 
-## 📨 [Optional] Deliverable 3 - Object Reconstruction [+20 pts]
+## 📨 [Optional] Deliverable 3 - Object Reconstruction [+12 pts]
 
 Since we are given the bounding boxes of the object to detect, it would be
 possible to match keypoints inside the bounding box for as many frames as
@@ -206,7 +203,7 @@ No starter code is provided for this deliverable, although it will be have much
 overlap with your deliverable 2 code. You can reuse functions but please try to
 delineate a boundary between your deliverables (for grading purposes).
 
-## 📨 Deliverable 4 - Evaluating BoW Place Recognition using RANSAC [30 pts]
+## 📨 Deliverable 4 - Evaluating BoW Place Recognition using RANSAC [25 pts]
 
 [DBoW2](https://github.com/dorian3d/DBoW2) is a state-of-the-art algorithm for
 place recognition (loop closure). It is based in a Bag of Words technique
@@ -348,9 +345,9 @@ as how we have done it in previous labs).
 
 ## Summary of Team Deliverables
 
- 1. A 1/2 page summary of the implementation and assumptions made by your Object Localization code, along with a final position estimate of the teddy bear in the world reference frame.
- 2. An image showing the trajectory of the robot and the final estimated location of the teddy bear in RVIZ
- 3. [Optional] A screenshot of your sparse 3D reconstruction of the teddy bear
+ 1. Report the final position estimate of the teddy bear in the world reference frame and analyze your performance. [Optional] A 1/2 page summary of the implementation and assumptions made by your Object Localization code.
+ 2. An image showing the trajectory of the robot and the final estimated location of the teddy bear in RVIZ.
+ 3. [Optional] A screenshot of your sparse 3D reconstruction of the teddy bear.
  4. For one feature extractor (e.g. choose 1 of SIFT, SURF, ORB, FAST), show at least two loop closures (pairs of images) along with the number and ratio of inliers in each. Preferably one good loop closure + one bad loop closure, if possible.
    - If you only get one loop closure with the descriptor you chose, you can include it and rerun with a different descriptor to get a 2nd loop closure. 
 
