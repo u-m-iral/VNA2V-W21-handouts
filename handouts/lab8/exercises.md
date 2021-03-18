@@ -124,7 +124,7 @@ rosbag play PATH/TO/ROSBAG/DOWNLOADED
 
 Great! Now you should be seeing YOLO detecting objects in the scene!
 
-## 📨 Deliverable 2 - Object Localization [25 pts]
+## 📨 Deliverable 2 - Object Localization [20 pts]
 
 Our goal for this exercise is to localize the teddy bear that is at the center
 of the scene in the _freiburg3_teddy_ dataset. To do so, we will use YOLO
