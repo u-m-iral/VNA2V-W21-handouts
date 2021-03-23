@@ -124,7 +124,7 @@ rosbag play PATH/TO/ROSBAG/DOWNLOADED
 
 Great! Now you should be seeing YOLO detecting objects in the scene!
 
-## 📨 Deliverable 2 - Object Localization [20 pts]
+## 📨 Deliverable 2 - Object Localization [15 pts]
 
 Our goal for this exercise is to localize the teddy bear that is at the center
 of the scene in the _freiburg3_teddy_ dataset. To do so, we will use YOLO
@@ -166,7 +166,7 @@ You can choose not to use the provided `yolo_localization.cpp` template and desi
 own architecture and you'll get up to 5 bonus points for doing so (refer to the "Design
 Your Own Architecture" section).
 
-### [Optional] Design Your Own Architecture [+5 pts]
+### [Optional] Design Your Own Architecture [+10 pts]
 
 Since there are many ways to solve this problem, and since we have reached a point
 where you should be comfortable designing your own ROS callbacks and general code
