@@ -29,7 +29,7 @@ Each group should create a new folder called `TEAM_<N>`, replacing `<N>` with yo
 
 ### Deadline
 
-**Deadline:** To submit your solution, please upload the corresponding files under `Assignments > Lab 8` by **Thursday, Mar 25th, 11:59 EDT**.
+**Deadline:** To submit your solution, please upload the corresponding files under `Assignments > Lab 8` by **Monday, Mar 29th, 11:59 EDT**.
 
 # 👤 Individual
 
