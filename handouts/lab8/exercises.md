@@ -203,7 +203,7 @@ No starter code is provided for this deliverable, although it will be have much
 overlap with your deliverable 2 code. You can reuse functions but please try to
 delineate a boundary between your deliverables (for grading purposes).
 
-## 📨 Deliverable 4 - Evaluating BoW Place Recognition using RANSAC [25 pts]
+## 📨 Deliverable 4 - Evaluating BoW Place Recognition using RANSAC [15 pts]
 
 [DBoW2](https://github.com/dorian3d/DBoW2) is a state-of-the-art algorithm for
 place recognition (loop closure). It is based in a Bag of Words technique
